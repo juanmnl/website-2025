@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me | Your Name Product Designer</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    </head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">Your Name</a>
+            <nav>
+                <button class="menu-toggle" aria-controls="main-navigation" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <ul id="main-navigation">
+                    <li><a href="index.html">Work</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li> </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h1>Let's Connect!</h1>
+                <p>I'm always open to discussing new design challenges, job opportunities, or just chatting about all things product and UX. Feel free to reach out through any of the channels below.</p>
+
+                <div class="contact-info">
+                    <div class="contact-item">
+                        Email: <a href="mailto:your.email@example.com">your.email@example.com</a>
+                    </div>
+                    <div class="contact-item">
+                        LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a>
+                    </div>
+                    </div>
+
+                <p>Or, send me a message directly using the form below:</p>
+
+                <form class="contact-form" action="YOUR_FORM_SUBMISSION_ENDPOINT" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" name="subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="button primary">Send Message</button>
+                    <p style="font-size: 0.9em; margin-top: 15px; color: var(--secondary-color);">*Note: For this form to work, you'll need a backend service like <a href="https://formspree.io/" target="_blank">Formspree</a>, <a href="https://www.netlify.com/products/forms/" target="_blank">Netlify Forms</a>, or a custom server setup.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year-footer"></span> Your Name. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://x.com/_juanmnl" target="_blank" aria-label="Twitter Profile">Twitter (yes, I'm still calling it like that)</a>
+                <a href="https://www.instagram.com/juanmnlcornejo/" target="_blank" aria-label="Instagram Profile">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
