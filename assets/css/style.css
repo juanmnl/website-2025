@@ -54,9 +54,9 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
 }
 
-h1 { font-size: 2.8em; }
-h2 { font-size: 2.2em; }
-h3 { font-size: 1.8em; }
+h1 { font-size: 1.4em; }
+h2 { font-size: 1.3em; }
+h3 { font-size: 1.1em; }
 p { margin-bottom: 1em; }
 ul { list-style: none; margin-bottom: 1em; }
 li { margin-bottom: 0.5em; }
@@ -222,7 +222,6 @@ nav ul li a.active::after {
 }
 
 .work-section h2 {
-    text-align: center;
     margin-bottom: 50px;
 }
 
@@ -277,13 +276,11 @@ nav ul li a.active::after {
 }
 
 .case-study h1 {
-    font-size: 2.5em;
     text-align: left;
     margin-bottom: 20px;
 }
 
 .project-intro {
-    font-size: 1.2em;
     color: var(--secondary-color);
     margin-bottom: 40px;
 }
@@ -321,7 +318,6 @@ nav ul li a.active::after {
 }
 
 .case-study-section h3 {
-    font-size: 1.8em;
     margin-bottom: 20px;
 }
 
@@ -361,8 +357,8 @@ nav ul li a.active::after {
 }
 
 .about-section h1 {
-    text-align: center;
     margin-bottom: 40px;
+    text-align: center;
 }
 
 .about-content {
@@ -373,13 +369,12 @@ nav ul li a.active::after {
 }
 
 .profile-photo { /* Using .profile-photo class for clarity */
-    width: 300px; /* Fixed width for profile picture */
-    height: 300px;
+    width: 200px; /* Fixed width for profile picture */
+    height: 200px;
     object-fit: cover;
     border-radius: 50%; /* Circle shape */
     flex-shrink: 0; /* Prevents image from shrinking */
     margin: 0 auto; /* Center image on smaller screens when wrapped */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Subtle shadow for depth */
 }
 
 .about-text {
@@ -388,7 +383,6 @@ nav ul li a.active::after {
 }
 
 .about-text h2 {
-    font-size: 1.8em;
     margin-top: 0;
 }
 
@@ -546,9 +540,9 @@ footer p {
 
 /* 9. Media Queries for Responsiveness */
 @media (max-width: 768px) {
-    h1 { font-size: 2.2em; }
-    h2 { font-size: 1.8em; }
-    h3 { font-size: 1.5em; }
+    h1 { font-size: 1.5em; }
+    h2 { font-size: 1.4em; }
+    h3 { font-size: 1.3em; }
 
     /* Header & Navigation for Mobile */
     header {
