@@ -8,15 +8,15 @@
 }
 
 :root {
-    --primary-color: #007bff; /* Example blue */
+    --primary-color: #000000; /* Example blue */
     --secondary-color: #6c757d; /* Example gray */
-    --text-color: #333;
+    --text-color: #222;
     --light-gray: #f8f9fa;
-    --dark-gray: #343a40;
+    --dark-gray: #1b1e21;
     --white: #ffffff;
-    --border-radius: 4px;
+    --border-radius: 3px;
     --font-family: 'Inter', sans-serif; /* Or any other clean sans-serif font */
-    --max-width: 1000px; /* Max width for content */
+    --max-width: 1920px; /* Max width for content */
 }
 
 html {
@@ -93,7 +93,7 @@ video {
 /* Buttons */
 .button {
     display: inline-block;
-    padding: 12px 25px;
+    padding: 4px 12px;
     border-radius: var(--border-radius);
     font-weight: 600;
     text-align: center;
@@ -132,7 +132,6 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 header .container {
@@ -142,13 +141,14 @@ header .container {
 }
 
 .logo {
-    font-size: 1.8em;
+    font-size: 1em;
     font-weight: 700;
     color: var(--dark-gray);
 }
 
 nav ul {
     display: flex;
+    margin-bottom: 0;
 }
 
 nav ul li {
@@ -184,13 +184,12 @@ nav ul li a.active::after {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 10px;
 }
 
 .icon-bar {
     display: block;
     width: 25px;
-    height: 3px;
+    height: 2px;
     background-color: var(--dark-gray);
     margin: 5px 0;
     transition: all 0.3s ease;
@@ -201,19 +200,18 @@ nav ul li a.active::after {
 .hero-section {
     background-color: var(--light-gray);
     padding: 100px 0;
-    text-align: center;
+    text-align: left;
 }
 
 .hero-section h1 {
-    font-size: 3.5em;
+    font-size: 1.2em;
     margin-bottom: 20px;
-    line-height: 1.1;
 }
 
 .hero-section p {
-    font-size: 1.3em;
+    font-size: 1.1em;
     max-width: 700px;
-    margin: 0 auto 30px auto;
+    text-align: left;
 }
 
 
@@ -405,7 +403,7 @@ nav ul li a.active::after {
 .skill-tag {
     background-color: var(--primary-color);
     color: var(--white);
-    padding: 8px 15px;
+    padding: 0 5px;
     border-radius: var(--border-radius);
     font-size: 0.9em;
     font-weight: 600;
@@ -553,6 +551,9 @@ footer p {
     h3 { font-size: 1.5em; }
 
     /* Header & Navigation for Mobile */
+    header {
+        padding: 15px 0 0;
+    }
     header .container {
         flex-wrap: wrap;
         justify-content: center;
@@ -590,7 +591,7 @@ footer p {
         display: block; /* Show hamburger icon on mobile */
         position: absolute;
         right: 20px;
-        top: 20px;
+        top: 16px;
     }
 
     /* Hero Section */
@@ -598,10 +599,10 @@ footer p {
         padding: 80px 0;
     }
     .hero-section h1 {
-        font-size: 2.5em;
+        font-size: 1.5em;
     }
     .hero-section p {
-        font-size: 1.1em;
+        font-size: 1.2m;
     }
 
     /* Project Grid */
