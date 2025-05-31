@@ -14,6 +14,7 @@
     --light-gray: #f8f9fa;
     --dark-gray: #1b1e21;
     --white: #ffffff;
+    --butter: #ffeda8;
     --border-radius: 3px;
     --font-family: 'Inter', sans-serif; /* Or any other clean sans-serif font */
     --max-width: 1920px; /* Max width for content */
@@ -57,8 +58,9 @@ h1, h2, h3, h4, h5, h6 {
 h1 { font-size: 1.4em; }
 h2 { font-size: 1.3em; }
 h3 { font-size: 1.1em; }
+h4 { font-size: .9em; }
 p { margin-bottom: 1em; }
-ul { list-style: none; margin-bottom: 1em; }
+ul { font-size: .9em; list-style: none; margin-bottom: 1em; }
 li { margin-bottom: 0.5em; }
 
 img {
@@ -75,6 +77,10 @@ video {
     display: block;
     margin-bottom: 1em;
     border-radius: var(--border-radius);
+}
+
+.highlight {
+    background-color: var(--butter);
 }
 
 /* Visually Hidden for Screen Readers Only */
@@ -203,15 +209,19 @@ nav ul li a.active::after {
     text-align: left;
 }
 
-.hero-section h1 {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
 .hero-section p {
-    font-size: 1.1em;
     max-width: 700px;
     text-align: left;
+}
+
+.hero-section ul {
+    list-style: none; /* Remove default bullets */
+    padding-left: 0; /* Remove padding */
+    margin-top: 20px;
+}
+
+.hero-section ul li a {
+    text-decoration: underline;
 }
 
 
@@ -354,6 +364,7 @@ nav ul li a.active::after {
 /* 6. About Page Specifics */
 .about-section {
     padding: 80px 0;
+    max-width: 700px;
 }
 
 .about-section h1 {
