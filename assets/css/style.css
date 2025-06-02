@@ -212,12 +212,13 @@ nav ul li a.active::after {
 .hero-section p {
     max-width: 700px;
     text-align: left;
+    letter-spacing: 0.032em;
 }
 
 .hero-section ul {
     list-style: none; /* Remove default bullets */
     padding-left: 0; /* Remove padding */
-    margin-top: 20px;
+    margin-top: 60px;
 }
 
 .hero-section ul li a {
@@ -392,8 +393,16 @@ nav ul li a.active::after {
     min-width: 300px; /* Ensures text doesn't get too narrow before wrapping */
 }
 
+.about-section p {
+    letter-spacing: 0.032em;
+}
+
+.about-text h2:first-of-type {
+    margin-top: 0px;
+}
+
 .about-text h2 {
-    margin-top: 0;
+    margin-top: 60px;
 }
 
 .skills-list {
