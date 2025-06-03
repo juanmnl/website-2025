@@ -8,8 +8,8 @@
 }
 
 :root {
-    --primary-color: #000000; /* Example blue */
-    --secondary-color: #6c757d; /* Example gray */
+    --primary-color: #111;
+    --secondary-color: #6c757d;
     --text-color: #222;
     --light-gray: #f8f9fa;
     --dark-gray: #1b1e21;
@@ -17,7 +17,7 @@
     --butter: #ffeda8;
     --border-radius: 3px;
     --font-family: 'Inter', sans-serif; /* Or any other clean sans-serif font */
-    --max-width: 1400px; /* Max width for content */
+    --max-width: 900px; /* Max width for content */
 }
 
 html {
@@ -49,11 +49,18 @@ a:hover {
     color: var(--dark-gray);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2 {
     color: var(--dark-gray);
     margin-bottom: 0.8em;
     line-height: 1.2;
     font-family: initial;
+}
+
+h3, h4, h5, h6, article h1 {
+    color: var(--dark-gray);
+    margin-bottom: 0.8em;
+    line-height: 1.2;
+    font-family: var(--font-family);
 }
 
 h1 { font-size: 1.4em; }
@@ -245,16 +252,15 @@ nav ul li a.active::after {
 }
 
 .project-card {
-    border: 1px solid #eee;
+    border: 1px solid #f6f6f6;
     border-radius: var(--border-radius);
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(2,2,2    ,0.1);
 }
 
 .project-card a {
@@ -273,7 +279,6 @@ nav ul li a.active::after {
 
 .project-card h3 {
     margin: 15px 15px 5px 15px;
-    font-size: 1.5em;
 }
 
 .project-card p {
@@ -303,7 +308,7 @@ nav ul li a.active::after {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
     background-color: var(--light-gray);
-    padding: 25px;
+    padding: 20px;
     border-radius: var(--border-radius);
     margin-bottom: 50px;
 }
@@ -383,10 +388,11 @@ nav ul li a.active::after {
 
 .profile-photo { /* Using .profile-photo class for clarity */
     width: 200px; /* Fixed width for profile picture */
-    height: 200px;
-    object-fit: cover;
+    height: 200px; /* Fixed height for profile picture */
+    object-fit: cover; /* Ensures image covers the area without distortion */
     border-radius: 50%; /* Circle shape */
     flex-shrink: 0; /* Prevents image from shrinking */
+    margin: 0 auto; /* Center image in flex container */
 }
 
 .about-text {
