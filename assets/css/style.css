@@ -259,8 +259,8 @@ nav ul li a.active::after {
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(2,2,2    ,0.1);
+    /* transform: translateY(-5px); */
+    box-shadow: 0 4px 8px rgba(2,2,2,0.1);
 }
 
 .project-card a {
@@ -287,8 +287,72 @@ nav ul li a.active::after {
     color: var(--secondary-color);
 }
 
+/* 5. Gallery Section Specifics (New Section) */
+.gallery-section {
+    padding: 80px 0;
+}
 
-/* 5. Case Study Page Specifics */
+.gallery-section h1 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.gallery-intro {
+    margin: 0 auto 50px auto;
+}
+
+.gallery-grid {
+    display: grid;
+    /* Responsive grid: 3 columns on large screens, adjust down */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px; /* Space between gallery items */
+}
+
+.gallery-item {
+    display: block; /* Ensures the div takes up its full space */
+    position: relative;
+    overflow: hidden; /* Ensures content (like zoomed image) doesn't spill out */
+    border-radius: var(--border-radius);
+    border: 1px solid #f6f6f6;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover effects */
+    cursor: pointer; /* Indicates that the item is clickable */
+    background-color: var(--white); /* Ensure background is white */
+}
+
+.gallery-item:hover {
+    box-shadow: 0 4px 8px rgba(2,2,2,0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px; /* Consistent height for all gallery images */
+    object-fit: cover; /* Crop to cover the area without distorting aspect ratio */
+    display: block; /* Removes extra space below image */
+    margin-bottom: 0; /* Override default image margin */
+    transition: transform 0.4s ease; /* Smooth zoom on hover */
+}
+
+.gallery-item:hover img {
+    transform: scale(1.03); /* Slight zoom effect on image when hovering over the item */
+}
+
+.gallery-caption {
+    background-color: var(--white); /* Explicitly white background for caption area */
+    border-top: 1px solid #eee; /* Subtle separator */
+}
+
+.gallery-caption h3 {
+    margin: 15px 15px 5px 15px;
+}
+
+.gallery-caption p {
+    margin: 0px 15px 15px 15px;
+    font-size: 0.95em;
+    color: var(--secondary-color);
+}
+
+
+/* 6. Case Study Page Specifics */
 .case-study {
     padding: 80px 0;
 }
@@ -369,7 +433,7 @@ nav ul li a.active::after {
 }
 
 
-/* 6. About Page Specifics */
+/* 7. About Page Specifics */
 .about-section {
     padding: 80px 0;
 }
@@ -431,7 +495,7 @@ nav ul li a.active::after {
 }
 
 
-/* 7. Contact Page Specifics */
+/* 8. Contact Page Specifics */
 .contact-section {
     padding: 80px 0;
 }
@@ -526,7 +590,7 @@ nav ul li a.active::after {
     background-color: var(--dark-gray);
 }
 
-/* 8. Footer */
+/* 9. Footer */
 footer {
     background-color: var(--dark-gray);
     color: var(--white);
@@ -557,7 +621,89 @@ footer p {
     opacity: 1;
 }
 
-/* 9. Media Queries for Responsiveness */
+/* Modal (Lightbox) Styles */
+.modal {
+    display: none; /* Hidden by default - JavaScript will change this to 'flex' on click */
+    position: fixed; /* Stay in place relative to the viewport */
+    z-index: 2000; /* Sit on top (higher than header/anything else) */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if content is too large */
+    background-color: rgba(0,0,0,0.9); /* Black overlay with 90% opacity */
+
+    /* Flexbox for centering modal content */
+
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    flex-direction: column; /* Stack image and caption vertically */
+}
+
+/* Modal Content (The Image inside the modal) */
+.modal-content {
+    margin: auto; /* Auto margins help with centering if flexbox wasn't used, but good practice */
+    display: block; /* Ensures it behaves like a block element */
+    max-width: 90%; /* Max width of the image relative to the modal */
+    max-height: 90vh; /* Max height of the image relative to viewport height */
+    border-radius: var(--border-radius); /* Apply your global border-radius */
+    box-shadow: 0 0 20px rgba(255,255,255,0.2); /* Subtle white shadow for contrast */
+}
+
+/* Modal Caption (Text below the image) */
+.modal-caption {
+    margin: 20px auto;
+    color: #f8f9fa; /* Light gray text for caption */
+    text-align: center;
+    max-width: 80%; /* Limit caption width for readability */
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5); /* Adds a subtle shadow for better readability on dark background */
+}
+
+/* Close Button (X icon) */
+.modal-close-button {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1; /* Light color for visibility */
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s; /* Smooth transition for hover effect */
+    cursor: pointer;
+    user-select: none; /* Prevent text selection on the X */
+}
+
+.modal-close-button:hover,
+.modal-close-button:focus {
+    color: #bbb; /* Slightly darker on hover/focus */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Animations for the modal content (Optional but enhances user experience) */
+/* These make the image and caption 'zoom' into view when the modal opens */
+.modal-content, #modalCaption {
+    -webkit-animation-name: zoom; /* For Safari */
+    -webkit-animation-duration: 0.6s; /* How long the animation takes */
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} /* Start from scale 0 (tiny) */
+    to {-webkit-transform:scale(1)}   /* End at scale 1 (normal size) */
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* Prevents the background content from scrolling when the modal is open */
+.modal-open {
+    overflow: hidden;
+}
+
+/* 10. Media Queries for Responsiveness */
 @media (max-width: 768px) {
     h1 { font-size: 1.5em; }
     h2 { font-size: 1.4em; }
@@ -639,6 +785,15 @@ footer p {
         width: 100%;
     }
 
+    /* Gallery Section */
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+
+    .gallery-item img {
+        height: 200px; /* Slightly smaller images on mobile */
+    }
+
     /* About Section */
     .about-content {
         flex-direction: column;
@@ -660,5 +815,17 @@ footer p {
     }
     .social-links a {
         margin: 0 10px; /* Adjust spacing */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-section {
+        padding: 60px 0;
+    }
+    .gallery-intro {
+        margin-bottom: 30px;
+    }
+    .gallery-grid {
+        gap: 20px;
     }
 }

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Gallery | Your Name Product Designer</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    </head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">Hi, I'm Juan Manuel - <span class="highlight"><small>Available for hire!</small></span></a>    
+            <nav>
+                <button class="menu-toggle" aria-controls="main-navigation" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <ul id="main-navigation">
+                    <li><a href="index.html">Work</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="gallery" class="gallery-section">
+            <div class="container">
+                <h1>Project Gallery</h1>
+                <p class="gallery-intro">A visual overview of some of my key product design projects and concepts over the years.</p>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="assets/images/th1.png" data-full-src="assets/images/th1.png" alt="Project 1: Onboarding Redesign" class="zoomable-image">
+                        <div class="gallery-caption">
+                            <h3>Onboarding Experience</h3>
+                            <p>Improving user activation.</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="assets/images/th2.png" data-full-src="assets/images/th2.png" alt="Project 2: Mobile App Feature" class="zoomable-image">
+                        <div class="gallery-caption">
+                            <h3>Mobile Feature Launch</h3>
+                            <p>Enhancing user engagement.</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="assets/images/project3-thumbnail.jpg" data-full-src="assets/images/project3-full.jpg" alt="Project 3: Dashboard Redesign" class="zoomable-image">
+                        <div class="gallery-caption">
+                            <h3>Analytics Dashboard</h3>
+                            <p>Streamlining data visualization.</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="assets/images/project4-thumbnail.jpg" data-full-src="assets/images/project4-full.jpg" alt="Project 4: E-commerce Checkout Flow" class="zoomable-image">
+                        <div class="gallery-caption">
+                            <h3>E-commerce Checkout</h3>
+                            <p>Optimizing conversion rates.</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="assets/images/project5-thumbnail.jpg" data-full-src="assets/images/project5-full.jpg" alt="Project 5: Design System Development" class="zoomable-image">
+                        <div class="gallery-caption">
+                            <h3>Design System</h3>
+                            <p>Ensuring consistency & scalability.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Juan Manuel Cornejo. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/juanmnl" target="_blank" aria-label="Github profile">Github</a>
+                <a href="https://marketplace.visualstudio.com/publishers/juanmnl" target="_blank" aria-label="VSCode themes">VSCode themes</a>
+                <a href="https://x.com/_juanmnl" target="_blank" aria-label="Twitter Profile">Twitter</a>
+                <a href="https://www.instagram.com/juanmnlcornejo/" target="_blank" aria-label="Instagram Profile">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="imageModal" class="modal">
+        <span class="modal-close-button">&times;</span>
+        <img class="modal-content" id="modalImage" alt="Zoomed Project Image">
+        <div id="modalCaption" class="modal-caption"></div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
