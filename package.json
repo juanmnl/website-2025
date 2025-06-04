@@ -1,0 +1,19 @@
+{
+  "name": "website-2025",
+  "version": "1.0.0",
+  "description": "Personal website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanmnl/website-2025.git"
+  },
+  "author": "juanmnl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juanmnl/website-2025/issues"
+  },
+  "homepage": "https://github.com/juanmnl/website-2025#readme"
+}

@@ -1,134 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Preserve Browser Extension | Juan Manuel - Product Design</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="icon" type="image/svg+xml" href="../rarbbit-icon.svg" />
     <link rel="alternate icon" href="../rarbbit-icon.svg" />
-</head>
-<body>
-
+  </head>
+  <body>
     <header>
-        <div class="container">
-            <a href="../index.html" class="logo">Hi, I'm Juan Manuel - <span class="highlight"><small>Available for hire!</small></span></a>
-            <nav>
-                <button class="menu-toggle" aria-controls="main-navigation" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <ul id="main-navigation">
-                    <li><a href="../index.html" class="active">Work</a></li>
-                    <li><a href="../about.html">About</a></li>
-                    <li><a href="../gallery.html">Gallery</a></li>
-                    <li><a href="../contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+      <div class="container">
+        <a href="../index.html" class="logo"
+          >Hi, I'm Juan Manuel -
+          <span class="highlight"><small>Available for hire!</small></span></a
+        >
+        <nav>
+          <button
+            class="menu-toggle"
+            aria-controls="main-navigation"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <ul id="main-navigation">
+            <li><a href="../index.html" class="active">Work</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../gallery.html">Gallery</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
-        <article class="case-study">
-            <div class="container">
-                <h1>Preserve Browser Extension</h1>
-                <p class="project-intro">Designed a browser extension that captures tamper-proof evidence from web content, social media posts, and online articles for legal proceedings. Solved the unique UX challenge of creating seamless evidence collection workflows within browser constraints, ensuring captured content maintains legal integrity while remaining user-friendly for human rights investigators and legal professionals.</p>
+      <article class="case-study">
+        <div class="container">
+          <h1>Preserve Browser Extension</h1>
+          <p class="project-intro">
+            Designed a browser extension that captures tamper-proof evidence
+            from web content, social media posts, and online articles for legal
+            proceedings. Solved the unique UX challenge of creating seamless
+            evidence collection workflows within browser constraints, ensuring
+            captured content maintains legal integrity while remaining
+            user-friendly for human rights investigators and legal
+            professionals.
+          </p>
 
-                <div class="project-details">
-                    <div class="detail-item">
-                        <h4>Role</h4>
-                        <p>Lead UX/UI Designer</p>
-                    </div>
-                    <div class="detail-item">
-                        <h4>Team</h4>
-                        <p>2 Engineers</p>
-                    </div>
-                    <div class="detail-item">
-                        <h4>Timeline</h4>
-                        <p>8 weeks</p>
-                    </div>
-                    <div class="detail-item">
-                        <h4>Tools</h4>
-                        <p>Figma, Miro</p>
-                    </div>
-                </div>
-
-                <div class="case-study-section">
-                    <h3>The Challenge</h3>
-                    <p>Legal professionals and investigators needed a way to capture online evidence that would be admissible in court, requiring tamper-proof collection while maintaining ease of use within the constraints of browser environments.</p>
-                    <img src="../assets/images/project1-problem.jpg" alt="Screenshot of old onboarding flow highlighting drop-off points">
-                    <p class="image-caption">Initial user flow showing high friction points.</p>
-                </div>
-
-                <div class="case-study-section">
-                    <h3>My Process & Research</h3>
-                    <p>I initiated this project by conducting user interviews with 10 new sign-ups to understand their mental models and pain points. Concurrently, I analyzed onboarding analytics to pinpoint specific drop-off stages.</p>
-                    <ul>
-                        <li><strong>User Interviews:</strong> Uncovered expectations vs. reality.</li>
-                        <li><strong>Competitor Analysis:</strong> Studied best-in-class onboarding patterns.</li>
-                        <li><strong>Journey Mapping:</strong> Visualized the current frustrating user path.</li>
-                        <li><strong>Persona Development:</strong> Identified core user types and their needs.</li>
-                    </ul>
-                    <img src="../assets/images/project1-research.png" alt="Miro board with user research insights and empathy map">
-                    <p class="image-caption">Key insights from user interviews and persona development.</p>
-                </div>
-
-                <div class="case-study-section">
-                    <h3>Ideation & Design</h3>
-                    <p>Based on research, I led brainstorming sessions to generate solutions. We focused on simplified steps, clearer language, and contextual help.</p>
-                    <p>Key design decisions included:</p>
-                    <ul>
-                        <li>Introducing a multi-step progress indicator.</li>
-                        <li>Breaking down complex forms into smaller chunks.</li>
-                        <li>Implementing tooltips and short tutorial videos.</li>
-                    </ul>
-                    <img src="../assets/images/project1-wireframes.jpg" alt="Low-fidelity wireframes showing new onboarding screens">
-                    <p class="image-caption">Early wireframes exploring new flow variations.</p>
-                    <img src="../assets/images/project1-hifi.png" alt="High-fidelity mockups of new onboarding screens">
-                    <p class="image-caption">High-fidelity designs showcasing the simplified onboarding experience.</p>
-                </div>
-
-                <div class="case-study-section">
-                    <h3>Testing & Iteration</h3>
-                    <p>We conducted unmoderated usability tests with 15 participants using a clickable Figma prototype. Key findings led to iterative improvements, such as refining microcopy and adjusting the placement of critical information.</p>
-                    <video controls src="../assets/images/project1-prototype-demo.mp4" alt="Video demonstration of the interactive prototype"></video>
-                    <p class="image-caption">Clickable prototype used for usability testing.</p>
-                </div>
-
-                <div class="case-study-section">
-                    <h3>The Solution & Impact</h3>
-                    <p>The new onboarding flow significantly improved user activation. We observed a <strong>25% increase in successful account setups</strong> within the first month post-launch, exceeding our initial goal. Qualitative feedback indicated users found the process much more intuitive and less intimidating.</p>
-                    <img src="../assets/images/project1-final-solution.jpg" alt="Final polished UI of the new onboarding flow">
-                    <p class="image-caption">The final redesigned onboarding flow.</p>
-                </div>
-
-                <div class="case-study-section">
-                    <h3>Learnings & Next Steps</h3>
-                    <p>This project reinforced the importance of continuous user feedback. We learned that even small changes in microcopy can have a significant impact on user understanding. Future iterations would involve A/B testing different call-to-action button styles.</p>
-                </div>
-
-                <div class="project-navigation">
-                    <a href="ktn-ryms.html" class="button">Next Project &rarr;</a>
-                    <a href="../index.html" class="button secondary">&larr; Back to Work</a>
-                </div>
+          <div class="project-details">
+            <div class="detail-item">
+              <h4>Role</h4>
+              <p>Lead UX/UI Designer</p>
             </div>
-        </article>
+            <div class="detail-item">
+              <h4>Team</h4>
+              <p>2 Engineers</p>
+            </div>
+            <div class="detail-item">
+              <h4>Timeline</h4>
+              <p>8 weeks</p>
+            </div>
+            <div class="detail-item">
+              <h4>Tools</h4>
+              <p>Figma, Miro</p>
+            </div>
+          </div>
+
+          <div class="case-study-section">
+            <h3>The Challenge</h3>
+            <p>
+              Legal professionals and investigators needed a way to capture
+              online evidence that would be admissible in court, requiring
+              tamper-proof collection while maintaining ease of use within the
+              constraints of browser environments.
+            </p>
+            <img
+              src="../assets/images/project1-problem.jpg"
+              alt="Screenshot of old onboarding flow highlighting drop-off points"
+            />
+            <p class="image-caption">
+              Initial user flow showing high friction points.
+            </p>
+          </div>
+
+          <div class="case-study-section">
+            <h3>My Process & Research</h3>
+            <p>
+              I initiated this project by conducting user interviews with 10 new
+              sign-ups to understand their mental models and pain points.
+              Concurrently, I analyzed onboarding analytics to pinpoint specific
+              drop-off stages.
+            </p>
+            <ul>
+              <li>
+                <strong>User Interviews:</strong> Uncovered expectations vs.
+                reality.
+              </li>
+              <li>
+                <strong>Competitor Analysis:</strong> Studied best-in-class
+                onboarding patterns.
+              </li>
+              <li>
+                <strong>Journey Mapping:</strong> Visualized the current
+                frustrating user path.
+              </li>
+              <li>
+                <strong>Persona Development:</strong> Identified core user types
+                and their needs.
+              </li>
+            </ul>
+            <img
+              src="../assets/images/project1-research.png"
+              alt="Miro board with user research insights and empathy map"
+            />
+            <p class="image-caption">
+              Key insights from user interviews and persona development.
+            </p>
+          </div>
+
+          <div class="case-study-section">
+            <h3>Ideation & Design</h3>
+            <p>
+              Based on research, I led brainstorming sessions to generate
+              solutions. We focused on simplified steps, clearer language, and
+              contextual help.
+            </p>
+            <p>Key design decisions included:</p>
+            <ul>
+              <li>Introducing a multi-step progress indicator.</li>
+              <li>Breaking down complex forms into smaller chunks.</li>
+              <li>Implementing tooltips and short tutorial videos.</li>
+            </ul>
+            <img
+              src="../assets/images/project1-wireframes.jpg"
+              alt="Low-fidelity wireframes showing new onboarding screens"
+            />
+            <p class="image-caption">
+              Early wireframes exploring new flow variations.
+            </p>
+            <img
+              src="../assets/images/project1-hifi.png"
+              alt="High-fidelity mockups of new onboarding screens"
+            />
+            <p class="image-caption">
+              High-fidelity designs showcasing the simplified onboarding
+              experience.
+            </p>
+          </div>
+
+          <div class="case-study-section">
+            <h3>Testing & Iteration</h3>
+            <p>
+              We conducted unmoderated usability tests with 15 participants
+              using a clickable Figma prototype. Key findings led to iterative
+              improvements, such as refining microcopy and adjusting the
+              placement of critical information.
+            </p>
+            <video
+              controls
+              src="../assets/images/project1-prototype-demo.mp4"
+              alt="Video demonstration of the interactive prototype"
+            ></video>
+            <p class="image-caption">
+              Clickable prototype used for usability testing.
+            </p>
+          </div>
+
+          <div class="case-study-section">
+            <h3>The Solution & Impact</h3>
+            <p>
+              The new onboarding flow significantly improved user activation. We
+              observed a
+              <strong>25% increase in successful account setups</strong> within
+              the first month post-launch, exceeding our initial goal.
+              Qualitative feedback indicated users found the process much more
+              intuitive and less intimidating.
+            </p>
+            <img
+              src="../assets/images/project1-final-solution.jpg"
+              alt="Final polished UI of the new onboarding flow"
+            />
+            <p class="image-caption">The final redesigned onboarding flow.</p>
+          </div>
+
+          <div class="case-study-section">
+            <h3>Learnings & Next Steps</h3>
+            <p>
+              This project reinforced the importance of continuous user
+              feedback. We learned that even small changes in microcopy can have
+              a significant impact on user understanding. Future iterations
+              would involve A/B testing different call-to-action button styles.
+            </p>
+          </div>
+
+          <div class="project-navigation">
+            <a href="ktn-ryms.html" class="button">Next Project &rarr;</a>
+            <a href="../index.html" class="button secondary"
+              >&larr; Back to Work</a
+            >
+          </div>
+        </div>
+      </article>
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; <span id="current-year"></span> Juan Manuel Cornejo. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://github.com/juanmnl" target="_blank" aria-label="Github profile">Github</a>
-                <a href="https://marketplace.visualstudio.com/publishers/juanmnl" target="_blank" aria-label="VSCode themes">VSCode themes</a>
-                <a href="https://x.com/_juanmnl" target="_blank" aria-label="Twitter Profile">Twitter</a>
-                <a href="https://www.instagram.com/juanmnlcornejo/" target="_blank" aria-label="Instagram Profile">Instagram</a>
-            </div>
+      <div class="container">
+        <p>
+          &copy; <span id="current-year"></span> Juan Manuel Cornejo. All rights
+          reserved.
+        </p>
+        <div class="social-links">
+          <a
+            href="https://github.com/juanmnl"
+            target="_blank"
+            aria-label="Github profile"
+            >Github</a
+          >
+          <a
+            href="https://marketplace.visualstudio.com/publishers/juanmnl"
+            target="_blank"
+            aria-label="VSCode themes"
+            >VSCode themes</a
+          >
+          <a
+            href="https://x.com/_juanmnl"
+            target="_blank"
+            aria-label="Twitter Profile"
+            >Twitter</a
+          >
+          <a
+            href="https://www.instagram.com/juanmnlcornejo/"
+            target="_blank"
+            aria-label="Instagram Profile"
+            >Instagram</a
+          >
         </div>
+      </div>
     </footer>
 
     <script src="../assets/js/script.js"></script>
-</body>
+  </body>
 </html>
