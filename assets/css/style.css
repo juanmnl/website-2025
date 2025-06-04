@@ -15,7 +15,7 @@
     --dark-gray: #1b1e21;
     --white: #ffffff;
     --butter: #ffeda8;
-    --border-radius: 3px;
+    --border-radius: 6px;
     --font-family: 'Inter', sans-serif; /* Or any other clean sans-serif font */
     --max-width: 920px; /* Max width for content */
 }
@@ -242,7 +242,7 @@ nav ul li a.active::after {
 }
 
 .work-section h2 {
-    margin-bottom: 50px;
+    margin-bottom: 8px;
 }
 
 .project-grid {
