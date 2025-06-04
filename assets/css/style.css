@@ -447,7 +447,6 @@ nav ul li a.active::after {
     flex-wrap: wrap; /* Allows wrapping on smaller screens */
     gap: 40px;
     align-items: flex-start; /* Aligns content to top */
-    max-width: 700px;
 }
 
 .profile-photo { /* Using .profile-photo class for clarity */
