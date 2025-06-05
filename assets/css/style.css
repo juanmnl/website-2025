@@ -220,7 +220,7 @@ nav ul li a.active::after {
 .hero-section p {
     max-width: 700px;
     text-align: left;
-    letter-spacing: 0.032em;
+    letter-spacing: 0.028em;
 }
 
 .hero-section ul {
@@ -353,6 +353,7 @@ nav ul li a.active::after {
 .gallery-caption p {
     margin: 0px 15px 15px 15px;
     font-size: 0.95em;
+    letter-spacing: 0.028em;
     color: var(--secondary-color);
 }
 
@@ -396,6 +397,7 @@ nav ul li a.active::after {
 .detail-item p {
     font-size: 0.95em;
     margin-bottom: 0;
+    letter-spacing: 0.028em;
 }
 
 .case-study-section {
@@ -474,7 +476,7 @@ nav ul li a.active::after {
 }
 
 .about-section p {
-    letter-spacing: 0.032em;
+    letter-spacing: 0.028em;
 }
 
 .about-text h2:first-of-type {
@@ -516,6 +518,7 @@ nav ul li a.active::after {
 .contact-section p {
     margin-bottom: 40px;
     max-width: 600px;
+    letter-spacing: 0.028em;
 }
 
 .contact-info {
