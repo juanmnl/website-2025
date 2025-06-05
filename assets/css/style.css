@@ -351,6 +351,11 @@ nav ul li a.active::after {
     color: var(--secondary-color);
 }
 
+.gallery-section ul li a {
+    text-decoration: underline;
+    font-weight: 600;
+}
+
 
 /* 6. Case Study Page Specifics */
 .case-study {
