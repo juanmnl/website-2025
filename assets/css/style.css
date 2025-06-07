@@ -847,3 +847,8 @@ footer p {
     width: 80px;
     margin: 80px auto;
 }
+
+.article-hero {
+    margin: 0 auto;
+    height: 420px;
+}
