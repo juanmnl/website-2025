@@ -72,10 +72,26 @@
           <div class="case-study-section">
             <h3>The Challenge</h3>
             <p>
-              A powerful human rights platform had evolved organically over
-              years, resulting in inconsistent user interfaces, conflicting
-              interaction patterns, and fragmented workflows that hindered user
-              adoption and efficiency across different features.
+              Uwazi had grown organically over several years into a powerful
+              human rights documentation platform, but this evolution came at a
+              cost. What started as focused solutions for specific needs had
+              accumulated into a patchwork of inconsistent user interfaces,
+              conflicting interaction patterns, and fragmented workflows. Users
+              faced different navigation paradigms across features, inconsistent
+              visual hierarchies, and unpredictable interactions that forced
+              them to relearn the interface with each new section.
+            </p>
+
+            <p>
+              This inconsistency created significant barriers to user adoption,
+              particularly for new organizations trying to onboard their teams.
+              Experienced users found themselves constantly context-switching
+              between different interface paradigms, reducing their efficiency
+              and increasing cognitive load when they needed to focus on
+              critical human rights documentation work. The fragmented
+              experience was ultimately hindering the platform's mission of
+              empowering human rights organizations with accessible, powerful
+              tools.
             </p>
             <img
               src="../assets/images/uwazi/uwazi-map.png"
@@ -89,39 +105,45 @@
           <div class="case-study-section">
             <h3>My Process & Research</h3>
             <p>
-              This redesign didn't come out of the blue, after many months of
-              fixing details and improving interactions, the team decided it was
-              time for a complete remake of the interface. After some
-              brainstorming sessions, we agreed that the best approach was to
-              start from scratch the UI, with incremental implementation, and
-              build a new design system that would unify the user experience
-              across the platform.
+              This redesign emerged from necessity. After months of fixing
+              details and improving individual interactions, the team recognized
+              it was time for a complete interface overhaul. Through
+              collaborative brainstorming sessions, we agreed on a comprehensive
+              approach: rebuild the UI from scratch with incremental
+              implementation while establishing a unified design system across
+              the entire platform.
             </p>
             <p>
-              I initiated the project by conducting a comprehensive audit of the
-              existing interface, identifying inconsistencies in design
-              patterns, interaction flows, and user feedback. Concurrently, I
-              analyzed what other databases and documentation systems were doing
-              to identify best practices.
+              I initiated the project with a thorough audit of the existing
+              interface, cataloging inconsistencies in design patterns,
+              interaction flows, and gathering user feedback. Simultaneously, I
+              researched how other database and documentation systems approached
+              similar challenges to identify industry best practices.
             </p>
             <ul>
               <li>
-                <strong>User Interviews:</strong> Uncovered expectations vs.
-                reality.
+                <strong>User feedback:</strong> Revealed the gap between user
+                expectations and current reality.
               </li>
               <li>
-                <strong>Competitor Analysis:</strong> Studied best-in-class
-                usability patterns.
+                <strong>Competitor Analysis:</strong> Identified best-in-class
+                usability patterns across similar platforms.
               </li>
               <li>
-                <strong>Journey Mapping:</strong> Visualized all of the
-                frustrating user paths.
+                <strong>Journey Mapping:</strong> Documented frustrating user
+                paths and pain points.
               </li>
               <li>
-                <strong>Persona Development:</strong> Identified core user types
-                and their needs.
+                <strong>Persona Development:</strong> Defined core user types
+                and their specific needs.
               </li>
             </ul>
+            <p>
+              <strong>Key Challenge:</strong> We lacked proper handover
+              documentation from the previous designer, requiring me to recreate
+              all implemented UI screens, features, and states in Figma before
+              moving forward.
+            </p>
             <img
               src="../assets/images/uwazi/redesign-miro.png"
               alt="Miro board with UI pain points and proposed solutions"
@@ -147,31 +169,22 @@
             <p class="image-caption">
               Summary of the audit findings with key pain points.
             </p>
-          </div>
 
-          <div class="case-study-section">
-            <h3>Ideation & Design</h3>
-            <p>
-              Based manly on research and best practices, I led a series of
-              sessions to generate alignment and agreements with the team. We
-              focused on simplifying as much as possible the steps to take,
-              breaking down complex workflows into clear, actionable stages.
-              This allowed us to progress with confidence, reducing cognitive
-              load and minimizing errors.
+            <img
+              src="../assets/images/uwazi/old-library-empty.png"
+              alt="Implementation screen of the old library empty state"
+            />
+            <p class="image-caption">
+              Implementation screen of the old library empty state.
             </p>
-            <p>Key design decisions and constraints included:</p>
-            <ul>
-              <li>
-                Translate the current features 1:1 while hunting as many bugs as
-                possible.
-              </li>
-              <li>Improve the interaction between key worklfows.</li>
-              <li>Unify and reuse components.</li>
-              <li>
-                Generate a design system that would allow us to scale the UI and
-                add features without breaking the consistency.
-              </li>
-            </ul>
+
+            <img
+              src="../assets/images/uwazi/prev-pdf.png"
+              alt="Implementation screens of the old PDF UI"
+            />
+            <p class="image-caption">
+              Implementation screens of the old PDF UI.
+            </p>
 
             <img
               src="../assets/images/uwazi/prevFilters.png"
@@ -179,6 +192,38 @@
             />
             <p class="image-caption">
               Implementation of the previous filters UI.
+            </p>
+          </div>
+
+          <div class="case-study-section">
+            <h3>Ideation & Design</h3>
+            <p>
+              Grounded in research insights and industry best practices, I
+              facilitated alignment sessions with the team to establish our
+              design principles. Our focus was aggressive
+              simplification—breaking complex workflows into clear, actionable
+              stages to reduce cognitive load and minimize user errors.
+            </p>
+            <p><strong>Core Design Constraints:</strong></p>
+            <ul>
+              <li>
+                Translate existing features 1:1 while eliminating as many bugs
+                as possible.
+              </li>
+              <li>Improve interactions between key workflows.</li>
+              <li>Unify and standardize reusable components.</li>
+              <li>
+                Build a scalable design system for consistent future feature
+                additions.
+              </li>
+            </ul>
+
+            <p>
+              The design system introduced several key components including a
+              new table-based UI for consistency, drawer interfaces for focused
+              tasks, stepped modals for complex processes, and a Dynamic Action
+              Bar (DAB) that surfaces contextual actions based on user
+              interactions.
             </p>
 
             <img
@@ -191,20 +236,29 @@
             </p>
 
             <img
-              src="../assets/images/uwazi/prev-pdf.png"
-              alt="Implementation screens of the old PDF UI"
+              src="../assets/images/uwazi/drawer.png"
+              alt="High-fidelity mockups of the new drawer UI"
             />
             <p class="image-caption">
-              Implementation screens of the old PDF UI.
+              High-fidelity mockups of the new drawer UI.
             </p>
 
             <img
-              src="../assets/images/uwazi/new-pdf.png"
-              alt="High-fidelity mockups of the new PDF UI"
+              src="../assets/images/uwazi/px-extractor.png"
+              alt="High-fidelity mockups of the new stepped modal UI"
             />
             <p class="image-caption">
-              High-fidelity mockups of a new PDF UI with a more modern interface
-              and contextual navigation.
+              High-fidelity mockups of the new stepped modal UI.
+            </p>
+
+            <img
+              src="../assets/images/uwazi/dab.png"
+              alt="High-fidelity mockups of the new DAB (Dynamic Action Bar) component"
+            />
+            <p class="image-caption">
+              High-fidelity mockups of the new DAB (Dynamic Action Bar)
+              component, which allows us to introduce contextual actions for
+              users when interacting with elements.
             </p>
 
             <img
@@ -215,23 +269,28 @@
               High-fidelity mockups of the new Template list and template edit
               UI.
             </p>
+          </div>
 
-            <img
-              src="../assets/images/uwazi/comp-rels.png"
-              alt="Side by side comparison of the old implementation and new components for relationships UI"
-            />
-            <p class="image-caption">
-              Side by side comparison of the old imlementation and new
-              components for relationships UI.
+          <div class="case-study-section">
+            <h3>Testing & Iteration</h3>
+            <p>
+              Our approach emphasized continuous refinement based on real-world
+              usage patterns rather than formal testing protocols. Through
+              iterative releases, we adjusted interface elements and workflows
+              to better align with how human rights organizations actually
+              manage complex documentation. Each iteration built upon previous
+              improvements, allowing us to fine-tune the experience while
+              maintaining system stability for organizations depending on the
+              platform daily.
             </p>
 
             <img
-              src="../assets/images/uwazi/query-builder.png"
-              alt="Conceptual mockup of the new relationship v2 property and its query builder UI"
+              src="../assets/images/uwazi/comp-settings.png"
+              alt="Side by side comparison of the unified table-based UI for settings"
             />
             <p class="image-caption">
-              Conceptual mockup of the new relationship v2 property and its
-              query builder UI.
+              Side by side comparison of the unified table-based UI for
+              settings.
             </p>
 
             <img
@@ -244,59 +303,102 @@
             </p>
 
             <img
-              src="../assets/images/uwazi/text-refs.png"
-              alt="New Text References UI mockup"
+              src="../assets/images/uwazi/comp-rels.png"
+              alt="Side by side comparison of the old implementation and new components for relationships UI"
             />
             <p class="image-caption">
-              Additive Text References UI mockup, allowing users to highlight
-              overlapping pieces of text, and link documents and other resources
-              directly within those field selections.
-            </p>
-          </div>
-
-          <div class="case-study-section">
-            <h3>Testing & Iteration</h3>
-            <p>
-              We conducted unmoderated usability tests with 15 participants
-              using a clickable Figma prototype. Key findings led to iterative
-              improvements, such as refining microcopy and adjusting the
-              placement of critical information.
-            </p>
-            <video
-              controls
-              src="../assets/images/project1-prototype-demo.mp4"
-              alt="Video demonstration of the interactive prototype"
-            ></video>
-            <p class="image-caption">
-              Clickable prototype used for usability testing.
+              Side by side comparison of the old and new components for
+              navigating a complex system of data relationships.
             </p>
           </div>
 
           <div class="case-study-section">
             <h3>The Solution & Impact</h3>
             <p>
-              The new onboarding flow significantly improved user activation. We
-              observed a
-              <strong>25% increase in successful account setups</strong> within
-              the first month post-launch, exceeding our initial goal.
-              Qualitative feedback indicated users found the process much more
-              intuitive and less intimidating.
+              The redesign introduced intuitive navigation, streamlined
+              workflows, and modern interface elements that significantly
+              reduced cognitive load for users managing complex data and
+              documentation. By standardizing components and creating
+              predictable user flows, the new interface dramatically improved
+              onboarding for new organizations while increasing efficiency for
+              existing users. The modernized platform enabled human rights
+              organizations to focus on their critical work rather than
+              wrestling with inconsistent tools.
             </p>
             <img
-              src="../assets/images/project1-final-solution.jpg"
-              alt="Final polished UI of the new onboarding flow"
+              src="../assets/images/uwazi/library-empty-state.png"
+              alt="New empty state and onboarding UI for the library"
             />
-            <p class="image-caption">The final redesigned onboarding flow.</p>
+            <p class="image-caption">
+              New empty state and onboarding UI for the library.
+            </p>
+            <img
+              src="../assets/images/uwazi/library-cards.png"
+              alt="New library cards UI with improved information hierarchy"
+            />
+            <p class="image-caption">
+              New library cards UI with improved information hierarchy.
+            </p>
+            <img
+              src="../assets/images/uwazi/new-pdf.png"
+              alt="High-fidelity mockups of the new PDF UI"
+            />
+            <p class="image-caption">
+              High-fidelity mockups of the new PDF UI with a modern interface
+              and contextual actions and navigation.
+            </p>
           </div>
 
           <div class="case-study-section">
             <h3>Learnings & Next Steps</h3>
             <p>
-              This project reinforced the importance of continuous user
-              feedback. We learned that even small changes in microcopy can have
-              a significant impact on user understanding. Future iterations
-              would involve A/B testing different call-to-action button styles.
+              This project reinforced the importance of gradual, user-centered
+              transformation when redesigning complex systems that organizations
+              depend on daily. I learned that achieving design consistency
+              across dozens of features requires careful prioritization and
+              constant user feedback to avoid disrupting established workflows.
             </p>
+
+            <p>
+              Moving forward, the design system foundation we built enables
+              rapid iteration on new features while maintaining the cohesive
+              experience users now expect. The new interface structure allows us
+              to add features without the complexity of redesigning inconsistent
+              patterns each time—a foundation that will serve the platform's
+              evolution for years to come.
+            </p>
+
+            <img
+              src="../assets/images/uwazi/text-refs.png"
+              alt="Concept for the new text References UI"
+            />
+            <p class="image-caption">
+              Concept for additive Text References UI, allowing users to
+              highlight overlapping pieces of text, and link documents and other
+              resources directly within those field selections.
+            </p>
+
+            <img
+              src="../assets/images/uwazi/query-builder.png"
+              alt="Conceptual mockup of the new relationship v2 property and its query builder UI"
+            />
+            <p class="image-caption">
+              Conceptual mockup of the new relationship v2 property and the
+              query builder UI.
+            </p>
+
+            <p>
+              This represents just a fraction of the comprehensive redesign
+              effort. Beyond the implemented features shown here, extensive
+              conceptual design work explored new usability patterns and
+              interaction paradigms that would further enhance the platform's
+              accessibility and power. These explorations laid the groundwork
+              for future innovations while ensuring the design system could
+              accommodate evolving user needs and emerging technologies in the
+              human rights documentation space.
+            </p>
+
+            <img class="firma" src="../assets/images/firma.png" />
           </div>
 
           <div class="project-navigation">

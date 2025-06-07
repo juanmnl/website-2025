@@ -841,3 +841,9 @@ footer p {
         gap: 20px;
     }
 }
+
+
+.firma {
+    width: 80px;
+    margin: 80px auto;
+}
