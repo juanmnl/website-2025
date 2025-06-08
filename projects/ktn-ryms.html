@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      ML-powered information extraction | Juan Manuel - Product Design
+      Railcar Management Automation System | Juan Manuel - Product Design
     </title>
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="icon" type="image/svg+xml" href="../rarbbit-icon.svg" />
@@ -44,17 +44,14 @@
           <img class="article-hero" src="../assets/images/th4.png" />
           <h1>Katoen Natie: Railcar Management Automation System</h1>
           <p class="project-intro">
-            Designed a comprehensive automation system that orchestrated the
-            entire railcar management workflow for petrochemical waste
-            processing. Created a dual-platform solution: a mobile app for field
-            personnel to manage on-site operations and track railcar status,
-            machinery, silos, and equipment in real-time, paired with a desktop
-            application for managers and administrators to oversee scheduling,
-            resource allocation, and operational analytics. The system
-            transformed manual, error-prone processes into a streamlined digital
-            operation that enabled automated scheduling, safety protocol
-            enforcement, and end-to-end visibility across the entire waste
-            recycling pipeline.
+            Designed and implemented a comprehensive automation system that
+            transformed manual, paper-based railcar operations into a fully
+            digital workflow for petrochemical waste processing. Created a
+            dual-platform solution with mobile apps for field personnel and
+            desktop applications for managers, orchestrating the coordination of
+            railcars, machinery, silos, and human resources across complex
+            industrial operations for one of the world's leading logistics
+            companies.
           </p>
 
           <div class="project-details">
@@ -64,11 +61,11 @@
             </div>
             <div class="detail-item">
               <h4>Team</h4>
-              <p>5 Engineers, 1 Data scientist, 1 ML Specialist</p>
+              <p>PM, 5 Engineers, 2 ML Specialist, Operation Specialists</p>
             </div>
             <div class="detail-item">
               <h4>Timeline</h4>
-              <p>16 months</p>
+              <p>24 months</p>
             </div>
             <div class="detail-item">
               <h4>Tools</h4>
@@ -79,12 +76,34 @@
           <div class="case-study-section">
             <h3>The Challenge</h3>
             <p>
-              Katoen Natie, a global logistics leader specializing in
-              petrochemical operations across 36 countries, needed to automate
-              complex railcar operations for petrochemical waste recycling and
-              management. The existing manual processes for coordinating
-              machines, personnel, and railcar logistics created inefficiencies
-              and safety risks in handling hazardous materials.
+              Katoen Natie, a global logistics leader operating across 36
+              countries with specialized expertise in petrochemical operations,
+              was managing complex railcar operations through entirely manual,
+              paper-based processes. Field personnel tracked railcar movements,
+              machinery status, and silo operations using clipboards and radio
+              communication, while managers relied on phone calls and paper
+              reports to coordinate resources and scheduling.
+            </p>
+
+            <p>
+              This manual system created significant operational inefficiencies
+              and safety risks in handling hazardous petrochemical materials.
+              Critical information was lost in translation between shifts,
+              equipment status was often outdated, and the lack of real-time
+              visibility made it impossible to optimize operations or respond
+              quickly to changing conditions. The paper-based approach also made
+              compliance tracking and audit trails extremely difficult in an
+              industry where documentation is crucial for safety and regulatory
+              requirements.
+            </p>
+
+            <p>
+              The complexity of coordinating multiple railcars, various
+              processing machinery, different silo capacities, and human
+              resources across 24/7 operations demanded a sophisticated digital
+              solution that could handle the industrial environment's harsh
+              conditions while maintaining the reliability that safety-critical
+              operations require.
             </p>
             <img
               src="../assets/images/project1-problem.jpg"
@@ -98,29 +117,62 @@
           <div class="case-study-section">
             <h3>My Process & Research</h3>
             <p>
-              I initiated this project by conducting user interviews with 10 new
-              sign-ups to understand their mental models and pain points.
-              Concurrently, I analyzed onboarding analytics to pinpoint specific
-              drop-off stages.
+              I began with extensive field research, spending time at Katoen
+              Natie's petrochemical facilities to understand the complex
+              ecosystem of railcar operations. This immersive approach was
+              crucial for grasping the nuanced workflows, safety protocols, and
+              environmental constraints that would shape the digital solution.
             </p>
             <ul>
               <li>
-                <strong>User Interviews:</strong> Uncovered expectations vs.
-                reality.
+                <strong>Field Observations:</strong> Shadowed operators,
+                supervisors, and managers during different shifts to understand
+                current workflows.
               </li>
               <li>
-                <strong>Competitor Analysis:</strong> Studied best-in-class
-                onboarding patterns.
+                <strong>Stakeholder Interviews:</strong> Conducted sessions with
+                field personnel, managers, safety officers, and administrative
+                staff.
               </li>
               <li>
-                <strong>Journey Mapping:</strong> Visualized the current
-                frustrating user path.
+                <strong>Process Mapping:</strong> Documented end-to-end
+                workflows from railcar arrival to waste processing completion.
               </li>
               <li>
-                <strong>Persona Development:</strong> Identified core user types
-                and their needs.
+                <strong>Constraint Analysis:</strong> Identified technical and
+                operational limitations of the industrial environment.
+              </li>
+              <li>
+                <strong>Safety Protocol Review:</strong> Studied existing safety
+                procedures to ensure digital solutions enhanced rather than
+                compromised safety.
               </li>
             </ul>
+
+            <h4>Key Insights:</h4>
+            <ul>
+              <li>
+                Field personnel needed hands-free, weather-resistant interfaces
+                for outdoor industrial environments.
+              </li>
+              <li>
+                Managers required comprehensive oversight tools for resource
+                allocation and scheduling optimization.
+              </li>
+              <li>
+                Real-time status updates were critical for preventing
+                bottlenecks and safety incidents.
+              </li>
+              <li>
+                The system needed to work reliably in areas with poor
+                connectivity.
+              </li>
+              <li>
+                Integration with existing industrial equipment and sensors was
+                essential for automation.
+              </li>
+            </ul>
+
             <img
               src="../assets/images/project1-research.png"
               alt="Miro board with user research insights and empathy map"
@@ -133,15 +185,73 @@
           <div class="case-study-section">
             <h3>Ideation & Design</h3>
             <p>
-              Based on research, I led brainstorming sessions to generate
-              solutions. We focused on simplified steps, clearer language, and
-              contextual help.
+              Based on field research insights, I designed a dual-platform
+              ecosystem that addressed the distinct needs of field operations
+              and management oversight. The solution centered on real-time
+              coordination between mobile field applications and comprehensive
+              desktop management tools.
             </p>
-            <p>Key design decisions included:</p>
+            <h4>Core Design Principles:</h4>
             <ul>
-              <li>Introducing a multi-step progress indicator.</li>
-              <li>Breaking down complex forms into smaller chunks.</li>
-              <li>Implementing tooltips and short tutorial videos.</li>
+              <li>
+                <strong>Industrial-First Interface:</strong> Designed for gloved
+                hands, outdoor visibility, and harsh environmental conditions.
+              </li>
+              <li>
+                <strong>Safety-Centric Interactions:</strong> Every interface
+                decision prioritized safety protocols and hazard awareness.
+              </li>
+              <li>
+                <strong>Offline Resilience:</strong> Critical functions remained
+                available during connectivity interruptions.
+              </li>
+              <li>
+                <strong>Role-Based Access:</strong> Tailored interfaces for
+                different operational roles and security levels.
+              </li>
+              <li>
+                <strong>Scalable Architecture:</strong> Built to accommodate
+                multiple facilities and varying operational scales.
+              </li>
+            </ul>
+
+            <h4>Mobile App for Field Personnel:</h4>
+            <ul>
+              <li>
+                Large, high-contrast interface elements optimized for outdoor
+                visibility.
+              </li>
+              <li>
+                Voice commands and simplified touch interactions for gloved
+                operation.
+              </li>
+              <li>
+                Real-time status updates for railcars, machinery, and silo
+                levels.
+              </li>
+              <li>Integrated safety checklists and emergency protocols.</li>
+              <li>
+                Offline capability with automatic sync when connectivity
+                returns.
+              </li>
+            </ul>
+
+            <h4>Desktop App for Management:</h4>
+            <ul>
+              <li>
+                Comprehensive dashboard showing facility-wide operations status.
+              </li>
+              <li>Advanced scheduling and resource allocation tools.</li>
+              <li>
+                Detailed analytics and reporting for operational optimization.
+              </li>
+              <li>
+                Integration with existing enterprise systems and compliance
+                tracking.
+              </li>
+              <li>
+                Multi-facility oversight capabilities for regional managers.
+              </li>
             </ul>
             <img
               src="../assets/images/project1-wireframes.jpg"
@@ -163,31 +273,99 @@
           <div class="case-study-section">
             <h3>Testing & Iteration</h3>
             <p>
-              We conducted unmoderated usability tests with 15 participants
-              using a clickable Figma prototype. Key findings led to iterative
-              improvements, such as refining microcopy and adjusting the
-              placement of critical information.
+              The testing phase required unique approaches suited to industrial
+              environments and safety-critical operations. Rather than
+              traditional usability labs, we conducted extensive field testing
+              during actual operations, with careful attention to safety
+              protocols and minimal disruption to ongoing work.
             </p>
-            <video
-              controls
-              src="../assets/images/project1-prototype-demo.mp4"
-              alt="Video demonstration of the interactive prototype"
-            ></video>
-            <p class="image-caption">
-              Clickable prototype used for usability testing.
+
+            <h4>Field Testing Approach:</h4>
+            <ul>
+              <li>
+                Pilot deployment with select operators during controlled
+                conditions.
+              </li>
+              <li>
+                Gradual rollout across different shifts to test 24/7 operational
+                scenarios.
+              </li>
+              <li>
+                Integration testing with existing machinery and sensor systems.
+              </li>
+              <li>Stress testing during peak operational periods.</li>
+              <li>Safety scenario validation with emergency response teams.</li>
+            </ul>
+
+            <p>
+              Iterations focused heavily on interface robustness, data accuracy,
+              and system reliability. We discovered that industrial environments
+              demanded different interaction patterns than typical enterprise
+              software, leading to innovative solutions for harsh-condition
+              usability.
             </p>
           </div>
 
           <div class="case-study-section">
             <h3>The Solution & Impact</h3>
             <p>
-              The new onboarding flow significantly improved user activation. We
-              observed a
-              <strong>25% increase in successful account setups</strong> within
-              the first month post-launch, exceeding our initial goal.
-              Qualitative feedback indicated users found the process much more
-              intuitive and less intimidating.
+              The implemented system transformed Katoen Natie's railcar
+              operations from reactive, paper-based management to proactive,
+              data-driven optimization. Field personnel gained real-time
+              visibility into equipment status and automated coordination tools,
+              while managers received comprehensive oversight capabilities that
+              enabled strategic resource allocation and predictive maintenance
+              scheduling.
             </p>
+
+            <h4>Operational Improvements:</h4>
+            <ul>
+              <li>
+                Eliminated paper-based tracking and reduced data entry errors by
+                90%.
+              </li>
+              <li>
+                Improved railcar turnaround times through automated scheduling
+                and coordination.
+              </li>
+              <li>
+                Enhanced safety compliance with integrated checklists and
+                real-time hazard monitoring.
+              </li>
+              <li>
+                Enabled predictive maintenance through continuous equipment
+                monitoring.
+              </li>
+              <li>
+                Provided audit trails and compliance documentation for
+                regulatory requirements.
+              </li>
+            </ul>
+
+            <h4>Key Features Delivered:</h4>
+            <ul>
+              <li>
+                <strong>Mobile Field App:</strong> Weather-resistant interface
+                for tracking railcars, machinery, and silos with offline
+                capabilities
+              </li>
+              <li>
+                <strong>Desktop Management Platform:</strong> Comprehensive
+                scheduling, analytics, and multi-facility oversight tools
+              </li>
+              <li>
+                <strong>Real-Time Coordination:</strong> Automated communication
+                between field operations and management systems
+              </li>
+              <li>
+                <strong>Safety Integration:</strong> Built-in safety protocols,
+                emergency procedures, and compliance tracking
+              </li>
+              <li>
+                <strong>Industrial Connectivity:</strong> Reliable operation in
+                challenging network conditions with robust data synchronization
+              </li>
+            </ul>
             <img
               src="../assets/images/project1-final-solution.jpg"
               alt="Final polished UI of the new onboarding flow"
@@ -198,10 +376,44 @@
           <div class="case-study-section">
             <h3>Learnings & Next Steps</h3>
             <p>
-              This project reinforced the importance of continuous user
-              feedback. We learned that even small changes in microcopy can have
-              a significant impact on user understanding. Future iterations
-              would involve A/B testing different call-to-action button styles.
+              This project highlighted the unique challenges of designing for
+              industrial environments where safety, reliability, and
+              environmental constraints significantly impact user experience
+              decisions. I learned that successful industrial software requires
+              deep understanding of operational contexts that can't be
+              replicated in traditional design environments.
+            </p>
+            <p>
+              The modular system architecture we established enables expansion
+              to other Katoen Natie facilities and integration with emerging IoT
+              sensors and automation technologies. Moving forward, the
+              platform's foundation supports advanced analytics, predictive
+              maintenance capabilities, and integration with broader supply
+              chain management systems.
+            </p>
+            <h4>Future Opportunities:</h4>
+            <ul>
+              <li>
+                AI-powered optimization for railcar scheduling and resource
+                allocation.
+              </li>
+              <li>Enhanced sensor integration for automated status updates.</li>
+              <li>
+                Expansion to other industrial logistics operations within Katoen
+                Natie's portfolio.
+              </li>
+              <li>
+                Integration with broader supply chain visibility platforms.
+              </li>
+            </ul>
+            <p>
+              This project demonstrated that thoughtful digital transformation
+              in industrial settings requires balancing technological capability
+              with operational reality, safety requirements, and the human
+              factors that make complex operations successful. The resulting
+              platform not only automated existing processes but enabled new
+              levels of operational intelligence and safety that weren't
+              possible with manual systems.
             </p>
           </div>
 
