@@ -850,5 +850,5 @@ footer p {
 
 .article-hero {
     margin: 0 auto;
-    height: 420px;
+    max-height: 420px;
 }
