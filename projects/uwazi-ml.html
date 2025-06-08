@@ -49,7 +49,7 @@
             process thousands of documents without technical expertise. Created
             interfaces for reviewing, accepting, and discarding AI-extracted
             information, transforming a complex technical process into
-            streamlined interactions that help organizations scale their
+            streamlined screens that help organizations scale their
             documentation efforts.
           </p>
 
@@ -60,96 +60,135 @@
             </div>
             <div class="detail-item">
               <h4>Team</h4>
-              <p>CTO, 6 Engineers, 2 ML Specialist</p>
+              <p>CTO, ML Engineer, 5 Engineers</p>
             </div>
             <div class="detail-item">
               <h4>Timeline</h4>
-              <p>24 months</p>
+              <p>14 months</p>
             </div>
             <div class="detail-item">
               <h4>Tools</h4>
-              <p>Figma, Miro</p>
+              <p>Figma, Miro, Document analysis tools</p>
             </div>
           </div>
 
           <div class="case-study-section">
             <h3>The Challenge</h3>
             <p>
-              A powerful human rights platform had evolved organically over
-              years, resulting in inconsistent user interfaces, conflicting
-              interaction patterns, and fragmented workflows that hindered user
-              adoption and efficiency across different features.
+              Human rights organizations needed to process thousands of
+              documents for evidence extraction, but machine learning tools were
+              too complex and technical for non-technical users to operate
+              effectively. Organizations were drowning in documentation—legal
+              briefs, witness testimonies, government reports, and media
+              coverage—but lacked the technical resources to leverage AI for
+              systematic information extraction.
+            </p>
+            <p>
+              The existing approach required either hiring expensive technical
+              specialists or manually reading through every document, creating
+              an impossible bottleneck for organizations working on
+              time-sensitive human rights cases. The challenge was designing an
+              interface that made sophisticated AI capabilities accessible to
+              domain experts without technical backgrounds, while maintaining
+              the precision and reliability that human rights work demands.
             </p>
             <img
-              src="../assets/images/project1-problem.jpg"
-              alt="Screenshot of old onboarding flow highlighting drop-off points"
+              src="../assets/images/ml-problem.jpg"
+              alt="Screenshot showing manual document processing workflow"
             />
             <p class="image-caption">
-              Initial user flow showing high friction points.
+              Manual document processing creating bottlenecks for human rights
+              organizations.
             </p>
           </div>
 
           <div class="case-study-section">
             <h3>My Process & Research</h3>
             <p>
-              I initiated this project by conducting user interviews with 10 new
-              sign-ups to understand their mental models and pain points.
-              Concurrently, I analyzed onboarding analytics to pinpoint specific
-              drop-off stages.
+              I approached this project by building on our existing deep
+              knowledge of how human rights organizations use Uwazi. Rather than
+              extensive field research, I focused on understanding the specific
+              technical and workflow challenges of integrating machine learning
+              into established documentation processes.
             </p>
             <ul>
               <li>
-                <strong>User Interviews:</strong> Uncovered expectations vs.
-                reality.
+                <strong>Internal User Data Analysis:</strong> Leveraged existing
+                usage patterns and feedback from Uwazi's user base.
               </li>
               <li>
-                <strong>Competitor Analysis:</strong> Studied best-in-class
-                onboarding patterns.
+                <strong>Technical Feasibility Study:</strong> Worked closely
+                with ML engineers to understand AI capabilities and constraints.
               </li>
               <li>
-                <strong>Journey Mapping:</strong> Visualized the current
-                frustrating user path.
+                <strong>Competitive Analysis:</strong> Studied existing AI tools
+                and document processing platforms to identify usability gaps.
               </li>
               <li>
-                <strong>Persona Development:</strong> Identified core user types
-                and their needs.
+                <strong>Workflow Integration Planning:</strong> Analyzed how ML
+                extraction could enhance rather than disrupt existing Uwazi
+                workflows.
+              </li>
+              <li>
+                <strong>Incremental Testing:</strong> Used experimental features
+                and prototypes to validate concepts with current users.
               </li>
             </ul>
             <img
-              src="../assets/images/project1-research.png"
-              alt="Miro board with user research insights and empathy map"
+              src="../assets/images/ml-research.png"
+              alt="Miro board showing competitive analysis and workflow mapping"
             />
             <p class="image-caption">
-              Key insights from user interviews and persona development.
+              Competitive analysis and workflow integration planning.
             </p>
           </div>
 
           <div class="case-study-section">
             <h3>Ideation & Design</h3>
             <p>
-              Based on research, I led brainstorming sessions to generate
-              solutions. We focused on simplified steps, clearer language, and
-              contextual help.
+              Based on our existing understanding of Uwazi users and competitive
+              research insights, I designed experimental workflows that
+              transformed machine learning from a black box into a collaborative
+              partner. The approach was highly iterative, with each design
+              building incrementally on user feedback and technical learnings.
             </p>
-            <p>Key design decisions included:</p>
+
+            <h4>Key Features:</h4>
             <ul>
-              <li>Introducing a multi-step progress indicator.</li>
-              <li>Breaking down complex forms into smaller chunks.</li>
-              <li>Implementing tooltips and short tutorial videos.</li>
+              <li>
+                <strong>Intuitive Training Interface:</strong> Drag-and-drop and
+                highlighting workflows for teaching AI models.
+              </li>
+              <li>
+                <strong>Smart Review Flows:</strong> Streamlined interfaces for
+                validating and correcting AI suggestions.
+              </li>
+              <li>
+                <strong>Batch Processing Tools:</strong> Efficient management of
+                large document sets with progress tracking.
+              </li>
+              <li>
+                <strong>Information Organization:</strong> Structured data
+                output that integrates with case-building workflows.
+              </li>
+              <li>
+                <strong>Model Management:</strong> Simple tools for saving,
+                sharing, and improving AI models across cases.
+              </li>
             </ul>
             <img
-              src="../assets/images/project1-wireframes.jpg"
-              alt="Low-fidelity wireframes showing new onboarding screens"
+              src="../assets/images/ml-wireframes.jpg"
+              alt="Low-fidelity wireframes showing AI training interface concepts"
             />
             <p class="image-caption">
-              Early wireframes exploring new flow variations.
+              Early wireframes exploring AI training interface concepts.
             </p>
             <img
-              src="../assets/images/project1-hifi.png"
-              alt="High-fidelity mockups of new onboarding screens"
+              src="../assets/images/ml-hifi.png"
+              alt="High-fidelity mockups of ML extraction workflows"
             />
             <p class="image-caption">
-              High-fidelity designs showcasing the simplified onboarding
+              High-fidelity designs showcasing the collaborative AI training
               experience.
             </p>
           </div>
@@ -157,50 +196,92 @@
           <div class="case-study-section">
             <h3>Testing & Iteration</h3>
             <p>
-              We conducted unmoderated usability tests with 15 participants
-              using a clickable Figma prototype. Key findings led to iterative
-              improvements, such as refining microcopy and adjusting the
-              placement of critical information.
+              The testing approach was inherently experimental and incremental,
+              leveraging Uwazi's existing user base for rapid feedback cycles.
+              Rather than formal usability testing, we deployed features
+              gradually to gather real-world usage data and iterate based on
+              actual organizational needs.
             </p>
-            <video
-              controls
-              src="../assets/images/project1-prototype-demo.mp4"
-              alt="Video demonstration of the interactive prototype"
-            ></video>
+            <img
+              src="../assets/images/ml-testing.jpg"
+              alt="Screenshots showing before and after AI suggestion interfaces"
+            />
             <p class="image-caption">
-              Clickable prototype used for usability testing.
+              Iterative improvements to AI suggestion clarity and user
+              confidence.
             </p>
           </div>
 
           <div class="case-study-section">
             <h3>The Solution & Impact</h3>
             <p>
-              The new onboarding flow significantly improved user activation. We
-              observed a
-              <strong>25% increase in successful account setups</strong> within
-              the first month post-launch, exceeding our initial goal.
-              Qualitative feedback indicated users found the process much more
-              intuitive and less intimidating.
+              The implemented system transformed how human rights organizations
+              approach large-scale document analysis. Users without technical
+              backgrounds successfully trained AI models to extract relevant
+              information from their specific document types, dramatically
+              reducing the time required for evidence gathering while
+              maintaining accuracy standards.
+            </p>
+            <p>
+              The foundation we built enables more sophisticated AI capabilities
+              while maintaining the accessible interface paradigm. The system
+              now supports organizations in handling larger case loads and
+              finding evidence more systematically than ever before.
             </p>
             <img
-              src="../assets/images/project1-final-solution.jpg"
-              alt="Final polished UI of the new onboarding flow"
+              src="../assets/images/ml-final-solution.jpg"
+              alt="Final ML extraction interface showing successful document processing"
             />
-            <p class="image-caption">The final redesigned onboarding flow.</p>
+            <p class="image-caption">
+              The final ML-powered information extraction workflow.
+            </p>
           </div>
 
           <div class="case-study-section">
             <h3>Learnings & Next Steps</h3>
             <p>
-              This project reinforced the importance of continuous user
-              feedback. We learned that even small changes in microcopy can have
-              a significant impact on user understanding. Future iterations
-              would involve A/B testing different call-to-action button styles.
+              This project demonstrated that successful AI democratization
+              requires designing for domain expertise rather than technical
+              proficiency. I learned that users' mental models of AI
+              capabilities significantly impact their trust and effective use of
+              machine learning tools.
             </p>
+
+            <h4>Future Opportunities:</h4>
+            <ul>
+              <li>
+                Automated document classification and routing based on content
+                type
+              </li>
+              <li>
+                Integration with external legal and news databases for
+                comprehensive case building
+              </li>
+              <li>
+                Collaborative AI training across multiple human rights
+                organizations
+              </li>
+              <li>
+                Advanced visualization tools for understanding patterns across
+                large document collections
+              </li>
+            </ul>
+
+            <p>
+              This project reinforced that the most powerful AI tools are those
+              that amplify human expertise rather than replace it, requiring
+              interface design that makes sophisticated technology feel like a
+              natural extension of existing professional workflows.
+            </p>
+
+            <br />
+            <h4>Huridocs | 2021-2025</h4>
+
+            <img class="firma" src="../assets/images/firma.png" />
           </div>
 
           <div class="project-navigation">
-            <a href="uwazi-preserve.html" class="button">Next Project &rarr;</a>
+            <a href="preserve.html" class="button">Next Project &rarr;</a>
             <a href="../index.html" class="button secondary"
               >&larr; Back to Work</a
             >
