@@ -40,15 +40,15 @@
       <article class="case-study">
         <div class="container">
           <img class="article-hero" src="../assets/images/th3.png" />
-          <h1>Preserve Browser Extension</h1>
+          <h1>Preserve: Evidence Collection for the Web</h1>
           <p class="project-intro">
-            Designed a browser extension that captures tamper-proof evidence
-            from web content, social media posts, and online articles for legal
-            proceedings. Solved the unique UX challenge of creating seamless
-            evidence collection workflows within browser constraints, ensuring
-            captured content maintains legal integrity while remaining
-            user-friendly for human rights investigators and legal
-            professionals.
+            Designed a browser extension integrated with Uwazi that captures
+            tamper-proof evidence from web content, social media posts, and
+            online articles for legal proceedings. Solved the unique UX
+            challenge of creating seamless evidence collection workflows within
+            browser constraints, ensuring captured content maintains legal
+            integrity while remaining user-friendly for human rights
+            investigators and legal professionals.
           </p>
 
           <div class="project-details">
@@ -58,25 +58,39 @@
             </div>
             <div class="detail-item">
               <h4>Team</h4>
-              <p>2 Engineers</p>
+              <p>PM, 2 Engineers (Alpha), Solo Design (V1.0)</p>
             </div>
             <div class="detail-item">
               <h4>Timeline</h4>
-              <p>8 weeks</p>
+              <p>1 month (Alpha development) + 2 months (V1 design)</p>
             </div>
             <div class="detail-item">
               <h4>Tools</h4>
-              <p>Figma, Miro</p>
+              <p>Figma, Browser DevTools</p>
             </div>
           </div>
 
           <div class="case-study-section">
             <h3>The Challenge</h3>
             <p>
-              Legal professionals and investigators needed a way to capture
-              online evidence that would be admissible in court, requiring
-              tamper-proof collection while maintaining ease of use within the
-              constraints of browser environments.
+              Legal professionals and human rights investigators needed a
+              reliable way to capture online evidence that would be admissible
+              in court, with seamless integration into their existing Uwazi
+              documentation workflows. Traditional screenshot methods and manual
+              documentation lacked the cryptographic verification required for
+              legal proceedings, while existing tools were either too technical
+              for non-technical users or failed to provide the tamper-proof
+              guarantees that legal contexts demand.
+            </p>
+            <p>
+              The challenge was designing an evidence collection workflow that
+              operated seamlessly within browser environments while maintaining
+              direct integration with Uwazi's documentation platform. Users
+              needed to capture not just visual content, but also metadata,
+              timestamps, and source verification—all while working within the
+              constraints of browser extension architecture and ensuring
+              captured evidence automatically synced with their ongoing human
+              rights cases.
             </p>
             <img
               src="../assets/images/project1-problem.jpg"
@@ -90,27 +104,29 @@
           <div class="case-study-section">
             <h3>My Process & Research</h3>
             <p>
-              I initiated this project by conducting user interviews with 10 new
-              sign-ups to understand their mental models and pain points.
-              Concurrently, I analyzed onboarding analytics to pinpoint specific
-              drop-off stages.
+              I collaborated closely with legal experts and human rights
+              investigators to understand the specific requirements for
+              admissible digital evidence. This involved studying legal
+              precedents, understanding chain-of-custody requirements, and
+              identifying the most common types of online content that require
+              preservation.
             </p>
             <ul>
               <li>
-                <strong>User Interviews:</strong> Uncovered expectations vs.
-                reality.
+                <strong>Legal Requirements:</strong> Studied evidence
+                admissibility standards and tamper-proof verification needs.
               </li>
               <li>
-                <strong>Competitor Analysis:</strong> Studied best-in-class
-                onboarding patterns.
+                <strong>User Workflows:</strong> Mapped how investigators
+                currently collect and document online evidence.
               </li>
               <li>
-                <strong>Journey Mapping:</strong> Visualized the current
-                frustrating user path.
+                <strong>Technical Constraints:</strong> Explored browser
+                extension limitations and security considerations.
               </li>
               <li>
-                <strong>Persona Development:</strong> Identified core user types
-                and their needs.
+                <strong>Content Types:</strong> Analyzed various online content
+                formats requiring preservation.
               </li>
             </ul>
             <img
@@ -125,15 +141,36 @@
           <div class="case-study-section">
             <h3>Ideation & Design</h3>
             <p>
-              Based on research, I led brainstorming sessions to generate
-              solutions. We focused on simplified steps, clearer language, and
-              contextual help.
+              The extension design prioritized simplicity and reliability,
+              enabling users to capture evidence with minimal technical
+              knowledge while ensuring maximum legal integrity. The interface
+              focused on clear visual feedback and straightforward interactions
+              that work consistently across different websites and content
+              types.
             </p>
-            <p>Key design decisions included:</p>
+
+            <h4>Key Features:</h4>
             <ul>
-              <li>Introducing a multi-step progress indicator.</li>
-              <li>Breaking down complex forms into smaller chunks.</li>
-              <li>Implementing tooltips and short tutorial videos.</li>
+              <li>
+                <strong>One-Click Capture:</strong> Simple interface for
+                capturing web pages, posts, and multimedia content.
+              </li>
+              <li>
+                <strong>Uwazi Integration:</strong>Direct sync with existing
+                Uwazi documentation workflows and case management.
+              </li>
+              <li>
+                <strong>Cryptographic Verification:</strong> Automatic
+                generation of tamper-proof certificates and metadata.
+              </li>
+              <li>
+                <strong>Chain of Custody:</strong> Built-in documentation for
+                legal trail requirements.
+              </li>
+              <li>
+                <strong>Cross-Platform Compatibility:</strong> Consistent
+                experience across different browsers and websites.
+              </li>
             </ul>
             <img
               src="../assets/images/project1-wireframes.jpg"
@@ -153,32 +190,20 @@
           </div>
 
           <div class="case-study-section">
-            <h3>Testing & Iteration</h3>
-            <p>
-              We conducted unmoderated usability tests with 15 participants
-              using a clickable Figma prototype. Key findings led to iterative
-              improvements, such as refining microcopy and adjusting the
-              placement of critical information.
-            </p>
-            <video
-              controls
-              src="../assets/images/project1-prototype-demo.mp4"
-              alt="Video demonstration of the interactive prototype"
-            ></video>
-            <p class="image-caption">
-              Clickable prototype used for usability testing.
-            </p>
-          </div>
-
-          <div class="case-study-section">
             <h3>The Solution & Impact</h3>
             <p>
-              The new onboarding flow significantly improved user activation. We
-              observed a
-              <strong>25% increase in successful account setups</strong> within
-              the first month post-launch, exceeding our initial goal.
-              Qualitative feedback indicated users found the process much more
-              intuitive and less intimidating.
+              This project demonstrated the importance of designing for
+              specialized, high-stakes use cases where user experience must
+              balance simplicity with technical precision. Working within
+              browser extension constraints while meeting legal requirements
+              provided unique insights into designing for regulated industries
+              and mission-critical applications.
+            </p>
+            <p>
+              The alpha validation confirmed that thoughtful UX design can make
+              complex legal-technical requirements accessible to non-technical
+              users, opening new possibilities for digital evidence collection
+              in human rights work and legal proceedings.
             </p>
             <img
               src="../assets/images/project1-final-solution.jpg"
@@ -188,13 +213,52 @@
           </div>
 
           <div class="case-study-section">
-            <h3>Learnings & Next Steps</h3>
+            <h3>Current Status & Next Steps</h3>
             <p>
-              This project reinforced the importance of continuous user
-              feedback. We learned that even small changes in microcopy can have
-              a significant impact on user understanding. Future iterations
-              would involve A/B testing different call-to-action button styles.
+              The alpha version successfully validates the core concept and
+              technical feasibility of tamper-proof evidence collection within
+              browser environments. User feedback from legal professionals and
+              investigators has been positive, confirming the product-market fit
+              and identifying key areas for enhancement.
             </p>
+
+            <h4>V1 designs:</h4>
+
+            <ul>
+              <li>
+                Enhanced user interface with improved visual hierarchy and
+                clearer workflows
+              </li>
+              <li>
+                Capture status indicators to provide clear feedback when
+                evidence collection fails or encounters issues
+              </li>
+              <li>
+                Expanded content type support including social media stories and
+                dynamic content
+              </li>
+              <li>
+                Advanced organization tools for managing large evidence
+                collections
+              </li>
+              <li>
+                Integration capabilities with legal case management systems
+              </li>
+              <li>
+                Improved export options for various legal documentation formats
+              </li>
+            </ul>
+
+            <p>
+              The v1 release will transform Preserve from a proof-of-concept
+              tool into a production-ready platform that legal professionals can
+              confidently integrate into their evidence collection workflows.
+            </p>
+
+            <br />
+            <h4>Huridocs | 2021-2025</h4>
+
+            <img class="firma" src="../assets/images/firma.png" />
           </div>
 
           <div class="project-navigation">
