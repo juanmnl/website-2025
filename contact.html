@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Me | Your Name Product Designer</title>
+    <title>Juan M. Cornejo | Contact Me</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="icon" type="image/svg+xml" href="./rarbbit-icon.svg" />
     <link rel="alternate icon" href="./rarbbit-icon.svg" />
@@ -11,10 +11,13 @@
   <body>
     <header>
       <div class="container">
-        <a href="index.html" class="logo"
-          >Hi, I'm Juan Manuel -
-          <span class="highlight"><small>Available for hire!</small></span></a
-        >
+        <div class="logo-status">
+          <div class="status-indicator"></div>
+          <a href="index.html" class="logo"
+            >Hi, I'm Juan Manuel -
+            <span class="highlight"><small>Available for hire!</small></span>
+          </a>
+        </div>
         <nav>
           <button
             class="menu-toggle"
@@ -39,70 +42,37 @@
     <main>
       <section id="contact" class="contact-section">
         <div class="container">
-          <h1>Let's Connect!</h1>
-          <p>
-            I'm always open to discussing new design challenges, job
-            opportunities, or just chatting about all things product and UX.
-            Feel free to reach out through any of the channels below.
-          </p>
+          <h1>Best ways to reach me:</h1>
 
-          <div class="contact-info">
-            <div class="contact-item">
-              Email: <a href="mailto:your.email@example.com">juanmnl@me.com</a>
-            </div>
-            <div class="contact-item">
-              IG:
-              <a
-                href="https://www.instagram.com/juanmnlcornejo/"
-                target="_blank"
-                >instagram.com/juanmnlcornejo</a
-              >
+          <div class="contact-item">
+            <strong>For work inquiries:</strong>
+            <a href="mailto:juanmnl@me.com">juanmnl@me.com</a>
+          </div>
+
+          <div class="contact-item">
+            <strong>For quick questions:</strong>
+            <a href="https://x.com/_juanmnl" target="_blank">@_juanmnl</a>
+          </div>
+
+          <div class="contact-item">
+            <strong>To see my photography work:</strong>
+            <a href="https://www.instagram.com/juanmnlcornejo/" target="_blank"
+              >@juanmnlcornejo</a
+            >
+          </div>
+
+          <div class="availability-status">
+            <div class="status-indicator"></div>
+            <div>
+              <p><strong>Currently available for new projects</strong></p>
+              <p>I typically respond within 24 hours</p>
             </div>
           </div>
 
-          <p>Or, send me a message directly using the form below:</p>
-
-          <form
-            class="contact-form"
-            action="YOUR_FORM_SUBMISSION_ENDPOINT"
-            method="POST"
-          >
-            <div class="form-group">
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name" required />
-            </div>
-            <div class="form-group">
-              <label for="email">Email:</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <div class="form-group">
-              <label for="subject">Subject:</label>
-              <input type="text" id="subject" name="subject" />
-            </div>
-            <div class="form-group">
-              <label for="message">Message:</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="5"
-                required
-              ></textarea>
-            </div>
-            <button type="submit" class="button primary">Send Message</button>
-            <p
-              style="
-                font-size: 0.9em;
-                margin-top: 15px;
-                color: var(--secondary-color);
-              "
-            >
-              *Note: For this form to work, you'll need a backend service like
-              <a href="https://formspree.io/" target="_blank">Formspree</a>,
-              <a href="https://www.netlify.com/products/forms/" target="_blank"
-                >Netlify Forms</a
-              >, or a custom server setup.
-            </p>
-          </form>
+          <div class="location-section">
+            <p>📍 Based in Quito, Ecuador (ECT timezone)</p>
+            <p>🌎 Available for remote work globally</p>
+          </div>
         </div>
       </section>
     </main>
