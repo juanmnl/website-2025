@@ -18,6 +18,7 @@
     --border-radius: 6px;
     --font-family: 'Inter', sans-serif; /* Or any other clean sans-serif font */
     --max-width: 920px; /* Max width for content */
+    --letter-spacing: 0.024em;
 }
 
 html {
@@ -53,7 +54,6 @@ h1, h2 {
     color: var(--dark-gray);
     margin-bottom: 0.8em;
     line-height: 1.2;
-    font-family: initial;
 }
 
 h3, h4, h5, h6, article h1 {
@@ -221,7 +221,7 @@ nav ul li a.active::after {
 .hero-section p {
     max-width: 700px;
     text-align: left;
-    letter-spacing: 0.028em;
+    letter-spacing: var(--letter-spacing);
 }
 
 .hero-section ul {
@@ -354,7 +354,7 @@ nav ul li a.active::after {
 .gallery-caption p {
     margin: 0px 15px 15px 15px;
     font-size: 0.95em;
-    letter-spacing: 0.028em;
+    letter-spacing: var(--letter-spacing);
     color: var(--secondary-color);
 }
 
@@ -398,7 +398,7 @@ nav ul li a.active::after {
 .detail-item p {
     font-size: 0.95em;
     margin-bottom: 0;
-    letter-spacing: 0.028em;
+    letter-spacing: var(--letter-spacing);
 }
 
 .case-study-section {
@@ -477,7 +477,7 @@ nav ul li a.active::after {
 }
 
 .about-section p {
-    letter-spacing: 0.028em;
+    letter-spacing: var(--letter-spacing);
 }
 
 .about-text h2:first-of-type {
@@ -520,7 +520,7 @@ nav ul li a.active::after {
 .contact-section p {
     margin-bottom: 40px;
     max-width: 600px;
-    letter-spacing: 0.028em;
+    letter-spacing: var(--letter-spacing);
 }
 
 .contact-info {
@@ -563,7 +563,7 @@ nav ul li a.active::after {
   margin: 0.5rem 0;
   color: var(--secondary-color);
   font-size: 0.95em;
-  letter-spacing: 0.028em;
+  letter-spacing: var(--letter-spacing);
   max-width: 100%;
 }
 
@@ -864,5 +864,5 @@ footer p {
 .availability-status p {
   margin: 0;
   color: var(--text-color);
-  letter-spacing: 0.028em;
+  letter-spacing: var(--letter-spacing);
 }
