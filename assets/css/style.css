@@ -691,8 +691,7 @@ footer p {
         padding: 15px 0 0;
     }
     header .container {
-        flex-wrap: wrap;
-        text-align: center;
+        display: block;
         margin-bottom: 15px
     }
     .logo {
