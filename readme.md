@@ -20,5 +20,5 @@
 ### Enhancements
 
 - [x] Add readme
-- [] Add vite
-- [] Add react or similar
+- [ ] Add vite
+- [ ] Refactor with react or similar
