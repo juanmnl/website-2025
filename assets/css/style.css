@@ -16,8 +16,8 @@
     --white: #ffffff;
     --butter: #ffeda8;
     --border-radius: 6px;
-    --font-family: 'Inter', sans-serif; /* Or any other clean sans-serif font */
-    --max-width: 920px; /* Max width for content */
+    --font-family: 'Inter', sans-serif;
+    --max-width: 920px;
     --letter-spacing: 0.024em;
 }
 
@@ -30,14 +30,14 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--white);
-    -webkit-font-smoothing: antialiased; /* Better font rendering */
-    -moz-osx-font-smoothing: grayscale; /* Better font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 0 20px; /* Horizontal padding */
+    padding: 0 20px;
 }
 
 a {
@@ -74,8 +74,8 @@ li { margin-bottom: 0.5em; }
 img {
     max-width: 100%;
     height: auto;
-    display: block; /* Removes extra space below image */
-    margin-bottom: 1em; /* Space below images */
+    display: block;
+    margin-bottom: 1em;
     border-radius: var(--border-radius);
 }
 
@@ -195,7 +195,7 @@ nav ul li a.active::after {
 
 /* Mobile Navigation Toggle (Hidden on Desktop) */
 .menu-toggle {
-    display: none; /* Hide by default */
+    display: none;
     background: none;
     border: none;
     cursor: pointer;
@@ -225,8 +225,8 @@ nav ul li a.active::after {
 }
 
 .hero-section ul {
-    list-style: none; /* Remove default bullets */
-    padding-left: 0; /* Remove padding */
+    list-style: none;
+    padding-left: 0;
     margin-top: 60px;
 }
 
@@ -272,15 +272,15 @@ nav ul li a.active::after {
 
 .project-card img {
     width: 100%;
-    height: 250px; /* Fixed height for thumbnails */
-    object-fit: cover; /* Ensures images cover the area without distortion */
-    margin-bottom: 0; /* Remove default margin */
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 0;
     border-radius: var(--border-radius) var(--border-radius) 0 0;
-    transition: transform 0.4s ease; /* Smooth zoom on hover */
+    transition: transform 0.4s ease;
 }
 
 .project-card:hover img {
-    transform: scale(1.03); /* Slight zoom effect on image when hovering over the item */
+    transform: scale(1.03);
 }
 
 .project-card h3 {
@@ -309,20 +309,19 @@ nav ul li a.active::after {
 
 .gallery-grid {
     display: grid;
-    /* Responsive grid: 3 columns on large screens, adjust down */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px; /* Space between gallery items */
+    gap: 30px;
 }
 
 .gallery-item {
-    display: block; /* Ensures the div takes up its full space */
+    display: block;
     position: relative;
-    overflow: hidden; /* Ensures content (like zoomed image) doesn't spill out */
+    overflow: hidden;
     border-radius: var(--border-radius);
     border: 1px solid #f6f6f6;
-    transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover effects */
-    cursor: pointer; /* Indicates that the item is clickable */
-    background-color: var(--white); /* Ensure background is white */
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    background-color: var(--white);
 }
 
 .gallery-item:hover {
@@ -331,20 +330,21 @@ nav ul li a.active::after {
 
 .gallery-item img {
     width: 100%;
-    height: 250px; /* Consistent height for all gallery images */
-    object-fit: cover; /* Crop to cover the area without distorting aspect ratio */
-    display: block; /* Removes extra space below image */
-    margin-bottom: 0; /* Override default image margin */
-    transition: transform 0.4s ease; /* Smooth zoom on hover */
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 0;
+    transition: transform 0.4s ease;
+    border-radius: 0;
 }
 
 .gallery-item:hover img {
-    transform: scale(1.03); /* Slight zoom effect on image when hovering over the item */
+    transform: scale(1.03);
 }
 
 .gallery-caption {
-    background-color: var(--white); /* Explicitly white background for caption area */
-    border-top: 1px solid #eee; /* Subtle separator */
+    background-color: var(--white);
+    border-top: 1px solid #eee;
 }
 
 .gallery-caption h3 {
@@ -417,7 +417,7 @@ nav ul li a.active::after {
 }
 
 .case-study-section ul {
-    list-style: disc; /* Use actual bullets for lists */
+    list-style: disc;
     padding-left: 20px;
     margin-bottom: 1.5em;
 }
@@ -443,7 +443,7 @@ nav ul li a.active::after {
 }
 
 .project-navigation .button {
-    min-width: 150px; /* Ensure buttons are wide enough */
+    min-width: 150px;
 }
 
 
@@ -458,23 +458,23 @@ nav ul li a.active::after {
 
 .about-content {
     display: flex;
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    flex-wrap: wrap;
     gap: 40px;
-    align-items: flex-start; /* Aligns content to top */
+    align-items: flex-start;
 }
 
-.profile-photo { /* Using .profile-photo class for clarity */
-    width: 200px; /* Fixed width for profile picture */
-    height: 200px; /* Fixed height for profile picture */
-    object-fit: cover; /* Ensures image covers the area without distortion */
-    border-radius: 50%; /* Circle shape */
-    flex-shrink: 0; /* Prevents image from shrinking */
-    margin: 0 auto; /* Center image in flex container */
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin: 0 auto;
 }
 
 .about-text {
-    flex-grow: 1; /* Allows text to take remaining space */
-    min-width: 300px; /* Ensures text doesn't get too narrow before wrapping */
+    flex-grow: 1;
+    min-width: 300px;
 }
 
 .about-section p {
@@ -494,7 +494,7 @@ nav ul li a.active::after {
     flex-wrap: wrap;
     gap: 10px;
     margin-top: 20px;
-    margin-bottom: 30px; /* Space after skills list */
+    margin-bottom: 30px;
 }
 
 .skill-tag {
@@ -504,7 +504,7 @@ nav ul li a.active::after {
     border-radius: var(--border-radius);
     font-size: 0.9em;
     font-weight: 600;
-    white-space: nowrap; /* Prevent tags from breaking */
+    white-space: nowrap;
 }
 
 
@@ -581,7 +581,7 @@ footer .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    flex-wrap: wrap;
 }
 
 footer p {
@@ -601,40 +601,37 @@ footer p {
 
 /* Modal (Lightbox) Styles */
 .modal {
-    display: none; /* Hidden by default - JavaScript will change this to 'flex' on click */
-    position: fixed; /* Stay in place relative to the viewport */
-    z-index: 2000; /* Sit on top (higher than header/anything else) */
+    display: none;
+    position: fixed;
+    z-index: 2000;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if content is too large */
-    background-color: rgba(0,0,0,0.9); /* Black overlay with 90% opacity */
-
-    /* Flexbox for centering modal content */
-
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    flex-direction: column; /* Stack image and caption vertically */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 /* Modal Content (The Image inside the modal) */
 .modal-content {
-    margin: auto; /* Auto margins help with centering if flexbox wasn't used, but good practice */
-    display: block; /* Ensures it behaves like a block element */
-    max-width: 90%; /* Max width of the image relative to the modal */
-    max-height: 90vh; /* Max height of the image relative to viewport height */
-    border-radius: var(--border-radius); /* Apply your global border-radius */
-    box-shadow: 0 0 20px rgba(255,255,255,0.2); /* Subtle white shadow for contrast */
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90vh;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
 }
 
 /* Modal Caption (Text below the image) */
 .modal-caption {
     margin: 20px auto;
-    color: #f8f9fa; /* Light gray text for caption */
+    color: #f8f9fa;
     text-align: center;
-    max-width: 80%; /* Limit caption width for readability */
-    text-shadow: 0 1px 3px rgba(0,0,0,0.5); /* Adds a subtle shadow for better readability on dark background */
+    max-width: 80%;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
 }
 
 /* Close Button (X icon) */
@@ -642,17 +639,17 @@ footer p {
     position: absolute;
     top: 20px;
     right: 35px;
-    color: #f1f1f1; /* Light color for visibility */
+    color: #f1f1f1;
     font-size: 40px;
     font-weight: bold;
-    transition: 0.3s; /* Smooth transition for hover effect */
+    transition: 0.3s;
     cursor: pointer;
-    user-select: none; /* Prevent text selection on the X */
+    user-select: none;
 }
 
 .modal-close-button:hover,
 .modal-close-button:focus {
-    color: #bbb; /* Slightly darker on hover/focus */
+    color: #bbb;
     text-decoration: none;
     cursor: pointer;
 }
@@ -660,15 +657,15 @@ footer p {
 /* Animations for the modal content (Optional but enhances user experience) */
 /* These make the image and caption 'zoom' into view when the modal opens */
 .modal-content, #modalCaption {
-    -webkit-animation-name: zoom; /* For Safari */
-    -webkit-animation-duration: 0.6s; /* How long the animation takes */
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
     animation-name: zoom;
     animation-duration: 0.6s;
 }
 
 @-webkit-keyframes zoom {
-    from {-webkit-transform:scale(0)} /* Start from scale 0 (tiny) */
-    to {-webkit-transform:scale(1)}   /* End at scale 1 (normal size) */
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
 }
 
 @keyframes zoom {
@@ -700,7 +697,7 @@ footer p {
     }
 
     nav ul {
-        display: none; /* Hide navigation by default on mobile */
+        display: none;
         flex-direction: column;
         width: 100%;
         margin-top: 15px;
@@ -708,7 +705,7 @@ footer p {
         border-top: 1px solid var(--light-gray);
     }
     nav ul.active {
-        display: flex; /* Show when active */
+        display: flex;
     }
     nav ul li {
         margin: 0;
@@ -723,7 +720,7 @@ footer p {
         text-align: center;
     }
     .menu-toggle {
-        display: block; /* Show hamburger icon on mobile */
+        display: block;
         position: absolute;
         right: 20px;
         top: 16px;
@@ -742,7 +739,7 @@ footer p {
 
     /* Project Grid */
     .project-grid {
-        grid-template-columns: 1fr; /* Single column on mobile */
+        grid-template-columns: 1fr;
     }
 
     /* Case Study */
@@ -751,7 +748,7 @@ footer p {
         padding-bottom: 25px;
     }
     .project-details {
-        grid-template-columns: 1fr; /* Single column for details on mobile */
+        grid-template-columns: 1fr;
     }
     .project-navigation {
         flex-direction: column;
@@ -764,11 +761,11 @@ footer p {
 
     /* Gallery Section */
     .gallery-grid {
-        grid-template-columns: 1fr; /* Single column on mobile */
+        grid-template-columns: 1fr;
     }
 
     .gallery-item img {
-        height: 200px; /* Slightly smaller images on mobile */
+        height: 200px;
     }
 
     /* About Section */
@@ -782,7 +779,7 @@ footer p {
 
     /* Contact Section */
     .contact-info {
-        gap: 15px; /* Adjust spacing */
+        gap: 15px;
     }
 
      .availability-status {
@@ -801,7 +798,7 @@ footer p {
         gap: 15px;
     }
     .social-links a {
-        margin: 0 10px; /* Adjust spacing */
+        margin: 0 10px;
     }
 }
 
