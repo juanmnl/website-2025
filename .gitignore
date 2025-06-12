@@ -1,31 +1,13 @@
-# Operating System files
 .DS_Store
 Thumbs.db
-
-# Node.js dependencies (if you ever add build tools like Webpack/Parcel/Vite)
 node_modules/
-
-# IDE specific files
-.vscode/        # VS Code
-.idea/          # IntelliJ/WebStorm
-*.sublime-project
-*.sublime-workspace
-
-# Editor backup files
+.vscode/ 
 *~
 *.swp
 *.bak
 *.tmp
-
-# Mac specific
 .AppleDouble
 .LSOverride
-
-# Thumbnails from macOS
 .fseventsd
 .Spotlight-V100
 .Trashes
-
-# Windows specific
-Desktop.ini
-ehthumbs.db
