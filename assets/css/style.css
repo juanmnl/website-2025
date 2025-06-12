@@ -439,6 +439,7 @@ nav ul li a.active::after {
     display: flex;
     justify-content: space-between;
     margin-top: 60px;
+    flex-direction: row-reverse;
 }
 
 .project-navigation .button {
@@ -755,6 +756,7 @@ footer p {
     .project-navigation {
         flex-direction: column;
         gap: 15px;
+
     }
     .project-navigation .button {
         width: 100%;
