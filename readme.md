@@ -13,6 +13,8 @@
   - [x] Featured projects
 
 - [x] Add basic styles
+  - [x] Mobile-first
+  - [x] Desktop
 - [x] Add screenshots and images
 - [x] Optim assets
 - [x] Deploy
