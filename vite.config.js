@@ -1,6 +1,22 @@
 import { defineConfig } from 'vite';
+import { viteImageOptimize } from 'vite-plugin-imagemin';
 
 export default defineConfig({
+  plugins: [
+    viteImageOptimize({
+      gifsicle: { optimizationLevel: 7 },
+      mozjpeg: { quality: 80 },
+      pngquant: { quality: [0.65, 0.8] },
+      svgo: {
+        plugins: [
+          {
+            name: 'removeViewBox',
+            active: false,
+          },
+        ],
+      },
+    }),
+  ],
   build: {
     rollupOptions: {
       input: {
