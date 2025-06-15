@@ -11,3 +11,4 @@ node_modules/
 .fseventsd
 .Spotlight-V100
 .Trashes
+/dist
