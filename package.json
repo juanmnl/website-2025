@@ -4,7 +4,9 @@
   "description": "Personal website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/juanmnl/website-2025/issues"
   },
-  "homepage": "https://github.com/juanmnl/website-2025#readme"
+  "homepage": "https://github.com/juanmnl/website-2025#readme",
+  "devDependencies": {
+    "vite": "^6.3.5"
+  }
 }
