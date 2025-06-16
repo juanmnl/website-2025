@@ -89,7 +89,7 @@ class MouseBlur {
       '  effectColor += vec3(colorVariation * 0.1, colorVariation * 0.05, colorVariation * 0.15);',
       '  effectColor += vec3(immediateInfluence * 0.08, 0.0, 0.0);',
       '  ',
-      '  gl_FragColor = vec4(effectColor, effect * 0.22);',
+      '  gl_FragColor = vec4(effectColor, effect * 0.3);',
       '}',
     ].join('\n');
 

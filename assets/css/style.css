@@ -867,8 +867,6 @@ footer p {
 .glitch {
   position: relative;
   display: inline-block;
-  font-weight: 400;
-  font-size: .9em;
 }
 
 
@@ -891,20 +889,12 @@ footer p {
   z-index: 2;
 }
 
-.glitch[data-text="still"]::before {
-  animation: glitch-auto 6s infinite;
+.glitch[data-text="digital experiences"]::before {
+  animation: glitch-auto 6s infinite 1.9s;
 }
 
-.glitch[data-text="still"]::after {
-  animation: glitch-auto 6s infinite 0.1s;
-}
-
-.glitch[data-text="in the age of artificial intelligence"]::before {
-  animation: glitch-auto 8s infinite 2s;
-}
-
-.glitch[data-text="in the age of artificial intelligence"]::after {
-  animation: glitch-auto 8s infinite 2.1s;
+.glitch[data-text="digital experiences"]::after {
+  animation: glitch-auto 6s infinite 2.1s;
 }
 
 @keyframes glitch-auto {
