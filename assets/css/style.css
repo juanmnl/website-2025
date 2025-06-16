@@ -141,9 +141,8 @@ video {
 
 /* 2. Header & Navigation */
 header {
-    background-color: var(--white);
+    backdrop-filter: blur(10px);
     padding: 15px 0;
-    border-bottom: 1px solid var(--light-gray);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -686,7 +685,8 @@ footer p {
 
     /* Header & Navigation for Mobile */
     header {
-        padding: 15px 0 0;
+        background-color: var(--white);
+        padding: 15px 0 1px 0;
     }
     header .container {
         display: block;
