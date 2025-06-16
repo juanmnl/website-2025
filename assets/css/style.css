@@ -356,10 +356,8 @@ nav ul li a.active::after {
 }
 
 .gallery-caption p {
-    margin: 0px 15px 15px 15px;
-    font-size: 0.95em;
+    margin: 15px;
     letter-spacing: var(--letter-spacing);
-    color: var(--secondary-color);
 }
 
 .gallery-section ul li a {
@@ -864,16 +862,6 @@ footer p {
   color: var(--text-color);
   letter-spacing: var(--letter-spacing);
 }
-
-/* .hero-section h1::before {
-    content: "UI UX IXD Artificial Intelligence";
-    font-size: 8em;
-    position: absolute;
-    top: 30px;
-    left: 0;
-    color: #f3f3f3;
-    z-index: -1;
-} */
 
 /* Glitch effect */
 .glitch {
