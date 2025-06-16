@@ -1,4 +1,5 @@
 import '../css/style.css';
+import { MouseBlur } from './mouse-blur.js';
 
 document.addEventListener('DOMContentLoaded', function () {
   const menuToggle = document.querySelector('.menu-toggle');
@@ -103,4 +104,19 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+
+  let mouseBlurEffect = null;
+
+  try {
+    mouseBlurEffect = new MouseBlur();
+    console.log('Mouse blur effect initialized');
+  } catch (error) {
+    console.error('Failed to initialize mouse blur effect:', error);
+  }
+
+  window.addEventListener('beforeunload', () => {
+    if (mouseBlurEffect) {
+      mouseBlurEffect.destroy();
+    }
+  });
 });

@@ -213,7 +213,7 @@ nav ul li a.active::after {
 
 /* 3. Hero Section */
 .hero-section {
-    background-color: var(--light-gray);
+    /* background-color: var(--light-gray); */
     padding: 100px 0;
     text-align: left;
 }
