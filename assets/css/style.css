@@ -861,6 +861,16 @@ footer p {
   letter-spacing: var(--letter-spacing);
 }
 
+/* .hero-section h1::before {
+    content: "UI UX IXD Artificial Intelligence";
+    font-size: 8em;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    color: #f3f3f3;
+    z-index: -1;
+} */
+
 /* Glitch effect */
 .glitch {
   position: relative;
@@ -929,3 +939,4 @@ footer p {
     transform: translate(0);
   }
 }
+

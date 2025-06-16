@@ -1,7 +1,6 @@
 import '../css/style.css';
 
 document.addEventListener('DOMContentLoaded', function () {
-  // 1. Mobile Navigation Toggle
   const menuToggle = document.querySelector('.menu-toggle');
   const mainNavigation = document.getElementById('main-navigation');
 
@@ -24,13 +23,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // 2. Set Current Year in Footer
   const currentYearSpan = document.getElementById('current-year-footer');
   if (currentYearSpan) {
     currentYearSpan.textContent = new Date().getFullYear();
   }
 
-  // 3. Highlight Active Navigation Link
   const currentPath = window.location.pathname;
   const navLinks = document.querySelectorAll('#main-navigation a');
 
@@ -62,7 +59,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // 4. Image Modal for Zoomable Images
   const modal = document.getElementById('imageModal');
   const modalImage = document.getElementById('modalImage');
   const modalCaption = document.getElementById('modalCaption');
@@ -107,4 +103,46 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+
+  function scrambleText(element, originalText, duration = 300) {
+    const chars = '!@#$%^&*()_+-=[]{}|;:,.<>?1234567890';
+    let iterations = 0;
+
+    const interval = setInterval(() => {
+      element.textContent = originalText
+        .split('')
+        .map((char, index) => {
+          if (char === ' ') return ' ';
+          if (index < iterations) return originalText[index];
+          return chars[Math.floor(Math.random() * chars.length)];
+        })
+        .join('');
+
+      if (iterations >= originalText.length) {
+        clearInterval(interval);
+        element.textContent = originalText;
+      }
+
+      iterations += 1.8;
+    }, 30);
+  }
+
+  function triggerScramble() {
+    const stillElement = document.querySelector('.glitch[data-text="still"]');
+    const aiElement = document.querySelector(
+      '.glitch[data-text="in the age of artificial intelligence"]'
+    );
+
+    if (stillElement) {
+      scrambleText(stillElement, 'still', 500);
+    }
+
+    setTimeout(() => {
+      if (aiElement) {
+        scrambleText(aiElement, 'in the age of artificial intelligence', 400);
+      }
+    }, 800);
+  }
+
+  setTimeout(triggerScramble, 500);
 });
