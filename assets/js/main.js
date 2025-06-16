@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function scrambleText(element, originalText, duration = 300) {
-    const chars = '!@#$%^&*()_+-=[]{}|;:,.<>?1234567890';
+    const chars = '!@#$%^&*()_+-=[]{}|;:,.?';
     let iterations = 0;
 
     const interval = setInterval(() => {
