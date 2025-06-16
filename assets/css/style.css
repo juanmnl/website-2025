@@ -832,7 +832,6 @@ footer p {
 }
 
 
-
 .availability-status {
   padding: 20px;
   border-radius: var(--border-radius);
@@ -860,4 +859,73 @@ footer p {
   margin: 0;
   color: var(--text-color);
   letter-spacing: var(--letter-spacing);
+}
+
+/* Glitch effect */
+.glitch {
+  position: relative;
+  display: inline-block;
+  font-weight: 400;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.glitch::before {
+  color: #ff0000;
+  z-index: 1;
+}
+
+.glitch::after {
+  color: #00ffff;
+  z-index: 2;
+}
+
+.glitch[data-text="still"]::before {
+  animation: glitch-auto 6s infinite;
+}
+
+.glitch[data-text="still"]::after {
+  animation: glitch-auto 6s infinite 0.1s;
+}
+
+.glitch[data-text="in the age of artificial intelligence"]::before {
+  animation: glitch-auto 8s infinite 2s;
+}
+
+.glitch[data-text="in the age of artificial intelligence"]::after {
+  animation: glitch-auto 8s infinite 2.1s;
+}
+
+@keyframes glitch-auto {
+  0%, 94% { 
+    opacity: 0;
+    transform: translate(0);
+  }
+  95% { 
+    opacity: 0.8;
+    transform: translate(-2px, 1px);
+  }
+  96% { 
+    transform: translate(2px, -1px);
+  }
+  97% { 
+    transform: translate(-1px, 2px);
+  }
+  98% { 
+    transform: translate(1px, -1px);
+  }
+  99% { 
+    transform: translate(-2px, 1px);
+  }
+  100% { 
+    opacity: 0;
+    transform: translate(0);
+  }
 }
