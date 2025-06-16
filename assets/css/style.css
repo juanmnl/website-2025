@@ -219,8 +219,6 @@ nav ul li a.active::after {
 }
 
 .hero-section h1 {
-    max-height: 80px;
-    min-height: 60px;
     margin-bottom: 2em;
 }
 
@@ -736,9 +734,6 @@ footer p {
     }
     .hero-section h1 {
         font-size: 1.5em;
-        max-height: 120px;
-        min-height: 60px;
-        max-width: 335px;
     }
     .hero-section p {
         font-size: 1.2m;

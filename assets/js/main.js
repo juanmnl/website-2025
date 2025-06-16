@@ -103,46 +103,4 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
-
-  function scrambleText(element, originalText, duration = 300) {
-    const chars = '!@#$%^&*()_+-=[]{}|;:,.?';
-    let iterations = 0;
-
-    const interval = setInterval(() => {
-      element.textContent = originalText
-        .split('')
-        .map((char, index) => {
-          if (char === ' ') return ' ';
-          if (index < iterations) return originalText[index];
-          return chars[Math.floor(Math.random() * chars.length)];
-        })
-        .join('');
-
-      if (iterations >= originalText.length) {
-        clearInterval(interval);
-        element.textContent = originalText;
-      }
-
-      iterations += 1.8;
-    }, 30);
-  }
-
-  function triggerScramble() {
-    const stillElement = document.querySelector('.glitch[data-text="still"]');
-    const aiElement = document.querySelector(
-      '.glitch[data-text="in the age of artificial intelligence"]'
-    );
-
-    if (stillElement) {
-      scrambleText(stillElement, 'still', 500);
-    }
-
-    setTimeout(() => {
-      if (aiElement) {
-        scrambleText(aiElement, 'in the age of artificial intelligence', 400);
-      }
-    }, 800);
-  }
-
-  setTimeout(triggerScramble, 500);
 });
