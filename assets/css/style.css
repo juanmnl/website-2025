@@ -17,7 +17,7 @@
     --butter: #ffeda8;
     --border-radius: 6px;
     --font-family: 'Inter', sans-serif;
-    --max-width: 920px;
+    --max-width: 960px;
     --letter-spacing: 0.024em;
 }
 
@@ -350,11 +350,11 @@ nav ul li a.active::after {
     border-top: 1px solid #eee;
 }
 
-.gallery-caption h3 {
-    margin: 15px 15px 5px 15px;
-}
 
 .gallery-caption p {
+    color: var(--dark-gray);
+    font-size: .7em;
+    text-transform: uppercase;
     margin: 15px;
     letter-spacing: var(--letter-spacing);
 }
