@@ -84,12 +84,12 @@ class MouseBlur {
       '  float ripple = sin(rippleDistance * 20.0 - u_time * 5.0) * 0.1 * immediateInfluence;',
       '  effect += ripple * 0.5;',
       '  ',
-      '  vec3 effectColor = vec3(0.0);',
-      '  float colorVariation = combinedInfluence * 0.25;',
-      '  effectColor += vec3(colorVariation * 0.1, colorVariation * 0.05, colorVariation * 0.15);',
-      '  effectColor += vec3(immediateInfluence * 0.08, 0.0, 0.0);',
+      '  vec3 effectColor = vec3(0.1);',
+      '  float colorVariation = combinedInfluence * 0.1;',
+      '  effectColor += vec3(colorVariation * 0.15, colorVariation * 0.15, colorVariation * 0.15);',
+      '  effectColor += vec3(immediateInfluence * 0.1, immediateInfluence * 0.1, immediateInfluence * 0.1);',
       '  ',
-      '  gl_FragColor = vec4(effectColor, effect * 0.3);',
+      '  gl_FragColor = vec4(effectColor, effect * 0.8);',
       '}',
     ].join('\n');
 

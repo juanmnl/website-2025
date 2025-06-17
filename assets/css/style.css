@@ -213,6 +213,11 @@ nav ul li a.active::after {
     /* background-color: var(--light-gray); */
     padding: 100px 0;
     text-align: left;
+    /* background-image: url('/assets/images/th5.png'); */
+    background-position: center;
+    background-size: cover;
+    background-position: top 10px;
+    background-repeat: no-repeat;
 }
 
 .hero-section h1 {
