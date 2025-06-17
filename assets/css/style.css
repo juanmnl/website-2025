@@ -34,6 +34,7 @@ body {
 }
 
 .container {
+    position: relative;
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 20px;
@@ -211,14 +212,8 @@ nav ul li a.active::after {
 
 /* 3. Hero Section */
 .hero-section {
-    /* background-color: var(--light-gray); */
     padding: 100px 0;
     text-align: left;
-    /* background-image: url('/assets/images/th5.png'); */
-    background-position: center;
-    background-size: cover;
-    background-position: top 10px;
-    background-repeat: no-repeat;
 }
 
 .hero-section h1 {
@@ -687,6 +682,80 @@ footer p {
     overflow: hidden;
 }
 
+/* Other styles to place */
+
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background-color: var(--white);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  transition: transform 0.1s ease;
+}
+
+.angle {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    width: 400px;
+    overflow: visible;
+}
+
+blockquote {
+    display: inline-block;
+    font-style: italic;
+    color: var(--secondary-color);
+    border-left: 4px solid var(--butter);
+    margin: 1em 0;
+    padding: 0.5em 1em;
+    background-color: #fbfbfb;
+}
+
+blockquote footer {
+    display: inline;
+    background-color: transparent;
+    text-align: right;
+    font-style: normal;
+    color: var(--dark-gray);
+}
+
+.firma {
+    width: 80px;
+    margin: 80px auto;
+}
+
+.article-hero {
+    margin: 0 auto;
+    max-height: 420px;
+}
+
+.logo-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.availability-status {
+  padding: 20px;
+  border-radius: var(--border-radius);
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.status-indicator {
+  width: 15px;
+  height: 15px;
+  background: var(--butter);
+  flex-shrink: 0;
+  animation: pulse 2s infinite;
+}
+
 /* 10. Media Queries for Responsiveness */
 @media (max-width: 768px) {
     h1 { font-size: 1.5em; }
@@ -746,6 +815,13 @@ footer p {
     }
     .hero-section p {
         font-size: 1.2m;
+    }
+
+    .angle {
+        top: 32px;
+        right: 10px;
+        width: 400px;
+        overflow: visible;
     }
 
     /* Project Grid */
@@ -826,71 +902,6 @@ footer p {
 }
 
 
-/* Other styles to place */
-
-.custom-cursor {
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  background-color: var(--white);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  mix-blend-mode: difference;
-  transition: transform 0.3s ease;
-}
-
-blockquote {
-    display: inline-block;
-    font-style: italic;
-    color: var(--secondary-color);
-    border-left: 4px solid var(--butter);
-    margin: 1em 0;
-    padding: 0.5em 1em;
-    background-color: #fbfbfb;
-}
-
-blockquote footer {
-    display: inline;
-    background-color: transparent;
-    text-align: right;
-    font-style: normal;
-    color: var(--dark-gray);
-}
-
-.firma {
-    width: 80px;
-    margin: 80px auto;
-}
-
-.article-hero {
-    margin: 0 auto;
-    max-height: 420px;
-}
-
-.logo-status {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-
-.availability-status {
-  padding: 20px;
-  border-radius: var(--border-radius);
-  margin-bottom: 40px;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.status-indicator {
-  width: 16px;
-  height: 16px;
-  background: var(--butter);
-  flex-shrink: 0;
-  animation: pulse 2s infinite;
-}
 
 @keyframes pulse {
   0% { box-shadow: 0 0 0 0 rgba(247, 183, 35, 0.4); }
