@@ -180,7 +180,7 @@ nav ul li a::after {
     content: '';
     position: absolute;
     width: 0;
-    height: 2px;
+    height: 1px;
     background-color: var(--primary-color);
     bottom: 0;
     left: 0;
@@ -218,7 +218,8 @@ nav ul li a.active::after {
 }
 
 .hero-section h1 {
-    margin-bottom: 2em;
+    font-size: 2.4em;
+    margin-bottom: 1em;
 }
 
 .hero-section p {
@@ -230,7 +231,7 @@ nav ul li a.active::after {
 .hero-section ul {
     list-style: none;
     padding-left: 0;
-    margin-top: 60px;
+    margin: 1.5em 0;
 }
 
 .hero-section ul li a {
@@ -480,6 +481,10 @@ nav ul li a.active::after {
 
 .about-section p {
     letter-spacing: var(--letter-spacing);
+}
+
+.about-section a {
+    text-decoration: underline;
 }
 
 .about-text h2:first-of-type {
@@ -817,6 +822,24 @@ footer p {
 
 /* Other styles to place */
 
+blockquote {
+    display: inline-block;
+    font-style: italic;
+    color: var(--secondary-color);
+    border-left: 4px solid var(--butter);
+    margin: 1em 0;
+    padding: 0.5em 1em;
+    background-color: #fbfbfb;
+}
+
+blockquote footer {
+    display: inline;
+    background-color: transparent;
+    text-align: right;
+    font-style: normal;
+    color: var(--dark-gray);
+}
+
 .firma {
     width: 80px;
     margin: 80px auto;
@@ -889,11 +912,11 @@ footer p {
   z-index: 2;
 }
 
-.glitch[data-text="digital experiences"]::before {
+.glitch[data-text="digital tools"]::before {
   animation: glitch-auto 6s infinite 1.9s;
 }
 
-.glitch[data-text="digital experiences"]::after {
+.glitch[data-text="digital tools"]::after {
   animation: glitch-auto 6s infinite 2.1s;
 }
 
