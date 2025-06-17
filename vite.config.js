@@ -21,7 +21,7 @@ export default defineConfig({
       algorithm: 'gzip',
       ext: '.gz',
     }),
-    viteCcompression({
+    viteCompression({
       algorithm: 'brotliCompress',
       ext: '.br',
     }),
