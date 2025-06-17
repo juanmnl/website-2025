@@ -34,10 +34,13 @@ body {
 }
 
 .container {
-    position: relative;
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 20px;
+}
+
+.hero-section > .container {
+    position: relative;
 }
 
 a {
@@ -712,6 +715,8 @@ blockquote {
     margin: 1em 0;
     padding: 0.5em 1em;
     background-color: #fbfbfb;
+    margin-right: 1em;
+    border-radius: var(--border-radius);
 }
 
 blockquote footer {
