@@ -23,7 +23,7 @@ class MouseBlur {
   createContainer() {
     this.container = document.createElement('div');
     this.container.style.cssText =
-      'position: fixed; top: 0; left: 0; width: 100%; height: 100vh; pointer-events: none; z-index: 1;';
+      'position: fixed; top: 0; left: 0; width: 100%; height: 100vh; pointer-events: none; z-index: -1;';
     document.body.insertBefore(this.container, document.body.firstChild);
   }
 
@@ -86,10 +86,10 @@ class MouseBlur {
       '  ',
       '  vec3 effectColor = vec3(0.1);',
       '  float colorVariation = combinedInfluence * 0.1;',
-      '  effectColor += vec3(colorVariation * 0.15, colorVariation * 0.15, colorVariation * 0.15);',
+      '  effectColor += vec3(colorVariation * 0.15, colorVariation * 0.15, colorVariation * 0.1);',
       '  effectColor += vec3(immediateInfluence * 0.1, immediateInfluence * 0.1, immediateInfluence * 0.1);',
       '  ',
-      '  gl_FragColor = vec4(effectColor, effect * 0.8);',
+      '  gl_FragColor = vec4(effectColor, effect * 0.9);',
       '}',
     ].join('\n');
 

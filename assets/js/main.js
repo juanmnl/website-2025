@@ -120,3 +120,22 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+// Custom cursor
+const cursor = document.createElement('div');
+cursor.className = 'custom-cursor';
+document.body.appendChild(cursor);
+
+document.addEventListener('mousemove', (e) => {
+  cursor.style.left = e.clientX - 10 + 'px'; // Center the circle
+  cursor.style.top = e.clientY - 10 + 'px';
+});
+
+// Hide cursor when mouse leaves window
+document.addEventListener('mouseleave', () => {
+  cursor.style.opacity = '0';
+});
+
+document.addEventListener('mouseenter', () => {
+  cursor.style.opacity = '1';
+});

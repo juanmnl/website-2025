@@ -28,6 +28,7 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--white);
+    cursor: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -247,7 +248,6 @@ nav ul li a.active::after {
 /* 4. Work Section (Homepage) */
 .work-section {
     padding: 80px 0;
-    background-color: var(--white);
 }
 
 .work-section h2 {
@@ -262,6 +262,7 @@ nav ul li a.active::after {
 
 .project-card {
     border: 1px solid #f6f6f6;
+    background-color: var(--white);
     border-radius: var(--border-radius);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -826,6 +827,18 @@ footer p {
 
 
 /* Other styles to place */
+
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background-color: var(--white);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  transition: transform 0.3s ease;
+}
 
 blockquote {
     display: inline-block;
