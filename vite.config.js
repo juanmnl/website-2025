@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import viteImagemin from 'vite-plugin-imagemin';
+import { compression } from 'vite-plugin-compression';
 
 export default defineConfig({
   plugins: [
@@ -16,7 +17,18 @@ export default defineConfig({
         ],
       },
     }),
+    compression({
+      algorithm: 'gzip',
+      ext: '.gz',
+    }),
+    compression({
+      algorithm: 'brotliCompress',
+      ext: '.br',
+    }),
   ],
+  optimizeDeps: {
+    include: ['three'],
+  },
   build: {
     rollupOptions: {
       input: {
@@ -28,6 +40,18 @@ export default defineConfig({
         uwaziMl: 'projects/uwazi-ml.html',
         uwaziPreserve: 'projects/uwazi-preserve.html',
         ktnRyms: 'projects/ktn-ryms.html',
+      },
+      output: {
+        manualChunks: {
+          three: ['three'],
+        },
+      },
+    },
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
       },
     },
   },
