@@ -361,6 +361,7 @@ nav ul li a.active::after {
     text-transform: uppercase;
     margin: 15px;
     letter-spacing: var(--letter-spacing);
+    font-weight: 600;
 }
 
 .gallery-section ul li a {
@@ -704,7 +705,7 @@ footer p {
     top: 20px;
     right: 15px;
     width: 400px;
-    overflow: visible;
+    border-radius: 0;
 }
 
 blockquote {
