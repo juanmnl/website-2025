@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite';
 import viteImagemin from 'vite-plugin-imagemin';
-import { compression } from 'vite-plugin-compression';
+import viteCompression from 'vite-plugin-compression';
 
 export default defineConfig({
   plugins: [
@@ -17,11 +17,11 @@ export default defineConfig({
         ],
       },
     }),
-    compression({
+    viteCompression({
       algorithm: 'gzip',
       ext: '.gz',
     }),
-    compression({
+    viteCcompression({
       algorithm: 'brotliCompress',
       ext: '.br',
     }),
