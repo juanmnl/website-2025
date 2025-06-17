@@ -891,6 +891,7 @@ blockquote footer {
   position: relative;
   display: inline-block;
   font-family: "Fredericka the Great", serif;
+  font-weight: 400;
 }
 
 
@@ -913,12 +914,12 @@ blockquote footer {
   z-index: 2;
 }
 
-.glitch[data-text="digital tools"]::before {
-  animation: glitch-auto 6s infinite 1.9s;
+.glitch[data-text="digital tools."]::before {
+  animation: glitch-auto 3s infinite 1.9s;
 }
 
-.glitch[data-text="digital tools"]::after {
-  animation: glitch-auto 6s infinite 2.1s;
+.glitch[data-text="digital tools."]::after {
+  animation: glitch-auto 3s infinite 2.1s;
 }
 
 @keyframes glitch-auto {
