@@ -121,21 +121,33 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-// Custom cursor
-const cursor = document.createElement('div');
-cursor.className = 'custom-cursor';
-document.body.appendChild(cursor);
+function isMobile() {
+  return (
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    ) || window.innerWidth <= 768
+  );
+}
 
-document.addEventListener('mousemove', (e) => {
-  cursor.style.left = e.clientX - 10 + 'px'; // Center the circle
-  cursor.style.top = e.clientY - 10 + 'px';
-});
+if (!isMobile()) {
+  // Hide default cursor only on desktop
+  document.body.style.cursor = 'none';
 
-// Hide cursor when mouse leaves window
-document.addEventListener('mouseleave', () => {
-  cursor.style.opacity = '0';
-});
+  // Create custom cursor
+  const cursor = document.createElement('div');
+  cursor.className = 'custom-cursor';
+  document.body.appendChild(cursor);
 
-document.addEventListener('mouseenter', () => {
-  cursor.style.opacity = '1';
-});
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX - 10 + 'px';
+    cursor.style.top = e.clientY - 10 + 'px';
+  });
+
+  document.addEventListener('mouseleave', () => {
+    cursor.style.opacity = '0';
+  });
+
+  document.addEventListener('mouseenter', () => {
+    cursor.style.opacity = '1';
+  });
+}
