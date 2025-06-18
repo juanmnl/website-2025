@@ -15,9 +15,9 @@
     --butter: #ffeda8;
     --border: #cfdce1;
     --border-radius: 6px;
-    --font-family: 'Inter', sans-serif;
+    --font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     --max-width: 960px;
-    --letter-spacing: 0.024em;
+    --letter-spacing: 0.013em;
 }
 
 html {
@@ -58,6 +58,7 @@ h1, h2 {
     color: var(--dark-gray);
     margin-bottom: 0.8em;
     line-height: 1.2;
+    letter-spacing: var(--letter-spacing);
 }
 
 h3, h4, h5, h6, article h1 {
@@ -65,6 +66,7 @@ h3, h4, h5, h6, article h1 {
     margin-bottom: 0.8em;
     line-height: 1.2;
     font-family: var(--font-family);
+    letter-spacing: var(--letter-spacing);
 }
 
 h1 { font-size: 1.4em; }
@@ -74,6 +76,11 @@ h4 { font-size: .9em; }
 p { margin-bottom: 1em; }
 ul { font-size: .9em; list-style: none; margin-bottom: 1em; }
 li { margin-bottom: 0.5em; }
+
+p {
+    letter-spacing: var(--letter-spacing);
+    line-height: 1.6em;
+}
 
 img {
     max-width: 100%;
@@ -229,7 +236,6 @@ nav ul li a.active::after {
 .hero-section p {
     max-width: 700px;
     text-align: left;
-    letter-spacing: var(--letter-spacing);
 }
 
 .hero-section ul {
@@ -280,7 +286,7 @@ nav ul li a.active::after {
 
 .project-card img {
     width: 100%;
-    height: 250px;
+    height: 220px;
     object-fit: cover;
     margin-bottom: 0;
     border-radius: var(--border-radius) var(--border-radius) 0 0;
@@ -292,12 +298,12 @@ nav ul li a.active::after {
 }
 
 .project-card h3 {
-    margin: 15px 15px 5px 15px;
+    margin: 10px 20px 5px 20px;
 }
 
 .project-card p {
-    margin: 0 15px 15px 15px;
-    font-size: 0.95em;
+    margin: 0 20px 15px 20px;
+    font-size: 0.9em;
     color: var(--secondary-color);
 }
 
@@ -357,11 +363,11 @@ nav ul li a.active::after {
 
 
 .gallery-caption p {
-    color: var(--dark-gray);
+    color: #8796a6;
+    font-weight: 600;
     font-size: .7em;
     text-transform: uppercase;
     margin: 8px 12px;
-    letter-spacing: var(--letter-spacing);
 }
 
 .gallery-section ul li a {
@@ -404,7 +410,6 @@ nav ul li a.active::after {
 .detail-item p {
     font-size: 0.95em;
     margin-bottom: 0;
-    letter-spacing: var(--letter-spacing);
 }
 
 .case-study-section {
@@ -483,10 +488,6 @@ nav ul li a.active::after {
     min-width: 300px;
 }
 
-.about-section p {
-    letter-spacing: var(--letter-spacing);
-}
-
 .about-section a {
     text-decoration: underline;
 }
@@ -531,7 +532,6 @@ nav ul li a.active::after {
 .contact-section p {
     margin-bottom: 40px;
     max-width: 600px;
-    letter-spacing: var(--letter-spacing);
 }
 
 .contact-info {
@@ -574,7 +574,6 @@ nav ul li a.active::after {
   margin: 0.5rem 0;
   color: var(--secondary-color);
   font-size: 0.95em;
-  letter-spacing: var(--letter-spacing);
   max-width: 100%;
 }
 
@@ -764,9 +763,9 @@ blockquote footer {
 
 /* 10. Media Queries for Responsiveness */
 @media (max-width: 768px) {
-    h1 { font-size: 1.5em; }
-    h2 { font-size: 1.4em; }
-    h3 { font-size: 1.3em; }
+    h1 { font-size: 1.3em; }
+    h2 { font-size: 1.1em; }
+    h3 { font-size: 1em; }
 
     /* Header & Navigation for Mobile */
     header {
@@ -918,7 +917,6 @@ blockquote footer {
 .availability-status p {
   margin: 0;
   color: var(--text-color);
-  letter-spacing: var(--letter-spacing);
 }
 
 /* Glitch effect */
