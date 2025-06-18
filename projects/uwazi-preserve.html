@@ -49,269 +49,273 @@
             src="../assets/images/th3.png"
             loading="lazy"
           />
-          <h1>Preserve: Evidence Collection for the Web</h1>
-          <p class="project-intro">
-            Designed a browser extension integrated with Uwazi that captures
-            tamper-proof evidence from web content, social media posts, and
-            online articles for legal proceedings. Solved the unique UX
-            challenge of creating seamless evidence collection workflows within
-            browser constraints, ensuring captured content maintains legal
-            integrity while remaining user-friendly for human rights
-            investigators and legal professionals.
-          </p>
+          <div class="paper">
+            <h1>Preserve: Evidence Collection for the Web</h1>
+            <p class="project-intro">
+              Designed a browser extension integrated with Uwazi that captures
+              tamper-proof evidence from web content, social media posts, and
+              online articles for legal proceedings. Solved the unique UX
+              challenge of creating seamless evidence collection workflows
+              within browser constraints, ensuring captured content maintains
+              legal integrity while remaining user-friendly for human rights
+              investigators and legal professionals.
+            </p>
 
-          <div class="project-details">
-            <div class="detail-item">
-              <h4>Role</h4>
-              <p>Lead UX/UI Designer</p>
+            <div class="project-details">
+              <div class="detail-item">
+                <h4>Role</h4>
+                <p>Lead UX/UI Designer</p>
+              </div>
+              <div class="detail-item">
+                <h4>Team</h4>
+                <p>PM, 3 Engineers</p>
+              </div>
+              <div class="detail-item">
+                <h4>Timeline</h4>
+                <p>1 month (Alpha development) + 2 months (V1 design)</p>
+              </div>
+              <div class="detail-item">
+                <h4>Tools</h4>
+                <p>MindNode, Figma, Browser DevTools</p>
+              </div>
             </div>
-            <div class="detail-item">
-              <h4>Team</h4>
-              <p>PM, 3 Engineers</p>
+
+            <div class="case-study-section">
+              <h3>The Challenge</h3>
+              <p>
+                Legal professionals and human rights investigators needed a
+                reliable way to capture online evidence that would be admissible
+                in court, with seamless integration into their existing Uwazi
+                documentation workflows. Traditional screenshot methods and
+                manual documentation lacked the cryptographic verification
+                required for legal proceedings, while existing tools were either
+                too technical for non-technical users or failed to provide the
+                tamper-proof guarantees that legal contexts demand.
+              </p>
+              <p>
+                The challenge was designing an evidence collection workflow that
+                operated seamlessly within browser environments while
+                maintaining direct integration with Uwazi's documentation
+                platform. Users needed to capture not just visual content, but
+                also metadata, timestamps, and source verification—all while
+                working within the constraints of browser extension architecture
+                and ensuring captured evidence automatically synced with their
+                ongoing human rights cases.
+              </p>
+              <img
+                src="../assets/images/preserve/flow.png"
+                loading="lazy"
+                alt="Information architecture diagram showing the flow of the Preserve extension"
+              />
+              <p class="image-caption">
+                Information architecture diagram showing the flow of the
+                Preserve extension.
+              </p>
             </div>
-            <div class="detail-item">
-              <h4>Timeline</h4>
-              <p>1 month (Alpha development) + 2 months (V1 design)</p>
+
+            <div class="case-study-section">
+              <h3>Process & Research</h3>
+              <p>
+                We worked closely with legal experts and human rights
+                investigators to understand the specific requirements for
+                admissible digital evidence. This involved studying legal
+                precedents, understanding chain-of-custody requirements, and
+                identifying the most common types of online content that require
+                preservation.
+              </p>
+              <ul>
+                <li>
+                  <strong>Legal Requirements:</strong> Studied evidence
+                  admissibility standards and tamper-proof verification needs.
+                </li>
+                <li>
+                  <strong>User Workflows:</strong> Mapped how investigators
+                  currently collect and document online evidence.
+                </li>
+                <li>
+                  <strong>Technical Constraints:</strong> Explored browser
+                  extension limitations and security considerations.
+                </li>
+                <li>
+                  <strong>Content Types:</strong> Analyzed various online
+                  content formats requiring preservation.
+                </li>
+              </ul>
+              <img
+                src="../assets/images/preserve/preserve-doc.png"
+                loading="lazy"
+                alt="Full presentation of the V1 flow and design, and MVP"
+              />
+              <p class="image-caption">
+                Full presentation of the V1 flow and design, and MVP.
+              </p>
             </div>
-            <div class="detail-item">
-              <h4>Tools</h4>
-              <p>MindNode, Figma, Browser DevTools</p>
+
+            <div class="case-study-section">
+              <h3>Ideation & Design</h3>
+              <p>
+                The extension design prioritized simplicity and reliability,
+                enabling users to capture evidence with minimal technical
+                knowledge while ensuring maximum legal integrity. The interface
+                focused on clear visual feedback and straightforward
+                interactions that work consistently across different websites
+                and content types.
+              </p>
+
+              <h4>Key Features:</h4>
+              <ul>
+                <li>
+                  <strong>One-Click Capture:</strong> Simple interface for
+                  capturing web pages, posts, and multimedia content.
+                </li>
+                <li>
+                  <strong>Uwazi Integration:</strong>Direct sync with existing
+                  Uwazi documentation workflows and case management.
+                </li>
+                <li>
+                  <strong>Cryptographic Verification:</strong> Automatic
+                  generation of tamper-proof certificates and metadata.
+                </li>
+                <li>
+                  <strong>Chain of Custody:</strong> Built-in documentation for
+                  legal trail requirements.
+                </li>
+                <li>
+                  <strong>Cross-Platform Compatibility:</strong> Consistent
+                  experience across different browsers and websites.
+                </li>
+              </ul>
+              <img
+                src="../assets/images/preserve/preserve-full-flow.png"
+                loading="lazy"
+                alt="Preserve extension full flow mockup"
+              />
+              <p class="image-caption">Preserve extension full flow mockup.</p>
+              <img
+                src="../assets/images/preserve/token.png"
+                loading="lazy"
+                alt="Preserve setup with a generated token, between Uwazi and the browser extension"
+              />
+              <p class="image-caption">
+                Preserve setup with a generated token, between Uwazi and the
+                browser extension.
+              </p>
+              <img
+                src="../assets/images/preserve/status.png"
+                loading="lazy"
+                alt="Capture status indicators showing success or failure within the extension"
+              />
+              <p class="image-caption">
+                Capture status indicators showing success or failure within the
+                extension.
+              </p>
             </div>
-          </div>
 
-          <div class="case-study-section">
-            <h3>The Challenge</h3>
-            <p>
-              Legal professionals and human rights investigators needed a
-              reliable way to capture online evidence that would be admissible
-              in court, with seamless integration into their existing Uwazi
-              documentation workflows. Traditional screenshot methods and manual
-              documentation lacked the cryptographic verification required for
-              legal proceedings, while existing tools were either too technical
-              for non-technical users or failed to provide the tamper-proof
-              guarantees that legal contexts demand.
-            </p>
-            <p>
-              The challenge was designing an evidence collection workflow that
-              operated seamlessly within browser environments while maintaining
-              direct integration with Uwazi's documentation platform. Users
-              needed to capture not just visual content, but also metadata,
-              timestamps, and source verification—all while working within the
-              constraints of browser extension architecture and ensuring
-              captured evidence automatically synced with their ongoing human
-              rights cases.
-            </p>
-            <img
-              src="../assets/images/preserve/flow.png"
-              loading="lazy"
-              alt="Information architecture diagram showing the flow of the Preserve extension"
-            />
-            <p class="image-caption">
-              Information architecture diagram showing the flow of the Preserve
-              extension.
-            </p>
-          </div>
+            <div class="case-study-section">
+              <h3>The Solution & Impact</h3>
+              <p>
+                This project demonstrated the importance of designing for
+                specialized, high-stakes use cases where user experience must
+                balance simplicity with technical precision. Working within
+                browser extension constraints while meeting legal requirements
+                provided unique insights into designing for regulated industries
+                and mission-critical applications.
+              </p>
+              <p>
+                The alpha validation confirmed that thoughtful UX design can
+                make complex legal-technical requirements accessible to
+                non-technical users, opening new possibilities for digital
+                evidence collection in human rights work and legal proceedings.
+              </p>
+              <img
+                src="../assets/images/preserve/chrome-store.png"
+                loading="lazy"
+                alt="Chrome Web Store listing for the Preserve extension"
+              />
+              <p class="image-caption">
+                Chrome Web Store listing for the Preserve extension.
+              </p>
+              <img
+                src="../assets/images/preserve/integration.png"
+                loading="lazy"
+                alt="Integration with Uwazi, showing how the extension captures evidence and syncs with the platform"
+              />
+              <p class="image-caption">
+                Integration with Uwazi, showing how the extension captures
+                evidence and syncs with the platform.
+              </p>
 
-          <div class="case-study-section">
-            <h3>Process & Research</h3>
-            <p>
-              We worked closely with legal experts and human rights
-              investigators to understand the specific requirements for
-              admissible digital evidence. This involved studying legal
-              precedents, understanding chain-of-custody requirements, and
-              identifying the most common types of online content that require
-              preservation.
-            </p>
-            <ul>
-              <li>
-                <strong>Legal Requirements:</strong> Studied evidence
-                admissibility standards and tamper-proof verification needs.
-              </li>
-              <li>
-                <strong>User Workflows:</strong> Mapped how investigators
-                currently collect and document online evidence.
-              </li>
-              <li>
-                <strong>Technical Constraints:</strong> Explored browser
-                extension limitations and security considerations.
-              </li>
-              <li>
-                <strong>Content Types:</strong> Analyzed various online content
-                formats requiring preservation.
-              </li>
-            </ul>
-            <img
-              src="../assets/images/preserve/preserve-doc.png"
-              loading="lazy"
-              alt="Full presentation of the V1 flow and design, and MVP"
-            />
-            <p class="image-caption">
-              Full presentation of the V1 flow and design, and MVP.
-            </p>
-          </div>
+              <img
+                src="../assets/images/preserve/preserve-closeup.png"
+                loading="lazy"
+                alt="Preserve extension capture and howw it's shown in Uwazi"
+              />
+              <p class="image-caption">
+                Preserve extension capture and howw it's shown in Uwazi.
+              </p>
+            </div>
 
-          <div class="case-study-section">
-            <h3>Ideation & Design</h3>
-            <p>
-              The extension design prioritized simplicity and reliability,
-              enabling users to capture evidence with minimal technical
-              knowledge while ensuring maximum legal integrity. The interface
-              focused on clear visual feedback and straightforward interactions
-              that work consistently across different websites and content
-              types.
-            </p>
+            <div class="case-study-section">
+              <h3>Current Status & Next Steps</h3>
+              <p>
+                The alpha version successfully validates the core concept and
+                technical feasibility of tamper-proof evidence collection within
+                browser environments. User feedback from legal professionals and
+                investigators has been positive, confirming the product-market
+                fit and identifying key areas for enhancement.
+              </p>
 
-            <h4>Key Features:</h4>
-            <ul>
-              <li>
-                <strong>One-Click Capture:</strong> Simple interface for
-                capturing web pages, posts, and multimedia content.
-              </li>
-              <li>
-                <strong>Uwazi Integration:</strong>Direct sync with existing
-                Uwazi documentation workflows and case management.
-              </li>
-              <li>
-                <strong>Cryptographic Verification:</strong> Automatic
-                generation of tamper-proof certificates and metadata.
-              </li>
-              <li>
-                <strong>Chain of Custody:</strong> Built-in documentation for
-                legal trail requirements.
-              </li>
-              <li>
-                <strong>Cross-Platform Compatibility:</strong> Consistent
-                experience across different browsers and websites.
-              </li>
-            </ul>
-            <img
-              src="../assets/images/preserve/preserve-full-flow.png"
-              loading="lazy"
-              alt="Preserve extension full flow mockup"
-            />
-            <p class="image-caption">Preserve extension full flow mockup.</p>
-            <img
-              src="../assets/images/preserve/token.png"
-              loading="lazy"
-              alt="Preserve setup with a generated token, between Uwazi and the browser extension"
-            />
-            <p class="image-caption">
-              Preserve setup with a generated token, between Uwazi and the
-              browser extension.
-            </p>
-            <img
-              src="../assets/images/preserve/status.png"
-              loading="lazy"
-              alt="Capture status indicators showing success or failure within the extension"
-            />
-            <p class="image-caption">
-              Capture status indicators showing success or failure within the
-              extension.
-            </p>
-          </div>
+              <h4>V1 designs:</h4>
 
-          <div class="case-study-section">
-            <h3>The Solution & Impact</h3>
-            <p>
-              This project demonstrated the importance of designing for
-              specialized, high-stakes use cases where user experience must
-              balance simplicity with technical precision. Working within
-              browser extension constraints while meeting legal requirements
-              provided unique insights into designing for regulated industries
-              and mission-critical applications.
-            </p>
-            <p>
-              The alpha validation confirmed that thoughtful UX design can make
-              complex legal-technical requirements accessible to non-technical
-              users, opening new possibilities for digital evidence collection
-              in human rights work and legal proceedings.
-            </p>
-            <img
-              src="../assets/images/preserve/chrome-store.png"
-              loading="lazy"
-              alt="Chrome Web Store listing for the Preserve extension"
-            />
-            <p class="image-caption">
-              Chrome Web Store listing for the Preserve extension.
-            </p>
-            <img
-              src="../assets/images/preserve/integration.png"
-              loading="lazy"
-              alt="Integration with Uwazi, showing how the extension captures evidence and syncs with the platform"
-            />
-            <p class="image-caption">
-              Integration with Uwazi, showing how the extension captures
-              evidence and syncs with the platform.
-            </p>
+              <ul>
+                <li>
+                  Enhanced user interface with improved visual hierarchy and
+                  clearer workflows
+                </li>
+                <li>
+                  Capture status indicators to provide clear feedback when
+                  evidence collection fails or encounters issues
+                </li>
+                <li>
+                  Expanded content type support including social media stories
+                  and dynamic content
+                </li>
+                <li>
+                  Advanced organization tools for managing large evidence
+                  collections
+                </li>
+                <li>
+                  Integration capabilities with legal case management systems
+                </li>
+                <li>
+                  Improved export options for various legal documentation
+                  formats
+                </li>
+              </ul>
 
-            <img
-              src="../assets/images/preserve/preserve-closeup.png"
-              loading="lazy"
-              alt="Preserve extension capture and howw it's shown in Uwazi"
-            />
-            <p class="image-caption">
-              Preserve extension capture and howw it's shown in Uwazi.
-            </p>
-          </div>
+              <p>
+                The v1 release will transform Preserve from a proof-of-concept
+                tool into a production-ready platform that legal professionals
+                can confidently integrate into their evidence collection
+                workflows.
+              </p>
 
-          <div class="case-study-section">
-            <h3>Current Status & Next Steps</h3>
-            <p>
-              The alpha version successfully validates the core concept and
-              technical feasibility of tamper-proof evidence collection within
-              browser environments. User feedback from legal professionals and
-              investigators has been positive, confirming the product-market fit
-              and identifying key areas for enhancement.
-            </p>
+              <br />
+              <h4>Huridocs | 2021-2025</h4>
 
-            <h4>V1 designs:</h4>
+              <img
+                class="firma"
+                src="../assets/images/firma.png"
+                loading="lazy"
+              />
+            </div>
 
-            <ul>
-              <li>
-                Enhanced user interface with improved visual hierarchy and
-                clearer workflows
-              </li>
-              <li>
-                Capture status indicators to provide clear feedback when
-                evidence collection fails or encounters issues
-              </li>
-              <li>
-                Expanded content type support including social media stories and
-                dynamic content
-              </li>
-              <li>
-                Advanced organization tools for managing large evidence
-                collections
-              </li>
-              <li>
-                Integration capabilities with legal case management systems
-              </li>
-              <li>
-                Improved export options for various legal documentation formats
-              </li>
-            </ul>
-
-            <p>
-              The v1 release will transform Preserve from a proof-of-concept
-              tool into a production-ready platform that legal professionals can
-              confidently integrate into their evidence collection workflows.
-            </p>
-
-            <br />
-            <h4>Huridocs | 2021-2025</h4>
-
-            <img
-              class="firma"
-              src="../assets/images/firma.png"
-              loading="lazy"
-            />
-          </div>
-
-          <div class="project-navigation">
-            <a href="ktn-ryms.html" class="button">Next Project &rarr;</a>
-            <a href="../index.html" class="button secondary"
-              >&larr; Back Home</a
-            >
+            <div class="project-navigation">
+              <a href="ktn-ryms.html" class="button">Next Project &rarr;</a>
+              <a href="../index.html" class="button secondary"
+                >&larr; Back Home</a
+              >
+            </div>
           </div>
         </div>
       </article>

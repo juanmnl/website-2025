@@ -488,7 +488,7 @@ nav ul li a.active::after {
     min-width: 300px;
 }
 
-.about-section a {
+.about-section p > a {
     text-decoration: underline;
 }
 
@@ -705,6 +705,12 @@ footer p {
     right: 15px;
     width: 400px;
     border-radius: 0;
+}
+
+.paper {
+    background-color: #fefefe;
+    padding: 20px 20px;
+    border-radius: var(--border-radius);
 }
 
 blockquote {
