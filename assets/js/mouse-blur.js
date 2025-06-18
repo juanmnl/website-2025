@@ -114,14 +114,17 @@ class MouseBlur {
 
   setupEventListeners() {
     const handleMouseMove = (event) => {
-      const x = event.clientX / window.innerWidth;
-      const y = 1.0 - event.clientY / window.innerHeight;
+      // Only update mouse position on desktop
+      if (!this.isMobile()) {
+        const x = event.clientX / window.innerWidth;
+        const y = 1.0 - event.clientY / window.innerHeight;
 
-      this.mouse.x = x;
-      this.mouse.y = y;
+        this.mouse.x = x;
+        this.mouse.y = y;
 
-      if (this.material) {
-        this.material.uniforms.u_mouse.value.copy(this.mouse);
+        if (this.material) {
+          this.material.uniforms.u_mouse.value.copy(this.mouse);
+        }
       }
     };
 
@@ -132,8 +135,18 @@ class MouseBlur {
           window.innerWidth,
           window.innerHeight
         );
+
+        // Reset mobile position on resize
+        if (this.isMobile()) {
+          this.setMobilePosition();
+        }
       }
     };
+
+    // Set initial mobile position
+    if (this.isMobile()) {
+      this.setMobilePosition();
+    }
 
     document.addEventListener('mousemove', handleMouseMove);
     window.addEventListener('resize', handleResize);
@@ -142,6 +155,24 @@ class MouseBlur {
       document.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('resize', handleResize);
     };
+  }
+
+  setMobilePosition() {
+    const mobileX = 0.5; // Center horizontally
+    const mobileY = 0.02; // Bottom (remember Y is flipped)
+
+    this.mouse.set(mobileX, mobileY);
+    if (this.material) {
+      this.material.uniforms.u_mouse.value.copy(this.mouse);
+    }
+  }
+
+  isMobile() {
+    return (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      ) || window.innerWidth <= 768
+    );
   }
 
   animate(time = 0) {

@@ -130,13 +130,27 @@ function isMobile() {
 }
 
 if (!isMobile()) {
-  // Hide default cursor only on desktop
   document.body.style.cursor = 'none';
 
-  // Create custom cursor
   const cursor = document.createElement('div');
   cursor.className = 'custom-cursor';
   document.body.appendChild(cursor);
+
+  const startX = window.innerWidth / 2;
+  const startY = window.innerHeight / 2;
+
+  cursor.style.left = startX - 10 + 'px';
+  cursor.style.top = startY - 10 + 'px';
+
+  if (window.mouseBlurEffect && window.mouseBlurEffect.material) {
+    window.mouseBlurEffect.mouse.set(
+      startX / window.innerWidth,
+      1.0 - startY / window.innerHeight
+    );
+    window.mouseBlurEffect.material.uniforms.u_mouse.value.copy(
+      window.mouseBlurEffect.mouse
+    );
+  }
 
   document.addEventListener('mousemove', (e) => {
     cursor.style.left = e.clientX - 10 + 'px';
@@ -150,4 +164,18 @@ if (!isMobile()) {
   document.addEventListener('mouseenter', () => {
     cursor.style.opacity = '1';
   });
+} else {
+  // Mobile: Set mouse effect position to bottom
+  if (window.mouseBlurEffect && window.mouseBlurEffect.material) {
+    const mobileX = window.innerWidth / 2;
+    const mobileY = window.innerHeight - 100; // 100px from bottom
+
+    window.mouseBlurEffect.mouse.set(
+      mobileX / window.innerWidth,
+      1.0 - mobileY / window.innerHeight
+    );
+    window.mouseBlurEffect.material.uniforms.u_mouse.value.copy(
+      window.mouseBlurEffect.mouse
+    );
+  }
 }
