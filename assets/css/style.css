@@ -6,13 +6,14 @@
 }
 
 :root {
-    --primary-color: #111;
+    --primary-color: #000;
     --secondary-color: #6c757d;
-    --text-color: #222;
+    --text-color: #111;
     --light-gray: #f8f9fa;
     --dark-gray: #1b1e21;
-    --white: #ffffff;
+    --white: #eaeff1;
     --butter: #ffeda8;
+    --border: #cfdce1;
     --border-radius: 6px;
     --font-family: 'Inter', sans-serif;
     --max-width: 960px;
@@ -123,7 +124,7 @@ video {
 
 .button.primary {
     background-color: var(--primary-color);
-    color: var(--white);
+    color: #fff;
 }
 
 .button.primary:hover {
@@ -259,7 +260,7 @@ nav ul li a.active::after {
 }
 
 .project-card {
-    border: 1px solid #f6f6f6;
+    border: 1px solid var(--border);
     background-color: var(--white);
     border-radius: var(--border-radius);
     overflow: hidden;
@@ -325,10 +326,10 @@ nav ul li a.active::after {
     position: relative;
     overflow: hidden;
     border-radius: var(--border-radius);
-    border: 1px solid #f6f6f6;
+    border: 1px solid var(--border);
     transition: box-shadow 0.3s ease, background-color 0.3s ease;
     cursor: pointer;
-    background-color: var(--white);
+    background-color: #fff;
 }
 
 .gallery-item:hover {
@@ -350,8 +351,8 @@ nav ul li a.active::after {
 }
 
 .gallery-caption {
-    background-color: var(--white);
-    border-top: 1px solid #eee;
+    background-color: #fff;
+    border-top: 1px solid var(--border);
 }
 
 
@@ -359,9 +360,8 @@ nav ul li a.active::after {
     color: var(--dark-gray);
     font-size: .7em;
     text-transform: uppercase;
-    margin: 15px;
+    margin: 8px 12px;
     letter-spacing: var(--letter-spacing);
-    font-weight: 600;
 }
 
 .gallery-section ul li a {
@@ -711,11 +711,11 @@ footer p {
 blockquote {
     display: inline-block;
     font-style: italic;
-    color: var(--secondary-color);
+    color: var(--text-color);
     border-left: 4px solid var(--butter);
     margin: 1em 0;
     padding: 0.5em 1em;
-    background-color: #fbfbfb;
+    background-color: #e2e9ee;
     margin-right: 1em;
     border-radius: var(--border-radius);
 }
