@@ -15,7 +15,7 @@
     --white: #eaeff1;
     --butter: #ffeda8;
     --border: #F5F4EE;
-    --border-radius: 6px;
+    --border-radius: 2px;
     --font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     --max-width: 960px;
     --letter-spacing: 0.013em;
@@ -124,34 +124,24 @@ video {
 .button {
     display: inline-block;
     padding: 4px 12px;
-    border-radius: var(--border-radius);
-    font-weight: 600;
+    font-weight: 500;
+    font-size: .875rem;
+    line-height: 1.25rem;
     text-align: center;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    transition: all 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     text-decoration: none;
-    border: 1px solid transparent;
+    border: 1px solid #111;
+    box-shadow: 2px 2px 2px hsl(0deg 0% 0% / 50%), 4px 4px 0 #000000;
+    
 }
 
-.button.primary {
-    background-color: var(--primary-color);
-    color: #fff;
+.button:hover {
+    box-shadow: 2px 2px 2px hsl(0deg 0% 0% / 50%), 3px 3px 0 #000000;
+    background-color: #dcdbd5;
+ 
 }
 
-.button.primary:hover {
-    background-color: var(--dark-gray);
-}
-
-.button.secondary {
-    background-color: transparent;
-    color: var(--primary-color);
-    border: 1px solid var(--primary-color);
-}
-
-.button.secondary:hover {
-    background-color: var(--primary-color);
-    color: var(--white);
-}
 
 
 /* 2. Header & Navigation */
@@ -181,30 +171,19 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 30px;
+    margin-left: 12px;
 }
 
 nav ul li a {
-    font-weight: 600;
+    font-weight: 500;
     color: var(--text-color);
     padding: 5px 0;
     position: relative;
 }
 
-nav ul li a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 1px;
-    background-color: var(--primary-color);
-    bottom: 0;
-    left: 0;
-    transition: width 0.3s ease;
-}
-
-nav ul li a:hover::after,
-nav ul li a.active::after {
-    width: 100%;
+.button.active {
+    background-color: #fff;
+    box-shadow: 2px 2px 2px hsl(0deg 0% 0% / 50%), 2px 2px 0 #000000;
 }
 
 /* Mobile Navigation Toggle (Hidden on Desktop) */
@@ -817,6 +796,24 @@ blockquote footer {
         display: block;
         text-align: center;
     }
+
+    nav ul li a.button {
+        display: block;
+        box-shadow: none;
+        border: none;
+    }
+    nav ul li a.button:hover {
+        display: block;
+        box-shadow: none;
+        border: none;
+    }
+    nav ul li a.button.active {
+        display: block;
+        box-shadow: none;
+        border: none;
+    }
+
+
     .menu-toggle {
         display: block;
         position: absolute;
