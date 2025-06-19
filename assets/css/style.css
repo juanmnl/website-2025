@@ -10,10 +10,11 @@
     --secondary-color: #6c757d;
     --text-color: #111;
     --light-gray: #f8f9fa;
+    --background: #F5F4EE;
     --dark-gray: #1b1e21;
     --white: #eaeff1;
     --butter: #ffeda8;
-    --border: #cfdce1;
+    --border: #F5F4EE;
     --border-radius: 6px;
     --font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     --max-width: 960px;
@@ -28,7 +29,7 @@ body {
     font-family: var(--font-family);
     line-height: 1.6;
     color: var(--text-color);
-    background-color: var(--white);
+    background-color: var(--background);
     cursor: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -41,6 +42,9 @@ body {
 }
 
 .hero-section > .container {
+    position: relative;
+}
+.contact-section > .container {
     position: relative;
 }
 
@@ -267,7 +271,7 @@ nav ul li a.active::after {
 
 .project-card {
     border: 1px solid var(--border);
-    background-color: var(--white);
+    background-color: var(--background);
     border-radius: var(--border-radius);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -335,7 +339,7 @@ nav ul li a.active::after {
     border: 1px solid var(--border);
     transition: box-shadow 0.3s ease, background-color 0.3s ease;
     cursor: pointer;
-    background-color: #fff;
+    background-color: var(--background);
 }
 
 .gallery-item:hover {
@@ -357,7 +361,7 @@ nav ul li a.active::after {
 }
 
 .gallery-caption {
-    background-color: #fff;
+    background-color: var(--background);
     border-top: 1px solid var(--border);
 }
 
@@ -708,7 +712,7 @@ footer p {
 }
 
 .paper {
-    background-color: #fefefe;
+    background-color: var(--background);
     padding: 20px 20px;
     border-radius: var(--border-radius);
 }
@@ -720,7 +724,7 @@ blockquote {
     border-left: 4px solid var(--butter);
     margin: 1em 0;
     padding: 0.5em 1em;
-    background-color: #e2e9ee;
+    background-color: var(--background);
     margin-right: 1em;
     border-radius: var(--border-radius);
 }
