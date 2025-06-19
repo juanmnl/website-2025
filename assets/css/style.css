@@ -834,9 +834,8 @@ blockquote footer {
 
     .angle {
         top: 32px;
-        right: 10px;
-        width: 400px;
-        overflow: visible;
+        right: 2px;
+        width: 240px;
     }
 
     /* Project Grid */
