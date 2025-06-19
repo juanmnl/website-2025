@@ -773,6 +773,10 @@ blockquote footer {
     h2 { font-size: 1.1em; }
     h3 { font-size: 1em; }
 
+    .container {
+        padding: 0 12px;
+    }
+
     /* Header & Navigation for Mobile */
     header {
         background-color: var(--white);
@@ -901,6 +905,11 @@ blockquote footer {
 }
 
 @media (max-width: 480px) {
+
+    .container {
+        padding: 0 8px;
+    }
+
     .gallery-section {
         padding: 60px 0;
     }
