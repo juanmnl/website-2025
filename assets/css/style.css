@@ -783,7 +783,7 @@ blockquote footer {
 
     /* Header & Navigation for Mobile */
     header {
-        background-color: var(--white);
+        background-color: var(--background);
         padding: 15px 0 1px 0;
     }
     header .container {
@@ -799,7 +799,7 @@ blockquote footer {
         flex-direction: column;
         width: 100%;
         margin-top: 15px;
-        background-color: var(--white);
+        background-color: var(--background);
         border-top: 1px solid var(--light-gray);
     }
     nav ul.active {
