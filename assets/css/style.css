@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+:focus-visible {
+  outline: rgb(248, 99, 117) solid 2px;
+}
+
 :root {
     --primary-color: #000;
     --secondary-color: #6c757d;
