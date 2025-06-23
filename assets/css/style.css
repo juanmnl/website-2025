@@ -141,7 +141,16 @@ video {
 
 .highlight {
     background-color: var(--butter);
-    /* animation: pulse 2s infinite; */
+    background: linear-gradient(90deg, transparent 0%, var(--butter) 0%, var(--butter) 100%, transparent 100%);
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+    background-position: left center;
+    animation: highlightSweep 0.8s ease 0.5s forwards;
+}
+
+@keyframes highlightSweep {
+    from { background-size: 0% 100%; }
+    to { background-size: 100% 100%; }
 }
 
 /* Visually Hidden for Screen Readers Only */
@@ -170,6 +179,7 @@ video {
     text-decoration: none;
     border: 1px solid #111;
     box-shadow: 2px 2px 2px hsl(0deg 0% 0% / 50%), 4px 4px 0 #000000;
+    background-color: var(--background);
     
 }
 
@@ -182,12 +192,21 @@ video {
 
 
 /* 2. Header & Navigation */
-header {
-    backdrop-filter: blur(10px);
-    padding: 15px 0;
+
+#navigation-root {
     position: sticky;
     top: 0;
     z-index: 1000;
+}
+
+#navigation-root header {
+    position: static;
+}
+
+header {
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+    top: 0;
 }
 
 header .container {
