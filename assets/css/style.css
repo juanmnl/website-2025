@@ -20,10 +20,10 @@
     --butter: #ffeda8;
     --border: #F5F4EE;
     --border-radius: 2px;
-    /* --font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; */
-    --font-family: monospace, "Courier New", Courier, monospace;
+    --font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    /* --font-family: monospace, "Courier New", Courier, monospace; */
     --max-width: 960px;
-    --letter-spacing: 0.018em;
+    --letter-spacing: 0.013em;
 }
 
 html {
@@ -65,14 +65,13 @@ a:hover {
 
 h1, h2 {
     color: var(--dark-gray);
-    margin-bottom: 0.9em;
+    margin-bottom: 0.4em;
     line-height: 1.2;
     letter-spacing: var(--letter-spacing);
 }
 
 h3, h4, h5, h6, article h1 {
     color: var(--dark-gray);
-    margin-bottom: 0.8em;
     line-height: 1.2;
     font-family: var(--font-family);
     letter-spacing: var(--letter-spacing);
@@ -90,7 +89,10 @@ p {
     letter-spacing: var(--letter-spacing);
     line-height: 1.8em;
     margin: 2em 0;
-    /* text-align: justify; */
+}
+
+p.subtitle {
+    margin: .4em 0;
 }
 
 img {
@@ -131,7 +133,7 @@ video {
 .button {
     display: inline-block;
     padding: 2px 8px;
-    font-size: .75rem;
+    font-size: .8rem;
     text-transform: uppercase;
     line-height: 1.25rem;
     text-align: center;
@@ -167,7 +169,7 @@ header .container {
 }
 
 .logo {
-    font-size: 1em;
+    font-size: .8em;
     font-weight: 700;
     color: var(--dark-gray);
 }
@@ -219,19 +221,17 @@ nav ul li a {
 
 .hero-section h1 {
     font-size: 2em;
-    margin-bottom: 1em;
-    font-weight: 100;
+    font-weight: 400;
 }
 
 .hero-section p {
-    max-width: 700px;
     text-align: left;
 }
 
 .hero-section ul {
     list-style: none;
     padding-left: 0;
-    margin: 1.5em 0;
+    margin: 2.5em 0;
 }
 
 .hero-section ul li a {
@@ -285,11 +285,11 @@ nav ul li a {
 .project-card h3 {
     font-size: .9em;
     text-transform: uppercase;
-    margin: 10px 20px 5px 20px;
+    margin: .8em .8em 0;
 }
 
 .project-card p {
-    margin: 0 20px 15px 20px;
+    margin: 0 .8em .8em;
     font-size: 0.85em;
     text-transform: uppercase;
     color: var(--secondary-color);
@@ -793,6 +793,7 @@ blockquote footer {
         display: block;
         box-shadow: none;
         border: none;
+        padding: .8em
     }
     nav ul li a.button:hover {
         display: block;
@@ -809,8 +810,8 @@ blockquote footer {
     .menu-toggle {
         display: block;
         position: absolute;
-        right: 20px;
-        top: 16px;
+        right: 8px;
+        top: 13px;
     }
 
     /* Hero Section */
@@ -898,7 +899,7 @@ blockquote footer {
 @media (max-width: 480px) {
 
     .container {
-        padding: 0 8px;
+        padding: 0 12px;
     }
 
     .archive-section {
