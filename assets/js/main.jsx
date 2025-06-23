@@ -4,7 +4,10 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import Navigation from './components/Navigation.jsx';
 
+
 document.addEventListener('DOMContentLoaded', function () {
+  document.body.classList.remove('loading', 'page-transitioning');
+  
   const navRoot = document.getElementById('navigation-root');
   if (navRoot) {
     const root = createRoot(navRoot);
@@ -61,7 +64,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Mouse blur effect
   let mouseBlurEffect = null;
   try {
     mouseBlurEffect = new MouseBlur();
@@ -70,7 +72,6 @@ document.addEventListener('DOMContentLoaded', function () {
     console.error('Failed to initialize mouse blur effect:', error);
   }
 
-  // Custom cursor setup
   function isMobile() {
     return (
       /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -92,7 +93,6 @@ document.addEventListener('DOMContentLoaded', function () {
     cursor.style.left = startX - 10 + 'px';
     cursor.style.top = startY - 10 + 'px';
 
-    // Set initial mouse blur position
     if (mouseBlurEffect && mouseBlurEffect.material) {
       mouseBlurEffect.mouse.set(
         startX / window.innerWidth,
@@ -116,7 +116,6 @@ document.addEventListener('DOMContentLoaded', function () {
       cursor.style.opacity = '1';
     });
   } else {
-    // Mobile: Set mouse effect position to bottom
     if (mouseBlurEffect && mouseBlurEffect.material) {
       const mobileX = window.innerWidth / 2;
       const mobileY = window.innerHeight - 100;
@@ -131,10 +130,19 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Cleanup
   window.addEventListener('beforeunload', () => {
     if (mouseBlurEffect) {
       mouseBlurEffect.destroy();
     }
   });
+
+  document.body.classList.remove('page-transitioning');
+});
+
+document.body.classList.add('loading');
+
+document.addEventListener('visibilitychange', () => {
+  if (!document.hidden) {
+    document.body.classList.remove('page-transitioning');
+  }
 });

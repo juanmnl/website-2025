@@ -28,6 +28,7 @@
 
 html {
     scroll-behavior: smooth;
+    background-color: var(--background);
 }
 
 body {
@@ -38,12 +39,38 @@ body {
     cursor: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: opacity 0.15s ease-out;
+}
+
+body.page-transitioning {
+    opacity: 0.95;
+}
+
+body.loading .container {
+    opacity: 0;
+}
+
+/* Preload common images */
+body::before {
+    content: '';
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    background: url('/assets/images/avatar.svg') no-repeat,
+                url('/assets/images/angle.png') no-repeat,
+                url('/assets/images/th1.png') no-repeat,
+                url('/assets/images/th2.png') no-repeat,
+                url('/assets/images/th3.png') no-repeat,
+                url('/assets/images/th4.png') no-repeat;
 }
 
 .container {
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 20px;
+    transition: opacity 0.1s ease-in;
 }
 
 .hero-section > .container {
@@ -101,6 +128,8 @@ img {
     display: block;
     margin-bottom: 1em;
     border-radius: var(--border-radius);
+    image-rendering: crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
 }
 
 video {
@@ -660,6 +689,35 @@ footer p {
 
 /* Other styles to place */
 
+.personal-card {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    /* border:rgb(248, 99, 117) solid 1px; */
+    width: fit-content;
+    padding: 1em .8em;
+    border-radius: var(--border-radius);
+}
+
+.personal-card .profile-photo {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0;
+    background-color: white;
+}
+
+.personal-card h1 {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.personal-card p {
+    margin: 0;
+}
+
 .custom-cursor {
   position: fixed;
   width: 20px;
@@ -674,7 +732,7 @@ footer p {
 
 .angle {
     position: absolute;
-    top: 20px;
+    top: 0px;
     right: 15px;
     width: 400px;
     border-radius: 0;
@@ -825,7 +883,6 @@ blockquote footer {
     }
 
     .angle {
-        top: 32px;
         right: 2px;
         width: 240px;
     }
@@ -951,11 +1008,11 @@ blockquote footer {
   z-index: 2;
 }
 
-.glitch[data-text="digital tools."]::before {
+.glitch[data-text="Product Designer"]::before {
   animation: glitch-auto 3s infinite 1.9s;
 }
 
-.glitch[data-text="digital tools."]::after {
+.glitch[data-text="Product Designer"]::after {
   animation: glitch-auto 3s infinite 2.1s;
 }
 
