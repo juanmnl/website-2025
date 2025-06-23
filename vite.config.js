@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 import viteImagemin from 'vite-plugin-imagemin';
 import viteCompression from 'vite-plugin-compression';
 
@@ -43,6 +44,7 @@ export default defineConfig({
       },
       output: {
         manualChunks: {
+          react: ['react', 'react-dom'],
           three: ['three'],
         },
       },

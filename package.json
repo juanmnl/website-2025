@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/juanmnl/website-2025#readme",
   "devDependencies": {
+    "@vitejs/plugin-react": "^4.6.0",
     "imagemin-mozjpeg": "^10.0.0",
     "imagemin-pngquant": "^10.0.0",
     "imagemin-svgo": "^11.0.1",
@@ -28,6 +29,8 @@
     "vite-plugin-imagemin": "^0.6.1"
   },
   "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
     "three": "^0.177.0"
   }
 }
