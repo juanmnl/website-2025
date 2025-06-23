@@ -8,7 +8,7 @@
 
   - [x] Home
   - [x] About
-  - [x] Project Gallery
+  - [x] Project archive
   - [x] Contact
   - [x] Featured projects
 

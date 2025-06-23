@@ -11,7 +11,7 @@
 
 :root {
     --primary-color: #000;
-    --secondary-color: #6c757d;
+    --secondary-color: #42474d;
     --text-color: #111;
     --light-gray: #f8f9fa;
     --background: #F5F4EE;
@@ -20,9 +20,10 @@
     --butter: #ffeda8;
     --border: #F5F4EE;
     --border-radius: 2px;
-    --font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    --max-width: 800px;
-    --letter-spacing: 0.013em;
+    /* --font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; */
+    --font-family: monospace, "Courier New", Courier, monospace;
+    --max-width: 960px;
+    --letter-spacing: 0.018em;
 }
 
 html {
@@ -64,7 +65,7 @@ a:hover {
 
 h1, h2 {
     color: var(--dark-gray);
-    margin-bottom: 0.8em;
+    margin-bottom: 0.9em;
     line-height: 1.2;
     letter-spacing: var(--letter-spacing);
 }
@@ -87,7 +88,9 @@ li { margin-bottom: 0.5em; }
 
 p {
     letter-spacing: var(--letter-spacing);
-    line-height: 1.6em;
+    line-height: 1.8em;
+    margin: 2em 0;
+    /* text-align: justify; */
 }
 
 img {
@@ -127,9 +130,9 @@ video {
 /* Buttons */
 .button {
     display: inline-block;
-    padding: 4px 12px;
-    font-weight: 500;
-    font-size: .875rem;
+    padding: 2px 8px;
+    font-size: .75rem;
+    text-transform: uppercase;
     line-height: 1.25rem;
     text-align: center;
     cursor: pointer;
@@ -215,7 +218,7 @@ nav ul li a {
 }
 
 .hero-section h1 {
-    font-size: 2.4em;
+    font-size: 2em;
     margin-bottom: 1em;
     font-weight: 100;
 }
@@ -261,7 +264,6 @@ nav ul li a {
 }
 
 .project-card:hover {
-    /* transform: translateY(-5px); */
     box-shadow: 0 4px 8px rgba(2,2,2,0.1);
 }
 
@@ -280,41 +282,35 @@ nav ul li a {
     transition: transform 0.4s ease;
 }
 
-.project-card:hover img {
-    transform: scale(1.03);
-}
-
 .project-card h3 {
+    font-size: .9em;
+    text-transform: uppercase;
     margin: 10px 20px 5px 20px;
 }
 
 .project-card p {
     margin: 0 20px 15px 20px;
-    font-size: 0.9em;
+    font-size: 0.85em;
+    text-transform: uppercase;
     color: var(--secondary-color);
 }
 
-/* 5. Gallery Section Specifics (New Section) */
-.gallery-section {
+/* 5. archive Section Specifics (New Section) */
+.archive-section {
     padding: 80px 0;
 }
 
-.gallery-section h1 {
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-.gallery-intro {
+.archive-intro {
     margin: 0 auto 50px auto;
 }
 
-.gallery-grid {
+.archive-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
 
-.gallery-item {
+.archive-item {
     display: block;
     position: relative;
     overflow: hidden;
@@ -325,11 +321,11 @@ nav ul li a {
     background-color: var(--background);
 }
 
-.gallery-item:hover {
+.archive-item:hover {
     box-shadow: 0 2px 4px rgba(2, 2, 2, 0.1);
 }
 
-.gallery-item img {
+.archive-item img {
     width: 100%;
     height: 250px;
     object-fit: cover;
@@ -339,27 +335,22 @@ nav ul li a {
     border-radius: 0;
 }
 
-.gallery-item:hover img {
-    transform: scale(1.03);
-}
 
-.gallery-caption {
+.archive-caption {
     background-color: var(--background);
     border-top: 1px solid var(--border);
 }
 
 
-.gallery-caption p {
-    color: #8796a6;
-    font-weight: 600;
+.archive-caption p {
+    color: var(--secondary-color);
     font-size: .7em;
     text-transform: uppercase;
     margin: 8px 12px;
 }
 
-.gallery-section ul li a {
+.archive-section ul li a {
     text-decoration: underline;
-    font-weight: 600;
 }
 
 
@@ -368,35 +359,30 @@ nav ul li a {
     padding: 80px 0;
 }
 
-.case-study h1 {
-    text-align: left;
-    margin-bottom: 20px;
-}
-
 .project-intro {
     color: var(--secondary-color);
-    margin-bottom: 40px;
 }
 
 .project-details {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
+    gap: 1em;
     background-color: var(--light-gray);
-    padding: 20px;
+    padding: 1em;
     border-radius: var(--border-radius);
     margin-bottom: 50px;
 }
 
 .detail-item h4 {
-    font-size: 1em;
+    font-size: .85em;
     color: var(--primary-color);
     margin-bottom: 5px;
 }
 
 .detail-item p {
-    font-size: 0.95em;
+    font-size: .8em;
     margin-bottom: 0;
+    margin-top: .5em;
 }
 
 .case-study-section {
@@ -417,7 +403,7 @@ nav ul li a {
 .case-study-section ul {
     list-style: disc;
     padding-left: 20px;
-    margin-bottom: 1.5em;
+    margin-bottom: 2.5em;
 }
 
 .case-study-section ul li {
@@ -426,7 +412,8 @@ nav ul li a {
 
 .image-caption {
     font-style: italic;
-    font-size: 0.9em;
+    font-size: 0.75em;
+    text-transform: uppercase;
     color: var(--secondary-color);
     text-align: center;
     margin-top: -0.5em;
@@ -448,10 +435,6 @@ nav ul li a {
 /* 7. About Page Specifics */
 .about-section {
     padding: 80px 0;
-}
-
-.about-section h1 {
-    margin-bottom: 40px;
 }
 
 .about-content {
@@ -498,10 +481,10 @@ nav ul li a {
 .skill-tag {
     background-color: var(--primary-color);
     color: var(--white);
-    padding: 0 5px;
+    padding: 2px 8px;
     border-radius: var(--border-radius);
-    font-size: 0.9em;
-    font-weight: 600;
+    font-size: 0.8em;
+    text-transform: uppercase;
     white-space: nowrap;
 }
 
@@ -513,12 +496,16 @@ nav ul li a {
 }
 
 .contact-section h1 {
-    margin-bottom: 20px;
+    margin-bottom: .8em;
 }
 
 .contact-section p {
     margin-bottom: 40px;
     max-width: 600px;
+}
+
+.contact-section .button {
+    text-transform: none;
 }
 
 .contact-info {
@@ -702,6 +689,7 @@ footer p {
 
 blockquote {
     display: inline-block;
+    font-size: .9em;
     font-style: italic;
     color: var(--text-color);
     border-left: 4px solid var(--butter);
@@ -831,7 +819,6 @@ blockquote footer {
     }
     .hero-section h1 {
         font-size: 1.5em;
-        font-weight: 600;
     }
     .hero-section p {
         font-size: 1.2m;
@@ -865,12 +852,12 @@ blockquote footer {
         width: 100%;
     }
 
-    /* Gallery Section */
-    .gallery-grid {
+    /* archive Section */
+    .archive-grid {
         grid-template-columns: 1fr;
     }
 
-    .gallery-item img {
+    .archive-item img {
         height: 200px;
     }
 
@@ -914,13 +901,13 @@ blockquote footer {
         padding: 0 8px;
     }
 
-    .gallery-section {
+    .archive-section {
         padding: 60px 0;
     }
-    .gallery-intro {
+    .archive-intro {
         margin-bottom: 30px;
     }
-    .gallery-grid {
+    .archive-grid {
         gap: 20px;
     }
 }
@@ -942,8 +929,6 @@ blockquote footer {
 .glitch {
   position: relative;
   display: inline-block;
-  font-family: "Fredericka the Great", serif;
-  font-weight: 400;
 }
 
 
