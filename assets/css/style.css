@@ -803,17 +803,21 @@ blockquote footer {
 
 
 .availability-status {
-  padding: 20px;
   border-radius: var(--border-radius);
   margin-bottom: 40px;
   display: flex;
   align-items: center;
   gap: 20px;
+  padding: 25px 50px 25px 30px;
+  border-radius: 60px;
+  background-color: var(--background);
+  width: fit-content;
 }
 
 .status-indicator {
   width: 15px;
   height: 15px;
+  border-radius: var(--border-radius);
   background: var(--butter);
   flex-shrink: 0;
   animation: pulse 2s infinite;
