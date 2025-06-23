@@ -19,7 +19,7 @@
     --white: #eaeff1;
     --butter: #ffeda8;
     --border: #F5F4EE;
-    --border-radius: 2px;
+    --border-radius: 20px;
     --font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     /* --font-family: monospace, "Courier New", Courier, monospace; */
     --max-width: 960px;
@@ -80,7 +80,7 @@ body::before {
 }
 
 a {
-    color: var(--primary-color);
+    color: var(--text-color);
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -170,6 +170,8 @@ video {
 .button {
     display: inline-block;
     padding: 2px 8px;
+    font-weight: 500;
+    border-radius: var(--border-radius);
     font-size: .8rem;
     text-transform: uppercase;
     line-height: 1.25rem;
@@ -299,7 +301,7 @@ nav ul li a {
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    gap: 20px;
 }
 
 .project-card {
@@ -354,7 +356,7 @@ nav ul li a {
 .archive-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    gap: 20px;
 }
 
 .archive-item {
@@ -413,7 +415,7 @@ nav ul li a {
 .project-details {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1em;
+    gap: 20px;
     background-color: var(--light-gray);
     padding: 1em;
     border-radius: var(--border-radius);
@@ -486,7 +488,7 @@ nav ul li a {
 .about-content {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 20px;
     align-items: flex-start;
 }
 
@@ -709,12 +711,12 @@ footer p {
 
 .personal-card {
     display: flex;
-    gap: 1em;
+    gap: 20px;
     align-items: center;
-    /* border:rgb(248, 99, 117) solid 1px; */
     width: fit-content;
-    padding: 1em .8em;
-    border-radius: var(--border-radius);
+    padding: .7em 2em .7em .7em;
+    border-radius: 60px;
+    background-color: var(--background);
 }
 
 .personal-card .profile-photo {
@@ -796,7 +798,7 @@ blockquote footer {
 .logo-status {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 5px;
 }
 
 
@@ -806,7 +808,7 @@ blockquote footer {
   margin-bottom: 40px;
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
 }
 
 .status-indicator {
@@ -920,7 +922,7 @@ blockquote footer {
     }
     .project-navigation {
         flex-direction: column;
-        gap: 15px;
+        gap: 20px;
 
     }
     .project-navigation .button {
@@ -947,7 +949,7 @@ blockquote footer {
 
     /* Contact Section */
     .contact-info {
-        gap: 15px;
+        gap: 20px;
     }
 
      .availability-status {
@@ -963,7 +965,7 @@ blockquote footer {
     /* Footer */
     footer .container {
         flex-direction: column;
-        gap: 15px;
+        gap: 20px;
     }
     .social-links a {
         margin: 0 10px;
