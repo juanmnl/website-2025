@@ -105,7 +105,7 @@ li { margin-bottom: 0.5em; }
 
 p {
     letter-spacing: var(--letter-spacing);
-    line-height: 1.8em;
+    line-height: 1.8;
     margin: 2em 0;
 }
 
@@ -170,10 +170,10 @@ video {
     display: inline-block;
     padding: 2px 10px;
     font-weight: 500;
-    border-radius: var(--border-radius);
+    border-radius: 8px;
     font-size: .8rem;
     text-transform: uppercase;
-    line-height: 1.25rem;
+    line-height: 1.25;
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease, color 0.3s ease, border-color 0.3s ease;
@@ -369,7 +369,7 @@ nav ul li a {
 .project-card p {
     margin: 0 .8em .8em;
     font-size: 0.75em;
-    line-height: 1.4em;
+    line-height: 1.4;
     text-transform: uppercase;
     color: var(--secondary-color);
 }
@@ -424,9 +424,10 @@ nav ul li a {
 
 .archive-caption p {
     color: var(--secondary-color);
-    font-size: .7em;
+    font-size: .75em;
+    line-height: 1.4;
     text-transform: uppercase;
-    margin: 8px 12px;
+    margin: .8em;
 }
 
 .archive-section ul li a {
