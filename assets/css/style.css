@@ -71,13 +71,6 @@ body::before {
     transition: opacity 0.1s ease-in;
 }
 
-.hero-section > .container {
-    position: relative;
-}
-.contact-section > .container {
-    position: relative;
-}
-
 a {
     color: var(--text-color);
     text-decoration: none;
@@ -121,6 +114,7 @@ p.subtitle {
 }
 
 img {
+    position: relative;
     max-width: 100%;
     height: auto;
     display: block;
@@ -128,6 +122,10 @@ img {
     border-radius: var(--border-radius);
     image-rendering: crisp-edges;
     image-rendering: -webkit-optimize-contrast;
+}
+img.lazyload {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
 video {
@@ -167,6 +165,7 @@ video {
 
 /* Buttons */
 .button {
+    position: relative;
     display: inline-block;
     padding: 2px 10px;
     font-weight: 500;
@@ -181,13 +180,42 @@ video {
     border: 1px solid #111;
     box-shadow: 2px 2px 2px hsl(0deg 0% 0% / 50%), 4px 4px 0 #000000;
     background-color: var(--background);
-    
 }
 
 .button:hover {
     box-shadow: 2px 2px 2px hsl(0deg 0% 0% / 50%), 3px 3px 0 #000000;
     background-color: #dcdbd5;
  
+}
+
+.button::before,
+.button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.button::before {
+  box-shadow: 0 0 0 1px red;
+}
+
+.button::after {
+  box-shadow: 0 0 0 1px cyan;
+}
+
+.button:hover::before {
+  animation: glitch-card 0.3s ease-out;
+}
+
+.button:hover::after {
+  animation: glitch-card 0.3s ease-out 0.1s;
 }
 
 
@@ -290,7 +318,7 @@ nav ul li a {
 
 /* 4. Work Section (Homepage) */
 .work-section {
-    padding: 80px 0;
+    padding: 60px 0;
 }
 
 .work-section h2 {
@@ -345,7 +373,7 @@ nav ul li a {
 
 /* 5. archive Section Specifics (New Section) */
 .archive-section {
-    padding: 80px 0;
+    padding: 60px 0;
 }
 
 .archive-intro {
@@ -358,7 +386,7 @@ nav ul li a {
     gap: 20px;
 }
 
-.archive-item {
+.archive-card {
     display: block;
     position: relative;
     overflow: hidden;
@@ -369,11 +397,12 @@ nav ul li a {
     background-color: var(--background);
 }
 
-.archive-item:hover {
+.archive-card:hover {
     box-shadow: 0 2px 4px rgba(2, 2, 2, 0.1);
 }
 
-.archive-item img {
+.archive-card img {
+    position: relative;
     width: 100%;
     height: 250px;
     object-fit: cover;
@@ -401,10 +430,37 @@ nav ul li a {
     text-decoration: underline;
 }
 
+.archive-card:hover img{
+  animation: glitch-image 0.3s ease-out;
+}
+
+@keyframes glitch-image {
+  0%, 100% { 
+    transform: translate(0);
+    filter: none;
+  }
+  20% { 
+    transform: translate(-1px, 1px);
+    filter: hue-rotate(90deg);
+  }
+  40% { 
+    transform: translate(1px, -1px);
+    filter: hue-rotate(-90deg);
+  }
+  60% { 
+    transform: translate(-1px, 1px);
+    filter: hue-rotate(180deg);
+  }
+  80% { 
+    transform: translate(1px, -1px);
+    filter: hue-rotate(-45deg);
+  }
+}
+
 
 /* 6. Case Study Page Specifics */
 .case-study {
-    padding: 80px 0;
+    padding: 60px 0;
 }
 
 .project-intro {
@@ -481,7 +537,7 @@ nav ul li a {
 
 /* 7. About Page Specifics */
 .about-section {
-    padding: 80px 0;
+    padding: 60px 0;
 }
 
 .about-content {
@@ -528,7 +584,7 @@ nav ul li a {
 .skill-tag {
     background-color: var(--primary-color);
     color: var(--white);
-    padding: 2px 8px;
+    padding: 2px 10px;
     border-radius: var(--border-radius);
     font-size: 0.8em;
     text-transform: uppercase;
@@ -539,7 +595,7 @@ nav ul li a {
 /* 8. Contact Page Specifics */
 
 .contact-section {
-    padding: 80px 0;
+    padding: 60px 0;
 }
 
 .contact-section h1 {
@@ -789,7 +845,7 @@ blockquote footer {
 .logo-status {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
 }
 
 
@@ -797,21 +853,21 @@ blockquote footer {
   border-radius: var(--border-radius);
   margin-bottom: 40px;
   display: flex;
+  align-self: center;
   align-items: center;
   gap: 20px;
-  padding: 25px 50px 25px 30px;
+  padding: 20px 40px 20px 40px;
   border-radius: 60px;
   background-color: var(--background);
   width: fit-content;
 }
 
 .status-indicator {
-  width: 15px;
-  height: 15px;
-  border-radius: var(--border-radius);
+  width: 3px;
+  height: 16px;
   background: var(--butter);
   flex-shrink: 0;
-  animation: pulse 2s infinite;
+  animation: pulse 1s infinite;
 }
 
 /* 10. Media Queries for Responsiveness */
@@ -830,7 +886,6 @@ blockquote footer {
         padding: 15px 0 1px 0;
     }
     header .container {
-        display: block;
         margin-bottom: 15px
     }
     .logo {
@@ -843,14 +898,15 @@ blockquote footer {
         width: 100%;
         margin-top: 15px;
         background-color: var(--background);
-        border-top: 1px solid var(--light-gray);
     }
     nav ul.active {
         display: flex;
+        position: absolute;
+        top: 2.6em;
+        left: 0;
     }
     nav ul li {
-        margin: 0;
-        border-bottom: 1px solid var(--light-gray);
+        margin-left: 0;
     }
     nav ul li:last-child {
         border-bottom: none;
@@ -878,16 +934,12 @@ blockquote footer {
         border: none;
     }
 
-
     .menu-toggle {
         display: block;
-        position: absolute;
-        right: 8px;
-        top: 13px;
     }
 
     /* Hero Section */
-    .hero-section {
+    .hero-section, .about-section, .archive-section, .contact-section {
         padding: 40px 0;
     }
     .hero-section h1 {
@@ -941,7 +993,7 @@ blockquote footer {
         grid-template-columns: 1fr;
     }
 
-    .archive-item img {
+    .archive-card img {
         height: 200px;
     }
 
@@ -979,29 +1031,12 @@ blockquote footer {
     }
 }
 
-@media (max-width: 480px) {
-
-    .container {
-        padding: 0 12px;
-    }
-
-    .archive-section {
-        padding: 60px 0;
-    }
-    .archive-intro {
-        margin-bottom: 30px;
-    }
-    .archive-grid {
-        gap: 20px;
-    }
-}
-
 
 
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(247, 183, 35, 0.4); }
-  70% { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(216, 209, 188, 0.28); }
+  70% { box-shadow: 0 0 0 9px rgba(135, 135, 135, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(19, 19, 19, 0); }
 }
 
 .availability-status p {
@@ -1026,12 +1061,12 @@ blockquote footer {
 }
 
 .glitch::before {
-  color: #ff0000;
+  color: red;
   z-index: 1;
 }
 
 .glitch::after {
-  color: #00ffff;
+  color: cyan;
   z-index: 2;
 }
 
@@ -1094,7 +1129,7 @@ blockquote footer {
   z-index: 1000;
 }
 
-/* Optional: Add a subtle loading animation */
+/* Subtle loading animation */
 #navigation-root:empty::before {
   content: '';
   display: block;
@@ -1112,3 +1147,87 @@ blockquote footer {
   0% { background-position: 200% 0; }
   100% { background-position: -200% 0; }
 }
+
+[class*="-card"] {
+ position: relative;
+}
+
+[class*="-card"]::before,
+[class*="-card"]::after {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ border-radius: inherit;
+ opacity: 0;
+ z-index: 1;
+ pointer-events: none;
+}
+
+[class*="-card"]::before {
+ box-shadow: 0 0 0 2px red;
+}
+
+[class*="-card"]::after {
+ box-shadow: 0 0 0 2px cyan;
+}
+
+[class*="-card"]:hover::before {
+ animation: glitch-card 0.3s ease-out;
+}
+
+[class*="-card"]:hover::after {
+ animation: glitch-card 0.3s ease-out 0.1s;
+}
+
+@keyframes glitch-card {
+ 0% { 
+   opacity: 0;
+   transform: translate(0);
+ }
+ 20% { 
+   opacity: 0.7;
+   transform: translate(-3px, 2px);
+ }
+ 40% { 
+   transform: translate(3px, -2px);
+ }
+ 60% { 
+   transform: translate(-2px, 3px);
+ }
+ 80% { 
+   transform: translate(2px, -2px);
+ }
+ 100% { 
+   opacity: 0;
+   transform: translate(0);
+ }
+}
+
+/* [class*="-card"]:hover {
+  animation: glitch-content 0.3s ease-out;
+}
+
+[class*="-card"]:hover * {
+  animation: glitch-content 0.3s ease-out 0.05s;
+}
+
+@keyframes glitch-content {
+  0%, 100% { 
+    transform: translate(0);
+  }
+  20% { 
+    transform: translate(-1px, 1px);
+  }
+  40% { 
+    transform: translate(1px, -1px);
+  }
+  60% { 
+    transform: translate(-1px, 1px);
+  }
+  80% { 
+    transform: translate(1px, -1px);
+  }
+} */
