@@ -900,13 +900,34 @@ blockquote footer {
   animation: pulse 1s infinite;
 }
 
+.social {
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+    margin-left: 1px;
+    gap: 14px;
+    
+}
+
+.social img {
+    width: 15px;
+    height: 15px;
+    border-radius: 0;
+    vertical-align: middle;
+    margin-bottom: 0;
+}
+
+.social img:hover {
+    fill: red
+}
+
 /* 10. Media Queries for Responsiveness */
 @media (max-width: 940px) {
-    .project-grid {
+  .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
-    }
+  }
 }
 
 @media (max-width: 768px) {
@@ -1061,11 +1082,11 @@ blockquote footer {
 
     /* archive Section */
     .archive-grid {
-        grid-template-columns: 1fr;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
     .archive-card img {
-        height: 200px;
+        height: 300px;
     }
 
     /* About Section */
@@ -1282,29 +1303,3 @@ blockquote footer {
    transform: translate(0);
  }
 }
-
-/* [class*="-card"]:hover {
-  animation: glitch-content 0.3s ease-out;
-}
-
-[class*="-card"]:hover * {
-  animation: glitch-content 0.3s ease-out 0.05s;
-}
-
-@keyframes glitch-content {
-  0%, 100% { 
-    transform: translate(0);
-  }
-  20% { 
-    transform: translate(-1px, 1px);
-  }
-  40% { 
-    transform: translate(1px, -1px);
-  }
-  60% { 
-    transform: translate(-1px, 1px);
-  }
-  80% { 
-    transform: translate(1px, -1px);
-  }
-} */
