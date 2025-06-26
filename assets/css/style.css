@@ -12,7 +12,7 @@
 :root {
     --primary-color: #010101;
     --secondary-color: #353a3f;
-    --text-color: #111;
+    --text-color: #24292F;
     --light-gray: #f8f9fa;
     --background: #F5F4EE;
     --dark-gray: #1b1e21;
@@ -584,6 +584,10 @@ nav ul li a {
     margin-bottom: 20px;
 }
 
+.case-study-section h4 {
+    margin-bottom: 1em;
+}
+
 .case-study-section ul {
     list-style: disc;
     padding-left: 20px;
@@ -915,10 +919,6 @@ blockquote footer {
     border-radius: 0;
     vertical-align: middle;
     margin-bottom: 0;
-}
-
-.social img:hover {
-    fill: red
 }
 
 /* 10. Media Queries for Responsiveness */
