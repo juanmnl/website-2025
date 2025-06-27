@@ -757,7 +757,9 @@ footer {
 }
 
 footer .container {
+    width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
@@ -1315,4 +1317,80 @@ blockquote footer {
    opacity: 0;
    transform: translate(0);
  }
+}
+
+
+.footer-columns {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-column {
+  flex: 1;
+  text-align: left;
+}
+
+.footer-column:first-child {
+  flex: 2;
+}
+
+.footer-column:last-child {
+  text-align: right;
+}
+
+.footer-column h4 {
+  color: var(--white);
+  font-size: 1em;
+  margin-bottom: .6em;
+  font-weight: 600;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  color: var(--white);
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  font-size: 0.9em;
+}
+
+.footer-column ul li a:hover {
+  opacity: 1;
+}
+
+.footer-bottom {
+  text-align: center;
+  width: 100%;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: var(--white);
+  opacity: 0.7;
+  font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+  .footer-columns {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .footer-column:last-child {
+    text-align: left;
+    }
 }
