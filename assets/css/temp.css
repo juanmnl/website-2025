@@ -1,0 +1,5 @@
+
+.button{
+    box-shadow: 2px 2px 2px hsl(0deg 0% 0% / 50%), 4px 4px 0 #000000;
+    background-color: var(--background);
+}
