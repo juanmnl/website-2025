@@ -24,3 +24,5 @@
 - [x] Add readme
 - [x] Add vite
 - [ ] Refactor with react or similar
+  - [x] Header
+  - [x] Footer

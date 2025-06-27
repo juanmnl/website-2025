@@ -3,6 +3,7 @@ import { MouseBlur } from './mouse-blur.js';
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import Navigation from './components/Navigation.jsx';
+import Footer from './components/Footer.jsx';
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -14,9 +15,10 @@ document.addEventListener('DOMContentLoaded', function () {
     root.render(<Navigation />);
   }
 
-  const currentYearSpan = document.getElementById('current-year');
-  if (currentYearSpan) {
-    currentYearSpan.textContent = new Date().getFullYear();
+  const footerRoot = document.getElementById('footer-root');
+  if (footerRoot) {
+    const footerReactRoot = createRoot(footerRoot);
+    footerReactRoot.render(<Footer />);
   }
 
 

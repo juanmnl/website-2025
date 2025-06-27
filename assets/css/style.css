@@ -36,6 +36,10 @@ body {
     color: var(--text-color);
     background-color: var(--background);
     cursor: none;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     transition: opacity 0.15s ease-out;
@@ -69,6 +73,10 @@ body::before {
     margin: 0 auto;
     padding: 0 20px;
     transition: opacity 0.1s ease-in;
+}
+
+main {
+  flex: 1;
 }
 
 a {
@@ -1205,6 +1213,11 @@ blockquote footer {
 
 
 /* REACT IMPLEMENTATION */
+
+#navigation-root,
+#footer-root {
+  flex-shrink: 0;
+}
 
 /* Reserve space for navigation to prevent layout shift */
 #navigation-root {
