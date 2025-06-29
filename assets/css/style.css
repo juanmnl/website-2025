@@ -16,7 +16,8 @@
     --background: #F5F4EE;
     --dark-gray: #1b1e21;
     --white: #eaeff1;
-    --butter: #ffeda8;
+    /* --butter: #ffeda8; */
+    --butter: #f5dec1;
     --border: #F5F4EE;
     --border-radius: 20px;
     --font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -172,6 +173,16 @@ video {
     background-repeat: no-repeat;
     background-position: left center;
     animation: highlightSweep 0.8s ease 0.5s forwards;
+}
+
+.hero-section .highlight:nth-child(1) {
+  filter: hue-rotate(45deg);
+  animation: highlightSweep .8s ease 0.6s forwards;
+}
+
+.contact-section .highlight:nth-child(1) {
+  filter: hue-rotate(45deg);
+  animation: highlightSweep 1s ease 0.7s forwards;
 }
 
 blockquote {
@@ -366,7 +377,7 @@ nav ul li a {
 
 .hero-section p {
     text-align: left;
-    max-width: 760px;
+    max-width: 600px;
 }
 
 .hero-section ul {
@@ -757,10 +768,6 @@ nav ul li a {
     align-items: flex-start;
 }
 
-.about-content > img {
-    animation: glitch-rabbit 2s infinite 2.1s;
-}
-
 .profile-photo {
     width: 200px;
     height: 200px;
@@ -769,6 +776,10 @@ nav ul li a {
     flex-shrink: 0;
     margin: 0 auto;
 }
+
+.profile-photo:hover {
+    animation: glitch-color 0.3s ease-in-out infinite;
+} 
 
 .about-text {
     flex-grow: 1;
@@ -1127,7 +1138,7 @@ footer p {
   }
 }
 
-@keyframes glitch-rabbit {
+@keyframes glitch-color {
   0%, 100% { 
     filter: none;
   }
