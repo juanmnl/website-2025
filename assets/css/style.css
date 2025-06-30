@@ -12,12 +12,13 @@
     --primary-color: #010101;
     --secondary-color: #353a3f;
     --text-color: #24292F;
-    --light-gray: #f8f9fa;
-    --background: #F5F4EE;
+    --light-gray: #fdfbef;
+    /* --background: #F5F4EE; */
+    --background: #fff6e9;
     --dark-gray: #1b1e21;
-    --white: #eaeff1;
-    /* --butter: #ffeda8; */
-    --butter: #f5dec1;
+    --white: #f5f5f5;
+    --butter: #ffe8a8;
+    --burnt-butter: #ffedcc;
     --border: #F5F4EE;
     --border-radius: 20px;
     --font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -176,12 +177,12 @@ video {
 }
 
 .hero-section .highlight:nth-child(1) {
-  filter: hue-rotate(45deg);
+  filter: hue-rotate(330deg);
   animation: highlightSweep .8s ease 0.6s forwards;
 }
 
 .contact-section .highlight:nth-child(1) {
-  filter: hue-rotate(45deg);
+  filter: hue-rotate(330deg);
   animation: highlightSweep 1s ease 0.7s forwards;
 }
 
@@ -231,13 +232,13 @@ blockquote footer {
 }
 
 .button:hover {
-    background-color: #dcdbd5;
+    background-color: var(--burnt-butter);
     border-right: 1px solid red;
     border-left: 1px solid cyan;
 }
 
 .button.active {
-    background-color: #fff;
+    background-color: var(--butter);
     border-right: 1px solid red;
     border-left: 1px solid cyan;
 }
@@ -680,7 +681,7 @@ nav ul li a {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
-    background-color: var(--light-gray);
+    background-color: var(--burnt-butter);
     padding: 1em;
     border-radius: var(--border-radius);
     margin-bottom: 50px;
@@ -689,7 +690,6 @@ nav ul li a {
 .detail-item h4 {
     font-size: .85em;
     color: var(--primary-color);
-    margin-bottom: 5px;
 }
 
 .detail-item p {
