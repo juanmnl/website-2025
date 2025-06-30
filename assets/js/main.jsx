@@ -4,6 +4,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import Navigation from './components/Navigation.jsx';
 import Footer from './components/Footer.jsx';
+import DigitalGarden from './components/DigitalGarden.jsx';
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -19,6 +20,12 @@ document.addEventListener('DOMContentLoaded', function () {
   if (footerRoot) {
     const footerReactRoot = createRoot(footerRoot);
     footerReactRoot.render(<Footer />);
+  }
+
+  const gardenRoot = document.getElementById('garden-root');
+  if (gardenRoot) {
+    const gardenReactRoot = createRoot(gardenRoot);
+    gardenReactRoot.render(<DigitalGarden />);
   }
 
 

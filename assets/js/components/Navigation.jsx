@@ -11,6 +11,7 @@ const Navigation = () => {
       '/': 'index.html',
       '/index.html': 'index.html',
       '/about.html': 'about.html',
+      // '/garden.html': 'garden.html',
       '/archive.html': 'archive.html',
       '/contact.html': 'contact.html'
     };
@@ -72,7 +73,7 @@ const Navigation = () => {
         <div className="logo-status">
           <div className="status-indicator"></div>
           <a 
-            href="index.html" 
+            href="/index.html" 
             className="logo"
             onMouseEnter={() => handleMouseEnter('/index.html')}
             onClick={(e) => handleLinkClick(e, '/index.html')}
@@ -119,6 +120,16 @@ const Navigation = () => {
                 About
               </a>
             </li>
+            {/* <li>
+              <a 
+                href="/garden.html" 
+                className={activeLink === 'garden.html' ? 'button active' : 'button'}
+                onClick={(e) => handleLinkClick(e, '/garden.html')}
+                onMouseEnter={() => handleMouseEnter('/garden.html')}
+              >
+                Garden
+              </a>
+            </li> */}
             <li>
               <a 
                 href="/archive.html" 
