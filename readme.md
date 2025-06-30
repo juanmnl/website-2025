@@ -11,6 +11,7 @@
   - [x] Project archive
   - [x] Contact
   - [x] Featured projects
+  - [ ] Digital Garden
 
 - [x] Add basic styles
   - [x] Mobile-first

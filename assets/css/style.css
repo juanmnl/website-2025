@@ -1396,9 +1396,6 @@ footer p {
 
 
 /* Digital Garden Styles */
-.digital-garden {
-  min-height: 100vh;
-}
 
 .garden-section {
   padding: 60px 0;
@@ -1451,7 +1448,7 @@ footer p {
   font-weight: 600;
 }
 
-.garden-card-content {
+.garden-content {
   padding: 0.8em;
 }
 
@@ -1512,13 +1509,6 @@ footer p {
   background: var(--background);
 }
 
-.garden-drawer-title h2 {
-  font-size: 1.2em;
-  font-weight: 600;
-  color: var(--dark-gray);
-  margin-bottom: 0.2em;
-  letter-spacing: var(--letter-spacing);
-}
 
 .garden-drawer-type {
   font-size: 0.8em;
@@ -1549,7 +1539,7 @@ footer p {
 }
 
 .drawer-section {
-  margin-bottom: 30px;
+  margin-bottom: 2em;
 }
 
 .drawer-section h3 {
@@ -1592,7 +1582,7 @@ footer p {
 }
 
 .garden-code {
-  padding: 16px;
+  padding: 0 2em 1em 0;
   font-size: 0.8em;
   overflow-x: auto;
   margin: 0;

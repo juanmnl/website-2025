@@ -11,7 +11,7 @@ const Navigation = () => {
       '/': 'index.html',
       '/index.html': 'index.html',
       '/about.html': 'about.html',
-      // '/garden.html': 'garden.html',
+      '/garden.html': 'garden.html',
       '/archive.html': 'archive.html',
       '/contact.html': 'contact.html'
     };
@@ -120,7 +120,7 @@ const Navigation = () => {
                 About
               </a>
             </li>
-            {/* <li>
+            <li>
               <a 
                 href="/garden.html" 
                 className={activeLink === 'garden.html' ? 'button active' : 'button'}
@@ -129,7 +129,7 @@ const Navigation = () => {
               >
                 Garden
               </a>
-            </li> */}
+            </li>
             <li>
               <a 
                 href="/archive.html" 
