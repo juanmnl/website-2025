@@ -73,8 +73,7 @@ body::before {
     left: -9999px;
     width: 1px;
     height: 1px;
-    background: url('/assets/images/avatar.svg') no-repeat,
-                url('/assets/images/th1.png') no-repeat,
+    background: url('/assets/images/th1.png') no-repeat,
                 url('/assets/images/th2.png') no-repeat,
                 url('/assets/images/th3.png') no-repeat,
                 url('/assets/images/th4.png') no-repeat;
