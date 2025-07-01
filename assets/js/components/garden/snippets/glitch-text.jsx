@@ -1,23 +1,3 @@
-import React from 'react';
-
-const GlitchTextLive = () => (
-  <span
-    className='glitch'
-    data-text='GLITCH'
-    style={{
-      position: 'relative',
-      display: 'inline-block',
-      fontFamily: 'monospace',
-      fontSize: '2em',
-      fontWeight: 'bold',
-      color: '#1b1e21',
-      textTransform: 'uppercase',
-    }}
-  >
-    GLITCH
-  </span>
-);
-
 export default {
   id: 4,
   title: 'Glitch Text Effect',
@@ -47,13 +27,13 @@ export default {
 .glitch::before {
   color: red;
   z-index: 1;
-  animation: glitch-auto 3s infinite 1.9s;
+  animation: glitch-auto 1s infinite 0.9s;
 }
 
 .glitch::after {
   color: cyan;
   z-index: 2;
-  animation: glitch-auto 3s infinite 2.1s;
+  animation: glitch-auto 1s infinite 1.1s;
 }
 
 @keyframes glitch-auto {
@@ -90,5 +70,4 @@ document.querySelectorAll('.glitch').forEach(element => {
     this.style.animation = null;
   });
 });`,
-  liveComponent: GlitchTextLive,
 };

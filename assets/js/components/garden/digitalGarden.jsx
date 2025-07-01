@@ -1,10 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { gardenItems } from './gardenIndex';
+import LivePreview from '../LivePreview';
 
 const DigitalGarden = () => {
   const [selectedItem, setSelectedItem] = useState(null);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [filter, setFilter] = useState('all');
+
+  // Sort by date (newest first)
+  const sortByDate = (array) => {
+    return [...array].sort((a, b) => {
+      const dateA = new Date(a.dateAdded || '2024-01-01');
+      const dateB = new Date(b.dateAdded || '2024-01-01');
+      return dateB - dateA; // Newest first
+    });
+  };
 
   const openDrawer = (item) => {
     setSelectedItem(item);
@@ -43,14 +53,31 @@ const DigitalGarden = () => {
   };
 
   // Filter items
-  const filteredItems = gardenItems.filter(item => {
-    if (filter === 'all') return true;
-    if (filter === 'element') return item.type === 'element';
-    if (filter === 'component') return item.type === 'component';
-    if (filter === 'layout') return item.type === 'layout';
-    if (filter === 'tutorial') return item.type === 'tutorial';
-    return item.type === filter;
-  });
+  const filteredItems = useMemo(() => {
+    let items = gardenItems;
+
+    // Apply filter
+    if (filter === 'code') {
+      items = items.filter(item => ['component', 'layout', 'animation'].includes(item.type));
+    } else if (filter === 'graphic') {
+      items = items.filter(item => item.type === 'graphic');
+    } else if (filter === 'latest') {
+      // Latest shows all items but sorted by date
+      return sortByDate(items);
+    }
+    // 'all' shows everything in original order
+
+    return items;
+  }, [filter]);
+
+  // Helper function to check if item is recent
+  const isRecent = (dateAdded) => {
+    if (!dateAdded) return false;
+    const itemDate = new Date(dateAdded);
+    const weekAgo = new Date();
+    weekAgo.setDate(weekAgo.getDate() - 7);
+    return itemDate > weekAgo;
+  };
 
   return (
     <div className="digital-garden">
@@ -63,28 +90,22 @@ const DigitalGarden = () => {
           All
         </button>
         <button 
-          className={`button ${filter === 'element' ? 'active' : ''}`}
-          onClick={() => setFilter('element')}
+          className={`button ${filter === 'latest' ? 'active' : ''}`}
+          onClick={() => setFilter('latest')}
         >
-          Element
+          Latest
         </button>
         <button 
-          className={`button ${filter === 'component' ? 'active' : ''}`}
-          onClick={() => setFilter('component')}
+          className={`button ${filter === 'code' ? 'active' : ''}`}
+          onClick={() => setFilter('code')}
         >
-          Component
+          Code
         </button>
         <button 
-          className={`button ${filter === 'layout' ? 'active' : ''}`}
-          onClick={() => setFilter('layout')}
+          className={`button ${filter === 'graphic' ? 'active' : ''}`}
+          onClick={() => setFilter('graphic')}
         >
-          Layout
-        </button>
-        <button 
-          className={`button ${filter === 'tutorial' ? 'active' : ''}`}
-          onClick={() => setFilter('tutorial')}
-        >
-          Tutorials
+          Graphics
         </button>
       </div>
 
@@ -100,6 +121,9 @@ const DigitalGarden = () => {
               <span className="garden-card-badge">{item.type}</span>
               {item.difficulty && (
                 <span className="garden-difficulty-badge">{item.difficulty}</span>
+              )}
+              {isRecent(item.dateAdded) && (
+                <span className="garden-new-badge">NEW</span>
               )}
             </div>
             <div className="garden-content">
@@ -139,7 +163,7 @@ const DigitalGarden = () => {
             </header>
 
             <div className="garden-drawer-content">
-              {selectedItem.type === 'tutorial' ? (
+              {selectedItem.type === 'graphic' ? (
                 // Tutorial Layout
                 <>
                   <section className="drawer-section">
@@ -167,14 +191,16 @@ const DigitalGarden = () => {
                     <p>{selectedItem.description}</p>
                   </section>
 
-                  {selectedItem.liveComponent && (
-                    <section className="drawer-section">
-                      <h3>Live Preview</h3>
-                      <div className="garden-preview">
-                        <selectedItem.liveComponent />
-                      </div>
-                    </section>
-                  )}
+                  <section className="drawer-section">
+                    <h3>Live Preview</h3>
+                    <div className="garden-preview">
+                      <LivePreview 
+                        html={selectedItem.html}
+                        css={selectedItem.css}
+                        js={selectedItem.js}
+                      />
+                    </div>
+                  </section>
 
                   <section className="drawer-section">
                     <h3>HTML</h3>

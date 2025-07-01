@@ -77,7 +77,7 @@ export default {
   id: 104,
   title: "Double Exposure Portrait Effect",
   description: "Create stunning double exposure effects by blending portraits with nature photography",
-  type: "tutorial",
+  type: "graphic",
   contentType: "photoshop",
   thumbnail: "/assets/images/tutorials/double-exposure-thumb.jpg",
   difficulty: "advanced",

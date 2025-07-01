@@ -169,5 +169,4 @@ export default {
     }
   });
 });`,
-  liveComponent: AccordionLive,
 };

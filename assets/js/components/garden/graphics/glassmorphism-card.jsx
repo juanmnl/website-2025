@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const RetroTextTutorial = ({ tutorial }) => {
+const GlassmorphismTutorial = ({ tutorial }) => {
   const [currentStep, setCurrentStep] = useState(0);
 
   return (
@@ -78,74 +78,66 @@ const RetroTextTutorial = ({ tutorial }) => {
 };
 
 export default {
-  id: 101,
-  title: 'Creating a Retro Text Effect',
+  id: 102,
+  title: 'Glassmorphism Card Design',
   description:
-    'Step-by-step guide to create a vintage 80s text effect in Photoshop',
-  type: 'tutorial',
+    'Create modern glass-effect cards with backdrop blur and transparency',
+  type: 'graphic',
   contentType: 'photoshop',
-  thumbnail: '/assets/images/tutorials/retro-text-thumb.jpg',
-  difficulty: 'intermediate',
-  estimatedTime: '15 minutes',
+  thumbnail: '/assets/images/tutorials/glass-card-thumb.jpg',
+  difficulty: 'beginner',
+  estimatedTime: '10 minutes',
   steps: [
     {
       id: 1,
-      title: 'Create New Document',
+      title: 'Set Up Background',
       description:
-        'Start with a 1920x1080 canvas with a dark background (#1a1a1a). This gives us plenty of space to work and the dark background will make our neon colors pop.',
-      image: '/assets/images/tutorials/retro-text/step1.jpg',
+        'Create a new document (800x600px) and add a colorful gradient background. Use vibrant colors like purple to pink gradient.',
+      image: '/assets/images/tutorials/glass-card/step1.jpg',
       tips: [
-        'Use RGB color mode for web projects',
-        'Set resolution to 72 DPI for screen use',
-        'Save your document immediately as .PSD',
+        'Try gradients from #8B5CF6 to #EC4899',
+        'Use radial gradient for more depth',
+        'Consider adding some noise for texture',
       ],
     },
     {
       id: 2,
-      title: 'Add Base Text',
+      title: 'Create Card Shape',
       description:
-        "Type your text using a bold, geometric font. We'll use 'RETRO' in all caps. Make it large - around 150px font size.",
-      image: '/assets/images/tutorials/retro-text/step2.jpg',
+        'Use the Rectangle Tool to create a rounded rectangle for your card. Make it about 300x400px and center it on your canvas.',
+      image: '/assets/images/tutorials/glass-card/step2.jpg',
       tips: [
-        'Try fonts like Impact, Bebas Neue, or Futura Bold',
-        'Make text large and bold for maximum impact',
-        'Center the text on your canvas',
+        'Set corner radius to 20-30px',
+        'Use white fill temporarily',
+        'Keep it centered for balance',
       ],
     },
     {
       id: 3,
-      title: 'Apply Gradient Overlay',
+      title: 'Apply Glass Effect',
       description:
-        "Right-click the text layer and choose 'Blending Options'. Add a Gradient Overlay with colors from hot pink (#ff006e) to cyan (#00f5ff).",
-      image: '/assets/images/tutorials/retro-text/step3.jpg',
+        'Lower the fill opacity to 20% and add layer effects: Inner Shadow, Drop Shadow, and most importantly, a subtle stroke.',
+      image: '/assets/images/tutorials/glass-card/step3.jpg',
       tips: [
-        "Use blend mode 'Normal'",
-        'Set angle to 45 degrees',
-        'Scale to 100%',
+        'Inner Shadow: White, 0px distance, 5px size',
+        'Drop Shadow: Black, 50% opacity, 10px distance',
+        'Stroke: 1px, white, 30% opacity',
       ],
     },
     {
       id: 4,
-      title: 'Add Outer Glow',
+      title: 'Add Content',
       description:
-        'In the same Layer Style dialog, add an Outer Glow. Use a bright cyan color (#00f5ff) with Screen blend mode.',
-      image: '/assets/images/tutorials/retro-text/step4.jpg',
-      tips: ['Set opacity to 75%', 'Size around 20-30px', 'Spread to 10%'],
-    },
-    {
-      id: 5,
-      title: 'Create Neon Effect',
-      description:
-        'Duplicate the text layer (Ctrl/Cmd + J). Clear the layer styles on the copy and add a bright stroke in cyan.',
-      image: '/assets/images/tutorials/retro-text/step5.jpg',
+        'Add your card content - title, description, and maybe a small icon. Keep text white or very light colors.',
+      image: '/assets/images/tutorials/glass-card/step4.jpg',
       tips: [
-        'Use stroke size of 3-5px',
-        'Position: Outside',
-        'Add a subtle outer glow to the stroke',
+        'Use semi-bold fonts for better readability',
+        'Keep hierarchy clear with font sizes',
+        'Add subtle text shadows for depth',
       ],
     },
   ],
-  tools: ['Text Tool', 'Layer Styles', 'Gradient Tool', 'Blending Options'],
-  finalResult: '/assets/images/tutorials/retro-text/final.jpg',
-  liveComponent: RetroTextTutorial,
+  tools: ['Rectangle Tool', 'Text Tool', 'Layer Effects', 'Gradient Tool'],
+  finalResult: '/assets/images/tutorials/glass-card/final.jpg',
+  liveComponent: GlassmorphismTutorial,
 };

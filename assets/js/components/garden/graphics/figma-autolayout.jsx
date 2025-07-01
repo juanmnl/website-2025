@@ -77,7 +77,7 @@ export default {
   id: 103,
   title: "Mastering Figma Auto Layout",
   description: "Learn to create responsive, flexible designs using Figma's Auto Layout feature",
-  type: "tutorial",
+  type: "graphic",
   contentType: "figma",
   thumbnail: "/assets/images/tutorials/figma-auto-layout-thumb.jpg",
   difficulty: "intermediate",

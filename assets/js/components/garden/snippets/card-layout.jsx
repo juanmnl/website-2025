@@ -1,32 +1,17 @@
-import React from 'react';
-
-const ProjectCardLive = () => (
-  <div className='project-card'>
-    <img
-      src='/assets/images/th1.png'
-      alt='Project Title'
-      className='card-image'
-    />
-    <div className='card-content'>
-      <h3 className='card-title'>Project Title</h3>
-      <p className='card-description'>Brief description</p>
-    </div>
-  </div>
-);
-
 export default {
   id: 2,
   title: 'Card Layout Pattern',
   description: 'Responsive card grid with hover effects and clean typography',
   type: 'layout',
   thumbnail: '/assets/images/placeholders/card.svg',
-  html: `<div class="project-card">
-  <img src="image.jpg" alt="Project Title" class="card-image">
-  <div class="card-content">
-    <h3 class="card-title">Project Title</h3>
-    <p class="card-description">Brief description</p>
-  </div>
-</div>`,
+  html: /*html*/`
+  <div class="project-card">
+    <img src="/assets/images/th1.png" alt="Project Title" class="card-image">
+    <div class="card-content">
+      <h3 class="card-title">Project Title</h3>
+      <p class="card-description">Brief description</p>
+    </div>
+  </div>`,
   css: `.project-card {
   border: 1px solid var(--border);
   background-color: var(--background);
@@ -67,5 +52,4 @@ export default {
     console.log('Card clicked');
   });
 });`,
-  liveComponent: ProjectCardLive,
 };
