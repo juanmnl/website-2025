@@ -4,7 +4,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import Navigation from './components/Navigation.jsx';
 import Footer from './components/Footer.jsx';
-import DigitalGarden from './components/DigitalGarden.jsx';
+import DigitalGarden from './components/garden/DigitalGarden.jsx';
 
 
 document.addEventListener('DOMContentLoaded', function () {
