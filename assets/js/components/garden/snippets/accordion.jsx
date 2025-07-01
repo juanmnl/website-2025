@@ -81,8 +81,8 @@ export default {
   id: 8,
   title: 'Accordion Component',
   description: 'Collapsible content sections with smooth animations',
-  type: 'layout',
-  thumbnail: '/assets/images/th2.png',
+  type: 'component',
+  thumbnail: '/assets/images/placeholders/accordion.svg',
   html: `<div class="accordion">
   <div class="accordion-item">
     <button class="accordion-header">

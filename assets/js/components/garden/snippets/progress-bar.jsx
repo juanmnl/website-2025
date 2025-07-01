@@ -54,7 +54,7 @@ export default {
   title: 'Progress Bar',
   description: 'Animated progress indicator with percentage',
   type: 'component',
-  thumbnail: '/assets/images/th1.png',
+  thumbnail: '/assets/images/placeholders/progress-bar.svg',
   html: `<div class="progress-container">
   <div class="progress-bar" data-progress="75">
     <div class="progress-fill"></div>

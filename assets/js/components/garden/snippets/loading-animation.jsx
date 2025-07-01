@@ -12,7 +12,7 @@ export default {
   title: 'Loading Animation',
   description: 'CSS-only loading animations with pulse effects',
   type: 'animation',
-  thumbnail: '/assets/images/th1.png',
+  thumbnail: '/assets/images/placeholders/loader.svg',
   html: `<div class="loading-container">
   <div class="status-indicator"></div>
   <span class="loading-text">Loading...</span>

@@ -57,8 +57,8 @@ export default {
   id: 5,
   title: 'Custom Checkbox',
   description: 'Styled checkbox with smooth transitions',
-  type: 'component',
-  thumbnail: '/assets/images/th3.png',
+  type: 'element',
+  thumbnail: '/assets/images/placeholders/checkbox.svg',
   html: `<label class="custom-checkbox">
   <input type="checkbox" />
   <span class="checkmark"></span>

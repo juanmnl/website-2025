@@ -45,7 +45,9 @@ const DigitalGarden = () => {
   // Filter items
   const filteredItems = gardenItems.filter(item => {
     if (filter === 'all') return true;
-    if (filter === 'code') return ['component', 'layout', 'animation'].includes(item.type);
+    if (filter === 'element') return item.type === 'element';
+    if (filter === 'component') return item.type === 'component';
+    if (filter === 'layout') return item.type === 'layout';
     if (filter === 'tutorial') return item.type === 'tutorial';
     return item.type === filter;
   });
@@ -61,10 +63,22 @@ const DigitalGarden = () => {
           All
         </button>
         <button 
-          className={`button ${filter === 'code' ? 'active' : ''}`}
-          onClick={() => setFilter('code')}
+          className={`button ${filter === 'element' ? 'active' : ''}`}
+          onClick={() => setFilter('element')}
         >
-          Code
+          Element
+        </button>
+        <button 
+          className={`button ${filter === 'component' ? 'active' : ''}`}
+          onClick={() => setFilter('component')}
+        >
+          Component
+        </button>
+        <button 
+          className={`button ${filter === 'layout' ? 'active' : ''}`}
+          onClick={() => setFilter('layout')}
+        >
+          Layout
         </button>
         <button 
           className={`button ${filter === 'tutorial' ? 'active' : ''}`}

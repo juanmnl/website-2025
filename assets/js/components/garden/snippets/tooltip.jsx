@@ -58,7 +58,7 @@ export default {
   title: 'Tooltip Component',
   description: 'Hoverable tooltip with positioning options',
   type: 'component',
-  thumbnail: '/assets/images/th4.png',
+  thumbnail: '/assets/images/placeholders/tooltip.svg',
   html: `<span class="tooltip" data-tooltip="This is a tooltip!">
   Hover me
 </span>`,

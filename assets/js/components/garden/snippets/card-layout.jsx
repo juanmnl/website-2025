@@ -19,7 +19,7 @@ export default {
   title: 'Card Layout Pattern',
   description: 'Responsive card grid with hover effects and clean typography',
   type: 'layout',
-  thumbnail: '/assets/images/th1.png',
+  thumbnail: '/assets/images/placeholders/card.svg',
   html: `<div class="project-card">
   <img src="image.jpg" alt="Project Title" class="card-image">
   <div class="card-content">

@@ -23,7 +23,7 @@ export default {
   title: 'Glitch Text Effect',
   description: 'Retro glitch animation with data attributes',
   type: 'animation',
-  thumbnail: '/assets/images/th2.png',
+  thumbnail: '/assets/images/placeholders/glitch.svg',
   html: `<span class="glitch" data-text="GLITCH">GLITCH</span>`,
   css: `.glitch {
   position: relative;

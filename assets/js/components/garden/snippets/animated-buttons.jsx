@@ -30,8 +30,8 @@ export default {
   id: 1,
   title: 'Animated Button Component',
   description: 'A sleek button with hover animations and multiple variants',
-  type: 'component',
-  thumbnail: '/assets/images/th1.png',
+  type: 'element',
+  thumbnail: '/assets/images/placeholders/button.svg',
   html: `<button class="button">Click me!</button>`,
   css: `.button {
   position: relative;
