@@ -81,9 +81,9 @@ const DigitalGarden = () => {
 
     // Apply filter
     if (filter === 'code') {
-      items = items.filter(item => ['component', 'layout', 'animation'].includes(item.type));
-    } else if (filter === 'tutorial') {
-      items = items.filter(item => item.type === 'tutorial');
+      items = items.filter(item => ['element', 'component', 'layout', 'animation'].includes(item.type));
+    } else if (filter === 'graphic') {
+      items = items.filter(item => item.type === 'graphic');
     }
     // 'all' shows everything
 
@@ -96,9 +96,32 @@ const DigitalGarden = () => {
     if (!dateAdded) return false;
     const itemDate = new Date(dateAdded);
     const weekAgo = new Date();
-    weekAgo.setDate(weekAgo.getDate() - 2);
+    weekAgo.setDate(weekAgo.getDate() - 7);
     return itemDate > weekAgo;
   };
+
+  // Get filter display name and description
+  const getFilterInfo = () => {
+    switch (filter) {
+      case 'code':
+        return {
+          name: 'Code Snippets',
+          description: 'Interactive components, layouts, and animations'
+        };
+      case 'tutorial':
+        return {
+          name: 'Graphivs',
+          description: 'Step-by-step guides for visual design'
+        };
+      default:
+        return {
+          name: 'All Items',
+          description: 'Everything in the digital garden'
+        };
+    }
+  };
+
+  const filterInfo = getFilterInfo();
 
   return (
     <div className="digital-garden">
@@ -129,42 +152,66 @@ const DigitalGarden = () => {
           Code
         </button>
         <button 
-          className={`button ${filter === 'tutorial' ? 'active' : ''}`}
-          onClick={() => setFilter('tutorial')}
+          className={`button ${filter === 'graphic' ? 'active' : ''}`}
+          onClick={() => setFilter('graphic')}
         >
-          Tutorials
+          Graphics
         </button>
       </div>
 
-      <div className="garden-grid">
-        {filteredItems.map((item) => (
-          <article
-            key={item.id}
-            className="garden-card"
-            onClick={() => openDrawer(item)}
-          >
-            <div className="garden-media">
-              <img src={item.thumbnail} alt={item.title} />
-              <span className="garden-card-badge">{item.type}</span>
-              {item.difficulty && (
-                <span className="garden-difficulty-badge">{item.difficulty}</span>
-              )}
-              {isRecent(item.dateAdded) && (
-                <span className="garden-new-badge">NEW</span>
-              )}
-            </div>
-            <div className="garden-content">
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-              {item.estimatedTime && (
-                <div className="garden-meta">
-                  <span className="estimated-time">⏱ {item.estimatedTime}</span>
-                </div>
-              )}
-            </div>
-          </article>
-        ))}
-      </div>
+      {/* Content Area */}
+      {filteredItems.length > 0 ? (
+        <div className="garden-grid">
+          {filteredItems.map((item) => (
+            <article
+              key={item.id}
+              className="garden-card"
+              onClick={() => openDrawer(item)}
+            >
+              <div className="garden-media">
+                <img src={item.thumbnail} alt={item.title} />
+                <span className="garden-card-badge">{item.type}</span>
+                {item.difficulty && (
+                  <span className="garden-difficulty-badge">{item.difficulty}</span>
+                )}
+                {isRecent(item.dateAdded) && (
+                  <span className="garden-new-badge">NEW</span>
+                )}
+              </div>
+              <div className="garden-content">
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+                {item.estimatedTime && (
+                  <div className="garden-meta">
+                    <span className="estimated-time">⏱ {item.estimatedTime}</span>
+                  </div>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+      ) : (
+        /* Empty State */
+        <div className="garden-empty-state">
+          <div className="empty-state-icon">🌱</div>
+          <h3 className="empty-state-title">No {filterInfo.name.toLowerCase()} found</h3>
+          <p className="empty-state-description">
+            {filter === 'code' && "We don't have any code snippets yet, but they're growing soon!"}
+            {filter === 'graphics' && "No tutorials are available at the moment, but new ones are being planted!"}
+            {filter === 'all' && "The garden is empty right now, but it will bloom soon with amazing content!"}
+          </p>
+          <div className="empty-state-actions">
+            {filter !== 'all' && (
+              <button 
+                className="button"
+                onClick={() => setFilter('all')}
+              >
+                View All Items
+              </button>
+            )}
+          </div>
+        </div>
+      )}
 
       {isDrawerOpen && <div className="garden-overlay" onClick={closeDrawer} />}
 
