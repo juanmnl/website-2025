@@ -80,8 +80,14 @@ const DigitalGarden = () => {
     let items = gardenItems;
 
     // Apply filter
-    if (filter === 'code') {
-      items = items.filter(item => ['element', 'component', 'layout', 'animation'].includes(item.type));
+    if (filter === 'element') {
+      items = items.filter(item => item.type === 'element');
+    } else if (filter === 'component') {
+      items = items.filter(item => item.type === 'component');
+    } else if (filter === 'layout') {
+      items = items.filter(item => item.type === 'layout');
+    } else if (filter === 'animation') {
+      items = items.filter(item => item.type === 'animation');
     } else if (filter === 'graphic') {
       items = items.filter(item => item.type === 'graphic');
     }
@@ -103,14 +109,29 @@ const DigitalGarden = () => {
   // Get filter display name and description
   const getFilterInfo = () => {
     switch (filter) {
-      case 'code':
+      case 'element':
         return {
-          name: 'Code Snippets',
-          description: 'Interactive components, layouts, and animations'
+          name: 'Elements',
+          description: 'Basic UI elements and building blocks'
         };
-      case 'tutorial':
+      case 'component':
         return {
-          name: 'Graphivs',
+          name: 'Components',
+          description: 'Interactive components and widgets'
+        };
+      case 'layout':
+        return {
+          name: 'Layouts',
+          description: 'Layout patterns and grid systems'
+        };
+      case 'animation':
+        return {
+          name: 'Animations',
+          description: 'CSS animations and transitions'
+        };
+      case 'graphic':
+        return {
+          name: 'Graphics',
           description: 'Step-by-step guides for visual design'
         };
       default:
@@ -146,10 +167,28 @@ const DigitalGarden = () => {
           All
         </button>
         <button 
-          className={`button ${filter === 'code' ? 'active' : ''}`}
-          onClick={() => setFilter('code')}
+          className={`button ${filter === 'element' ? 'active' : ''}`}
+          onClick={() => setFilter('element')}
         >
-          Code
+          Elements
+        </button>
+        <button 
+          className={`button ${filter === 'component' ? 'active' : ''}`}
+          onClick={() => setFilter('component')}
+        >
+          Components
+        </button>
+        <button 
+          className={`button ${filter === 'layout' ? 'active' : ''}`}
+          onClick={() => setFilter('layout')}
+        >
+          Layouts
+        </button>
+        <button 
+          className={`button ${filter === 'animation' ? 'active' : ''}`}
+          onClick={() => setFilter('animation')}
+        >
+          Animations
         </button>
         <button 
           className={`button ${filter === 'graphic' ? 'active' : ''}`}
@@ -196,8 +235,11 @@ const DigitalGarden = () => {
           <div className="empty-state-icon">🌱</div>
           <h3 className="empty-state-title">No {filterInfo.name.toLowerCase()} found</h3>
           <p className="empty-state-description">
-            {filter === 'code' && "We don't have any code snippets yet, but they're growing soon!"}
-            {filter === 'graphics' && "No tutorials are available at the moment, but new ones are being planted!"}
+            {filter === 'element' && "No basic elements are available yet, but they're being crafted!"}
+            {filter === 'component' && "No interactive components are ready yet, but they're in development!"}
+            {filter === 'layout' && "No layout patterns are available at the moment, but they're being designed!"}
+            {filter === 'animation' && "No animations are planted yet, but they'll be moving in soon!"}
+            {filter === 'graphic' && "No visual design tutorials are available at the moment, but new ones are being planted!"}
             {filter === 'all' && "The garden is empty right now, but it will bloom soon with amazing content!"}
           </p>
           <div className="empty-state-actions">
@@ -237,7 +279,7 @@ const DigitalGarden = () => {
             </header>
 
             <div className="garden-drawer-content">
-              {selectedItem.type === 'tutorial' ? (
+              {selectedItem.type === 'graphic' ? (
                 // Tutorial Layout
                 <>
                   <section className="drawer-section">

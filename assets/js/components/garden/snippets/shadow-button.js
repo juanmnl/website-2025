@@ -1,5 +1,5 @@
 export default {
-  id: 1,
+  id: 14,
   title: 'Long shadow Button',
   description: 'A simple button with long shadow and states',
   type: 'element',
@@ -25,21 +25,21 @@ export default {
       text-transform: uppercase;
       cursor: pointer;
       transition: all 0.3s ease;
-      border: 1px solid #111;
+      border: 3px solid #111;
       color: #24292F;
-      box-shadow: 4px 4px 4px hsl(0deg 0% 0% / 50%), 6px 6px 0 #000000;
+      box-shadow: 12px 12px 8px hsl(0deg 0% 0% / 50%), 6px 6px 0 #000000;
       background-color: var(--background);
     }
 
     .button:hover {
       background-color: #dcdbd5;
-      box-shadow: 2px 2px 2px hsl(0deg 0% 0% / 50%), 4px 4px 0 #000000;
+      box-shadow: 2px 2px 2px hsl(0deg 0% 0% / 0%), 4px 4px 0 #000000;
       background-color: var(--background);
     }
 
     .button.active {
       background-color: var(--butter);
-      box-shadow: 0px 0px 0px hsl(0deg 0% 0% / 50%), 1px 1px 0 #000000;
+      box-shadow: 0px 0px 0px hsl(0deg 0% 0% / 0%), 1px 1px 0 #000000;
       background-color: var(--background);
     }`,
   js: /*js*/ `
