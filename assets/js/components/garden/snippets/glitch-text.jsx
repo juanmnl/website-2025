@@ -1,7 +1,7 @@
 export default {
   id: 4,
   title: 'Glitch Text Effect',
-  description: 'Retro glitch animation with data attributes',
+  description: 'Glitch animation for text with data attributes',
   type: 'animation',
   thumbnail: '/assets/images/placeholders/glitch.svg',
   html: `<span class="glitch" data-text="GLITCH">GLITCH</span>`,

@@ -1,7 +1,7 @@
 export default {
   id: 2,
   title: 'Card Layout Pattern',
-  description: 'Responsive card grid with hover effects and clean typography',
+  description: 'Simple card layout with clean typography',
   type: 'layout',
   thumbnail: '/assets/images/placeholders/card.svg',
   html: /*html*/`

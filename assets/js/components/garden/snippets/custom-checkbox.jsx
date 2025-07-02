@@ -1,7 +1,7 @@
 export default {
   id: 5,
   title: 'Custom Checkbox',
-  description: 'Styled checkbox with smooth transitions',
+  description: 'Pure CSS styled checkbox with smooth transitions',
   type: 'element',
   thumbnail: '/assets/images/placeholders/checkbox.svg',
   html: `<label class="custom-checkbox">

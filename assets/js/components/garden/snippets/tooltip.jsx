@@ -1,7 +1,7 @@
 export default {
   id: 6,
   title: 'Tooltip Component',
-  description: 'Hoverable tooltip with positioning options',
+  description: 'Simple hoverable tooltip with custom text',
   type: 'component',
   thumbnail: '/assets/images/placeholders/tooltip.svg',
   html: `<span class="tooltip" data-tooltip="This is a tooltip!">

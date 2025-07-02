@@ -1,7 +1,7 @@
 export default {
   id: 1,
-  title: 'Animated Button Component',
-  description: 'A sleek button with hover animations and multiple variants',
+  title: 'Animated Button',
+  description: 'A simple button with hover and active animations',
   type: 'element',
   thumbnail: '/assets/images/placeholders/button.svg',
   html: /*html*/`
