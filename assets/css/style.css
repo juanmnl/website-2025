@@ -1859,3 +1859,63 @@ footer p {
     font-size: 1.5em;
   }
 }
+
+/* Toast Notification */
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
+  min-width: 300px;
+  padding: 0;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: toast-slide-in 0.3s ease-out;
+}
+
+.toast--success {
+  background: var(--burnt-butter);
+  color: var(--text-color);
+}
+
+.toast--error {
+  background: #ef4444;
+  color: white;
+}
+
+.toast-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+}
+
+.toast-icon {
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.toast-message {
+  font-size: 0.85em;
+  font-weight: 500;
+}
+
+@keyframes toast-slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .toast {
+    left: 20px;
+    right: 20px;
+    min-width: auto;
+  }
+}

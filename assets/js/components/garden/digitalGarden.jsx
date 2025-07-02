@@ -6,12 +6,13 @@ const DigitalGarden = () => {
   const [selectedItem, setSelectedItem] = useState(null);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [filter, setFilter] = useState('all');
+  const [toast, setToast] = useState(null);
 
   // Sort by date (newest first)
   const sortByDate = (array) => {
     return [...array].sort((a, b) => {
-      const dateA = new Date(a.dateAdded || '2024-01-01');
-      const dateB = new Date(b.dateAdded || '2024-01-01');
+      const dateA = new Date(a.dateAdded || '2025-01-01');
+      const dateB = new Date(b.dateAdded || '2025-01-01');
       return dateB - dateA; // Newest first
     });
   };
@@ -28,6 +29,12 @@ const DigitalGarden = () => {
     setTimeout(() => setSelectedItem(null), 300);
   };
 
+  // Show toast notification
+  const showToast = (message, type = 'success') => {
+    setToast({ message, type });
+    setTimeout(() => setToast(null), 3000);
+  };
+
   // Close drawer on escape key
   useEffect(() => {
     const handleEscape = (e) => {
@@ -40,34 +47,48 @@ const DigitalGarden = () => {
     return () => document.removeEventListener('keydown', handleEscape);
   }, [isDrawerOpen]);
 
-  // Copy to clipboard function
-  const copyToClipboard = async (text) => {
+  // Copy to clipboard function with toast
+  const copyToClipboard = async (text, type = 'Code') => {
     if (navigator.clipboard) {
       try {
         await navigator.clipboard.writeText(text);
-        // You could add a toast notification here
+        showToast(`${type} copied to clipboard!`, 'success');
       } catch (err) {
         console.error('Failed to copy:', err);
+        showToast('Failed to copy to clipboard', 'error');
+      }
+    } else {
+      // Fallback for older browsers
+      try {
+        const textArea = document.createElement('textarea');
+        textArea.value = text;
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        showToast(`${type} copied to clipboard!`, 'success');
+      } catch (err) {
+        console.error('Failed to copy:', err);
+        showToast('Failed to copy to clipboard', 'error');
       }
     }
   };
 
-  // Filter items
+  // Filter items and ALWAYS sort by date (most recent first)
   const filteredItems = useMemo(() => {
     let items = gardenItems;
 
     // Apply filter
     if (filter === 'code') {
       items = items.filter(item => ['component', 'layout', 'animation'].includes(item.type));
-    } else if (filter === 'graphic') {
-      items = items.filter(item => item.type === 'graphic');
-    } else if (filter === 'latest') {
-      // Latest shows all items but sorted by date
-      return sortByDate(items);
+    } else if (filter === 'tutorial') {
+      items = items.filter(item => item.type === 'tutorial');
     }
-    // 'all' shows everything in original order
+    // 'all' shows everything
 
-    return items;
+    // ALWAYS sort by date (newest first)
+    return sortByDate(items);
   }, [filter]);
 
   // Helper function to check if item is recent
@@ -75,12 +96,24 @@ const DigitalGarden = () => {
     if (!dateAdded) return false;
     const itemDate = new Date(dateAdded);
     const weekAgo = new Date();
-    weekAgo.setDate(weekAgo.getDate() - 7);
+    weekAgo.setDate(weekAgo.getDate() - 2);
     return itemDate > weekAgo;
   };
 
   return (
     <div className="digital-garden">
+      {/* Toast Notification */}
+      {toast && (
+        <div className={`toast toast--${toast.type}`}>
+          <div className="toast-content">
+            <span className="toast-icon">
+              {toast.type === 'success' ? '✓' : '✕'}
+            </span>
+            <span className="toast-message">{toast.message}</span>
+          </div>
+        </div>
+      )}
+
       {/* Filter Controls */}
       <div className="garden-filters">
         <button 
@@ -90,22 +123,16 @@ const DigitalGarden = () => {
           All
         </button>
         <button 
-          className={`button ${filter === 'latest' ? 'active' : ''}`}
-          onClick={() => setFilter('latest')}
-        >
-          Latest
-        </button>
-        <button 
           className={`button ${filter === 'code' ? 'active' : ''}`}
           onClick={() => setFilter('code')}
         >
           Code
         </button>
         <button 
-          className={`button ${filter === 'graphic' ? 'active' : ''}`}
-          onClick={() => setFilter('graphic')}
+          className={`button ${filter === 'tutorial' ? 'active' : ''}`}
+          onClick={() => setFilter('tutorial')}
         >
-          Graphics
+          Tutorials
         </button>
       </div>
 
@@ -163,7 +190,7 @@ const DigitalGarden = () => {
             </header>
 
             <div className="garden-drawer-content">
-              {selectedItem.type === 'graphic' ? (
+              {selectedItem.type === 'tutorial' ? (
                 // Tutorial Layout
                 <>
                   <section className="drawer-section">
@@ -209,7 +236,7 @@ const DigitalGarden = () => {
                         HTML
                         <button 
                           className="copy-btn"
-                          onClick={() => copyToClipboard(selectedItem.html)}
+                          onClick={() => copyToClipboard(selectedItem.html, 'HTML')}
                           style={{
                             background: 'none',
                             border: 'none',
@@ -235,7 +262,7 @@ const DigitalGarden = () => {
                         CSS
                         <button 
                           className="copy-btn"
-                          onClick={() => copyToClipboard(selectedItem.css)}
+                          onClick={() => copyToClipboard(selectedItem.css, 'CSS')}
                           style={{
                             background: 'none',
                             border: 'none',
@@ -261,7 +288,7 @@ const DigitalGarden = () => {
                         JavaScript
                         <button 
                           className="copy-btn"
-                          onClick={() => copyToClipboard(selectedItem.js)}
+                          onClick={() => copyToClipboard(selectedItem.js, 'JavaScript')}
                           style={{
                             background: 'none',
                             border: 'none',

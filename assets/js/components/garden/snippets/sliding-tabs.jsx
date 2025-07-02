@@ -33,125 +33,135 @@ export default {
     </div>
   </div>
 </div>`,
-  css: /*css*/`.tabs {
-  max-width: 500px;
-  margin: 0 auto;
+  css: /*css*/`
+  .tabs {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .tab-list {
+    position: relative;
+    display: flex;
+    background: var(--light-gray);
+    border-radius: var(--border-radius);
+    padding: 4px;
+    margin-bottom: 20px;
+  }
+
+  .tab-button {
+    flex: 1;
+    min-width: 112px;
+    padding: 10px 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.85em;
+    color: var(--secondary-color);
+    transition: color 0.3s ease;
+    position: relative;
+    z-index: 2;
+    border-radius: calc(var(--border-radius) - 4px);
+  }
+
+  .tab-button.active {
+    color: var(--dark-gray);
+  }
+
+  .tab-indicator {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    height: calc(100% - 8px);
+    background: white;
+    border-radius: calc(var(--border-radius) - 4px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    z-index: 1;
+  }
+
+  .tab-content {
+    min-height: 150px;
+  }
+
+  .tab-panel {
+    display: none;
+    animation: fadeIn 0.3s ease;
+  }
+
+  .tab-panel.active {
+    display: block;
+  }
+
+  .tab-panel h3 {
+    margin-bottom: 10px;
+    color: var(--dark-gray);
+  }
+
+  .tab-panel p {
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  @media (max-width: 1024px) {
+  .tab-button {
+    min-width: 91px;
+    padding: 4px 8px;
+    font-size: 0.75em;
+  }
 }
 
-.tab-list {
-  position: relative;
-  display: flex;
-  background: var(--light-gray);
-  border-radius: var(--border-radius);
-  padding: 4px;
-  margin-bottom: 20px;
-}
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }`,
+  js: /*js*/`
+  const tabs = document.querySelector('.tabs');
+  const tabButtons = tabs.querySelectorAll('.tab-button');
+  const tabPanels = tabs.querySelectorAll('.tab-panel');
+  const indicator = tabs.querySelector('.tab-indicator');
 
-.tab-button {
-  flex: 1;
-  min-width: 112px;
-  padding: 10px 16px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 0.85em;
-  color: var(--secondary-color);
-  transition: color 0.3s ease;
-  position: relative;
-  z-index: 2;
-  border-radius: calc(var(--border-radius) - 4px);
-}
+  function updateIndicator(activeButton) {
+    const buttonRect = activeButton.getBoundingClientRect();
+    const containerRect = activeButton.parentElement.getBoundingClientRect();
+    
+    const left = buttonRect.left - containerRect.left;
+    const width = buttonRect.width;
+    
+    indicator.style.left = left + 'px';
+    indicator.style.width = width + 'px';
+  }
 
-.tab-button.active {
-  color: var(--dark-gray);
-}
+  function switchTab(targetTab) {
+    // Remove active class from all buttons and panels
+    tabButtons.forEach(btn => btn.classList.remove('active'));
+    tabPanels.forEach(panel => panel.classList.remove('active'));
+    
+    // Add active class to clicked button and corresponding panel
+    const activeButton = document.querySelector(\`[data-tab="\${targetTab}"]\`);
+    const activePanel = document.getElementById(targetTab);
+    
+    activeButton.classList.add('active');
+    activePanel.classList.add('active');
+    
+    // Update indicator position
+    updateIndicator(activeButton);
+  }
 
-.tab-indicator {
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  height: calc(100% - 8px);
-  background: white;
-  border-radius: calc(var(--border-radius) - 4px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  z-index: 1;
-}
+  // Initialize indicator position
+  updateIndicator(document.querySelector('.tab-button.active'));
 
-.tab-content {
-  min-height: 150px;
-}
-
-.tab-panel {
-  display: none;
-  animation: fadeIn 0.3s ease;
-}
-
-.tab-panel.active {
-  display: block;
-}
-
-.tab-panel h3 {
-  margin-bottom: 10px;
-  color: var(--dark-gray);
-}
-
-.tab-panel p {
-  color: var(--text-color);
-  line-height: 1.6;
-  margin: 0;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}`,
-  js: /*js*/`const tabs = document.querySelector('.tabs');
-const tabButtons = tabs.querySelectorAll('.tab-button');
-const tabPanels = tabs.querySelectorAll('.tab-panel');
-const indicator = tabs.querySelector('.tab-indicator');
-
-function updateIndicator(activeButton) {
-  const buttonRect = activeButton.getBoundingClientRect();
-  const containerRect = activeButton.parentElement.getBoundingClientRect();
-  
-  const left = buttonRect.left - containerRect.left;
-  const width = buttonRect.width;
-  
-  indicator.style.left = left + 'px';
-  indicator.style.width = width + 'px';
-}
-
-function switchTab(targetTab) {
-  // Remove active class from all buttons and panels
-  tabButtons.forEach(btn => btn.classList.remove('active'));
-  tabPanels.forEach(panel => panel.classList.remove('active'));
-  
-  // Add active class to clicked button and corresponding panel
-  const activeButton = document.querySelector(\`[data-tab="\${targetTab}"]\`);
-  const activePanel = document.getElementById(targetTab);
-  
-  activeButton.classList.add('active');
-  activePanel.classList.add('active');
-  
-  // Update indicator position
-  updateIndicator(activeButton);
-}
-
-// Initialize indicator position
-updateIndicator(document.querySelector('.tab-button.active'));
-
-// Add click listeners
-tabButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const targetTab = button.getAttribute('data-tab');
-    switchTab(targetTab);
+  // Add click listeners
+  tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const targetTab = button.getAttribute('data-tab');
+      switchTab(targetTab);
+    });
   });
-});
 
-// Update indicator on window resize
-window.addEventListener('resize', () => {
-  const activeButton = document.querySelector('.tab-button.active');
-  updateIndicator(activeButton);
-});`
+  // Update indicator on window resize
+  window.addEventListener('resize', () => {
+    const activeButton = document.querySelector('.tab-button.active');
+    updateIndicator(activeButton);
+  });`
 };
