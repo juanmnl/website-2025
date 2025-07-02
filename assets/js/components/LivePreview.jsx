@@ -74,17 +74,40 @@ const LivePreview = ({ html, css, js }) => {
       if (js && js.trim()) {
         setTimeout(() => {
           try {
-            // Create a function scope to execute the JS
-            const executeJS = new Function('container', `
-              // Make common DOM methods available in the scope
-              const document = container.shadowRoot || container;
-              const querySelectorAll = (selector) => document.querySelectorAll(selector);
-              const querySelector = (selector) => document.querySelector(selector);
+            // Create a safer execution context
+            const executeJS = new Function(
+              'container', 
+              'document', 
+              'querySelector', 
+              'querySelectorAll', 
+              'getElementById',
+              'createElement',
+              `
+              // Provide proper document context
+              const shadowDoc = container.shadowRoot || container;
+              
+              // Override document methods to work with shadow DOM
+              const originalDocument = document;
+              document = {
+                ...originalDocument,
+                querySelector: (selector) => shadowDoc.querySelector(selector),
+                querySelectorAll: (selector) => shadowDoc.querySelectorAll(selector),
+                getElementById: (id) => shadowDoc.getElementById(id),
+                createElement: (tagName) => originalDocument.createElement(tagName)
+              };
               
               ${js}
-            `);
+              `
+            );
             
-            executeJS(container);
+            executeJS(
+              container,
+              shadowRoot.ownerDocument || document,
+              (selector) => shadowRoot.querySelector(selector),
+              (selector) => shadowRoot.querySelectorAll(selector),
+              (id) => shadowRoot.getElementById(id),
+              (tagName) => document.createElement(tagName)
+            );
           } catch (jsError) {
             console.warn('JavaScript execution error in preview:', jsError);
           }
@@ -120,25 +143,14 @@ const LivePreview = ({ html, css, js }) => {
   }
 
   return (
-    // <div
-    //   ref={containerRef}
-    //   style={{
-    //     display: 'contents',
-    //     width: '100%',
-    //     minHeight: '200px',
-    //     border: '1px solid var(--border)',
-    //     borderRadius: 'var(--border-radius)',
-    //     backgroundColor: 'var(--background)',
-    //     overflow: 'hidden',
-    //     position: 'relative'
-    //   }}
-    // />,
     <div
       ref={containerRef}
       style={{
         display: 'contents',
-        width: '100%',
+        minHeight: '200px',
+        border: '1px solid var(--border)',
         borderRadius: 'var(--border-radius)',
+        backgroundColor: 'var(--background)',
         overflow: 'hidden',
         position: 'relative'
       }}

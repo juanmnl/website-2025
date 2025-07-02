@@ -1,4 +1,4 @@
-const snippetModules = import.meta.glob('./snippets/*.jsx', { eager: true });
+const snippetModules = import.meta.glob('./snippets/*.js', { eager: true });
 const graphicModules = import.meta.glob('./graphics/*.jsx', { eager: true });
 
 const snippets = Object.values(snippetModules).map((module) => module.default);
