@@ -3,7 +3,8 @@ export default {
   title: 'Pulse Animation',
   description: 'CSS-only pulse animation',
   type: 'animation',
-  thumbnail: '/assets/images/placeholders/loader.svg',
+  dateAdded: '2025-06-20',
+  thumbnail: '/assets/images/snippets/thumbnails/loader.svg',
   html: /*html*/`
   <div class="pulse-container">
     <div class="pulse-indicator"></div>

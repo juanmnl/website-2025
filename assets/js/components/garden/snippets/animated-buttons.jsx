@@ -3,7 +3,8 @@ export default {
   title: 'Animated Button',
   description: 'A simple button with hover and active animations',
   type: 'element',
-  thumbnail: '/assets/images/placeholders/button.svg',
+  dateAdded: "2025-06-21",
+  thumbnail: '/assets/images/snippets/thumbnails/button.svg',
   html: /*html*/`
     <div class="container">
       <button class="button">Hover me! Click me!</button>

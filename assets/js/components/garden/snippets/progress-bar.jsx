@@ -3,7 +3,8 @@ export default {
   title: 'Progress Bar',
   description: 'Animated progress indicator with percentage',
   type: 'component',
-  thumbnail: '/assets/images/placeholders/progress-bar.svg',
+  dateAdded: '2025-06-30',
+  thumbnail: '/assets/images/snippets/thumbnails/progress-bar.svg',
   html: /*html*/`
   <div class="progress-container">
     <div class="progress-bar" data-progress="75">

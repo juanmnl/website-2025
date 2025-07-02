@@ -3,11 +3,13 @@ export default {
   title: 'Tooltip Component',
   description: 'Simple hoverable tooltip with custom text',
   type: 'component',
-  thumbnail: '/assets/images/placeholders/tooltip.svg',
-  html: `<span class="tooltip" data-tooltip="This is a tooltip!">
-  Hover me
-</span>`,
-  css: `.tooltip {
+  dateAdded: '2025-06-23',
+  thumbnail: '/assets/images/snippets/thumbnails/tooltip.svg',
+  html: /*html*/`
+  <span class="tooltip" data-tooltip="This is a tooltip!">
+    Hover me
+  </span>`,
+  css: /*css*/`.tooltip {
   position: relative;
   cursor: pointer;
   border-bottom: 1px dotted var(--secondary-color);
@@ -52,7 +54,7 @@ export default {
   opacity: 1;
   visibility: visible;
 }`,
-  js: `// Optional: Close tooltip on click elsewhere
+  js: /*js*/`// Optional: Close tooltip on click elsewhere
 document.addEventListener('click', function(e) {
   if (!e.target.closest('.tooltip')) {
     // Handle tooltip close logic
