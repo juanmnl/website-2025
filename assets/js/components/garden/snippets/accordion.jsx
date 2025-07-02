@@ -16,6 +16,18 @@ export default {
       <p>Content for section 1</p>
     </div>
   </div>
+  <div class="accordion-item">
+    <button class="accordion-header">
+      <span>Section 2</span>
+      <span class="accordion-icon">+</span>
+    </button>
+    <div class="accordion-content">
+      <p>Content for section 2</p>
+    </div>
+    <div class="accordion-content">
+      <p>Content for section 2</p>
+    </div>
+  </div>
 </div>`,
   css: `.accordion {
   border: 1px solid var(--border);
