@@ -1,11 +1,10 @@
 export default {
-  id: 11,
-  title: "Dropdown Menu",
-  description: "Dropdown menu with keyboard navigation",
-  type: "component",
-  dateAdded: "2025-07-02",
-  thumbnail: "/assets/images/snippets/thumbnails/dropdown-menu.svg",
-  html: /*html*/`<div class="dropdown">
+  title: 'Dropdown Menu',
+  description: 'Dropdown menu with keyboard navigation',
+  type: 'component',
+  dateAdded: '2025-07-02',
+  thumbnail: '/assets/images/snippets/thumbnails/dropdown-menu.svg',
+  html: /*html*/ `<div class="dropdown">
   <button class="dropdown-trigger">
     Options
     <span class="dropdown-arrow">▼</span>
@@ -18,7 +17,7 @@ export default {
     <a href="#" class="dropdown-item">Logout</a>
   </div>
 </div>`,
-  css: /*css*/`.dropdown {
+  css: /*css*/ `.dropdown {
   position: relative;
   display: inline-block;
 }
@@ -92,7 +91,7 @@ export default {
   background: var(--border);
   margin: 4px 0;
 }`,
-  js: /*js*/`document.querySelectorAll('.dropdown').forEach(dropdown => {
+  js: /*js*/ `document.querySelectorAll('.dropdown').forEach(dropdown => {
   const trigger = dropdown.querySelector('.dropdown-trigger');
   const menu = dropdown.querySelector('.dropdown-menu');
   
@@ -121,5 +120,5 @@ export default {
       dropdown.classList.remove('open');
     });
   });
-});`
+});`,
 };

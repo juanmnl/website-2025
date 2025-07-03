@@ -1,10 +1,30 @@
+// Auto-import all snippets and tutorials
 const snippetModules = import.meta.glob('./snippets/*.js', { eager: true });
 const graphicModules = import.meta.glob('./graphics/*.jsx', { eager: true });
 
-const snippets = Object.values(snippetModules).map((module) => module.default);
-const graphics = Object.values(graphicModules).map((module) => module.default);
+// Helper function to generate stable IDs from title
+const generateId = (title) => {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9]/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '');
+};
 
-// export const gardenItems = [...snippets, ...graphics].sort(
-//   (a, b) => a.id - b.id
-// );
-export const gardenItems = [...snippets].sort((a, b) => a.id - b.id);
+const snippets = Object.values(snippetModules).map((module) => ({
+  ...module.default,
+  id: generateId(module.default.title),
+}));
+
+const graphics = Object.values(graphicModules).map((module) => ({
+  ...module.default,
+  id: generateId(module.default.title),
+}));
+
+// Combine and sort by date
+const allItems = [...snippets, ...graphics];
+export const gardenItems = allItems.sort((a, b) => {
+  const dateA = new Date(a.dateAdded || '2025-01-01');
+  const dateB = new Date(b.dateAdded || '2025-01-01');
+  return dateB - dateA;
+});

@@ -1,5 +1,4 @@
 export default {
-  id: 13,
   title: 'Toast Notification',
   description: 'Notifications with success, error, and warning states',
   type: 'component',

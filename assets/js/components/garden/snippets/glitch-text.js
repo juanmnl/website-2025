@@ -1,12 +1,11 @@
 export default {
-  id: 4,
   title: 'Glitch Text Effect',
   description: 'Glitch animation for text with data attributes',
   type: 'animation',
   dateAdded: '2025-06-25',
   thumbnail: '/assets/images/snippets/thumbnails/glitch.svg',
-  html: /*html*/`<span class="glitch" data-text="GLITCH">GLITCH</span>`,
-  css: /*css*/`.glitch {
+  html: /*html*/ `<span class="glitch" data-text="GLITCH">GLITCH</span>`,
+  css: /*css*/ `.glitch {
   position: relative;
   display: inline-block;
   font-family: monospace;
@@ -63,7 +62,7 @@ export default {
     transform: translate(0);
   }
 }`,
-  js: /*js*/`// Trigger glitch on hover
+  js: /*js*/ `// Trigger glitch on hover
 document.querySelectorAll('.glitch').forEach(element => {
   element.addEventListener('mouseenter', function() {
     this.style.animation = 'none';

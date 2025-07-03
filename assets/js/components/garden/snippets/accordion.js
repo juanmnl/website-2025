@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 
 export default {
-  id: 8,
   title: 'Accordion Component',
   description: 'Collapsible sections with smooth animations',
   type: 'component',
-  dateAdded: "2025-06-20",
+  dateAdded: '2025-06-20',
   thumbnail: '/assets/images/snippets/thumbnails/accordion.svg',
-  html: /*html*/`<div class="accordion">
+  html: /*html*/ `<div class="accordion">
   <div class="accordion-item">
     <button class="accordion-header">
       <span>Section 1</span>
@@ -30,7 +29,7 @@ export default {
     </div>
   </div>
 </div>`,
-  css: /*css*/`.accordion {
+  css: /*css*/ `.accordion {
   border: 1px solid var(--border);
   border-radius: var(--border-radius);
   overflow: hidden;
@@ -89,7 +88,7 @@ export default {
   font-size: 0.85em;
   color: var(--secondary-color);
 }`,
-  js: /*js*/`document.querySelectorAll('.accordion-header').forEach(header => {
+  js: /*js*/ `document.querySelectorAll('.accordion-header').forEach(header => {
   header.addEventListener('click', function() {
     const item = this.parentElement;
     const isActive = item.classList.contains('active');

@@ -1,5 +1,4 @@
 export default {
-  id: 14,
   title: 'Long shadow Button',
   description: 'A simple button with long shadow and states',
   type: 'element',

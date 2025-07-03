@@ -1,15 +1,14 @@
 export default {
-  id: 3,
   title: 'Pulse Animation',
   description: 'CSS-only pulse animation',
   type: 'animation',
   dateAdded: '2025-06-20',
   thumbnail: '/assets/images/snippets/thumbnails/loader.svg',
-  html: /*html*/`
+  html: /*html*/ `
   <div class="pulse-container">
     <div class="pulse-indicator"></div>
   </div>`,
-  css: /*css*/`
+  css: /*css*/ `
   .pulse-container {
     display: flex;
     align-items: center;
@@ -35,7 +34,7 @@ export default {
     70% { box-shadow: 0 0 0 19px rgba(135, 135, 135, 0); }
     100% { box-shadow: 0 0 0 0 rgba(19, 19, 19, 0); }
   }`,
-  js: /*js*/`
+  js: /*js*/ `
   function showLoading() {
     document.querySelector('.loading-container').style.display = 'flex';
   }

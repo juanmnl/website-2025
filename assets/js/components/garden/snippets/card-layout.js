@@ -1,11 +1,10 @@
 export default {
-  id: 2,
   title: 'Card Layout Pattern',
   description: 'Simple card layout with clean typography',
   type: 'layout',
-  dateAdded: "2025-06-22",
+  dateAdded: '2025-06-22',
   thumbnail: '/assets/images/snippets/thumbnails/card.svg',
-  html: /*html*/`
+  html: /*html*/ `
   <div class="project-card">
     <img src="/assets/images/th1.png" alt="Project Title" class="card-image">
     <div class="card-content">
@@ -13,7 +12,7 @@ export default {
       <p class="card-description">Brief description</p>
     </div>
   </div>`,
-  css: /*css*/`
+  css: /*css*/ `
   .project-card {
     border: 1px solid var(--border);
     background-color: var(--background);
@@ -49,7 +48,7 @@ export default {
     font-size: 0.75em;
     color: var(--secondary-color);
   }`,
-  js: /*js*/`
+  js: /*js*/ `
   document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('click', function() {
       console.log('Card clicked');

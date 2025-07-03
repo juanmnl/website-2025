@@ -1,11 +1,10 @@
 export default {
-  id: 12,
-  title: "Sliding Tabs",
-  description: "Tab component with smooth transitions",
-  type: "layout",
-  dateAdded: "2025-07-02",
-  thumbnail: "/assets/images/snippets/thumbnails/sliding-tabs.svg",
-  html: /*html*/`<div class="tabs">
+  title: 'Sliding Tabs',
+  description: 'Tab component with smooth transitions',
+  type: 'layout',
+  dateAdded: '2025-07-02',
+  thumbnail: '/assets/images/snippets/thumbnails/sliding-tabs.svg',
+  html: /*html*/ `<div class="tabs">
   <div class="tab-list">
     <button class="tab-button active" data-tab="tab1">Home</button>
     <button class="tab-button" data-tab="tab2">About</button>
@@ -33,7 +32,7 @@ export default {
     </div>
   </div>
 </div>`,
-  css: /*css*/`
+  css: /*css*/ `
   .tabs {
     max-width: 500px;
     margin: 0 auto;
@@ -115,7 +114,7 @@ export default {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
   }`,
-  js: /*js*/`
+  js: /*js*/ `
   const tabs = document.querySelector('.tabs');
   const tabButtons = tabs.querySelectorAll('.tab-button');
   const tabPanels = tabs.querySelectorAll('.tab-panel');
@@ -163,5 +162,5 @@ export default {
   window.addEventListener('resize', () => {
     const activeButton = document.querySelector('.tab-button.active');
     updateIndicator(activeButton);
-  });`
+  });`,
 };

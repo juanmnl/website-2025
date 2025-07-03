@@ -1,17 +1,16 @@
 export default {
-  id: 5,
   title: 'Custom Checkbox',
   description: 'Pure CSS styled checkbox with smooth transition',
   type: 'element',
-  dateAdded: "2025-06-23",
+  dateAdded: '2025-06-23',
   thumbnail: '/assets/images/snippets/thumbnails/checkbox.svg',
-  html: /*html*/`
+  html: /*html*/ `
   <label class="custom-checkbox">
     <input type="checkbox" />
     <span class="checkmark"></span>
     Remember me
   </label>`,
-  css: /*css*/`
+  css: /*css*/ `
   .custom-checkbox {
     display: flex;
     align-items: center;
@@ -55,7 +54,7 @@ export default {
   .custom-checkbox input:checked + .checkmark:after {
     display: block;
   }`,
-  js: /*js*/`
+  js: /*js*/ `
   document.querySelectorAll('.custom-checkbox input').forEach(checkbox => {
     checkbox.addEventListener('change', function() {
       console.log('Checkbox:', this.checked ? 'checked' : 'unchecked');

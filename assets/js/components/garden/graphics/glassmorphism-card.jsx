@@ -78,7 +78,6 @@ const GlassmorphismTutorial = ({ tutorial }) => {
 };
 
 export default {
-  id: 102,
   title: 'Glassmorphism Card Design',
   description:
     'Create modern glass-effect cards with backdrop blur and transparency',

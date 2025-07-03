@@ -78,7 +78,6 @@ const RetroTextTutorial = ({ tutorial }) => {
 };
 
 export default {
-  id: 101,
   title: 'Creating a Retro Text Effect',
   description:
     'Step-by-step guide to create a vintage 80s text effect in Photoshop',

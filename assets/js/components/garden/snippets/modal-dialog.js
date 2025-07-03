@@ -1,8 +1,6 @@
 export default {
-  id: 9,
   title: 'Modal Dialog',
-  description:
-    'Accessible modal with focus management',
+  description: 'Accessible modal with focus management',
   type: 'component',
   dateAdded: '2025-07-01',
   thumbnail: '/assets/images/snippets/thumbnails/modal-dialog.svg',
@@ -106,7 +104,7 @@ export default {
     justify-content: flex-end;
     gap: 10px;
   }`,
-  js: /*js*/`
+  js: /*js*/ `
   const modalTrigger = document.querySelector('.modal-trigger');
   const modal = document.querySelector('.modal');
   const modalOverlay = document.querySelector('.modal-overlay');

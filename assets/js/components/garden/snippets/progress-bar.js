@@ -1,18 +1,17 @@
 export default {
-  id: 7,
   title: 'Progress Bar',
   description: 'Animated progress indicator with percentage',
   type: 'component',
   dateAdded: '2025-06-30',
   thumbnail: '/assets/images/snippets/thumbnails/progress-bar.svg',
-  html: /*html*/`
+  html: /*html*/ `
   <div class="progress-container">
     <div class="progress-bar" data-progress="75">
       <div class="progress-fill"></div>
       <span class="progress-text">75%</span>
     </div>
   </div>`,
-  css: /*css*/`
+  css: /*css*/ `
   .progress-container {
     width: 100%;
     min-width: 300px;

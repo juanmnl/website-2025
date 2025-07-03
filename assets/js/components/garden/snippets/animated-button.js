@@ -1,15 +1,14 @@
 export default {
-  id: 1,
   title: 'Animated Button',
   description: 'A simple button with hover and active animations',
   type: 'element',
-  dateAdded: "2025-06-21",
+  dateAdded: '2025-06-21',
   thumbnail: '/assets/images/snippets/thumbnails/button.svg',
-  html: /*html*/`
+  html: /*html*/ `
     <div class="container">
       <button class="button">Hover me! Click me!</button>
     </div>`,
-  css: /*css*/`
+  css: /*css*/ `
     .container {
       display: flex;
       gap: 10px;
@@ -48,7 +47,7 @@ export default {
       border-right: 2px solid #111;
       border-left: 2px solid #111;
     }`,
-      js: /*js*/`
+  js: /*js*/ `
       document.querySelectorAll('.button').forEach(button => {
         button.addEventListener('click', function() {
           this.classList.toggle('active');

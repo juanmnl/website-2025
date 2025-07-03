@@ -1,16 +1,15 @@
 export default {
-  id: 10,
-  title: "Toggle Switch",
-  description: "Modern toggle switch with smooth animation",
-  type: "component",
-  dateAdded: "2025-07-01",
-  thumbnail: "/assets/images/snippets/thumbnails/toggle-switch.svg",
-  html: /*html*/`<label class="toggle-switch">
+  title: 'Toggle Switch',
+  description: 'Modern toggle switch with smooth animation',
+  type: 'component',
+  dateAdded: '2025-07-01',
+  thumbnail: '/assets/images/snippets/thumbnails/toggle-switch.svg',
+  html: /*html*/ `<label class="toggle-switch">
   <input type="checkbox" />
   <span class="toggle-slider"></span>
   <span class="toggle-label">Dark Mode</span>
 </label>`,
-  css: /*css*/`.toggle-switch {
+  css: /*css*/ `.toggle-switch {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -60,7 +59,7 @@ export default {
 .toggle-switch input:checked + .toggle-slider:hover {
   background: var(--burnt-butter);
 }`,
-  js: /*js*/`document.querySelectorAll('.toggle-switch input').forEach(toggle => {
+  js: /*js*/ `document.querySelectorAll('.toggle-switch input').forEach(toggle => {
   toggle.addEventListener('change', function() {
     const label = this.parentElement.querySelector('.toggle-label');
     if (this.checked) {
@@ -69,5 +68,5 @@ export default {
       console.log('Toggle OFF:', label.textContent);
     }
   });
-});`
+});`,
 };
