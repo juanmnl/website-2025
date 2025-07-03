@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { gardenItems } from './gardenIndex';
-import LivePreview from '../LivePreview';
+import LivePreview from './LivePreview';
 
 const DigitalGarden = () => {
   const [selectedItem, setSelectedItem] = useState(null);

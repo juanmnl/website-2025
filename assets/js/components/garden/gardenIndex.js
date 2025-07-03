@@ -1,6 +1,8 @@
+import TutorialViewer from './TutorialViewer';
+
 // Auto-import all snippets and tutorials
 const snippetModules = import.meta.glob('./snippets/*.js', { eager: true });
-const graphicModules = import.meta.glob('./graphics/*.jsx', { eager: true });
+const graphicModules = import.meta.glob('./graphics/*.js', { eager: true });
 
 // Helper function to generate stable IDs from title
 const generateId = (title) => {
@@ -19,6 +21,7 @@ const snippets = Object.values(snippetModules).map((module) => ({
 const graphics = Object.values(graphicModules).map((module) => ({
   ...module.default,
   id: generateId(module.default.title),
+  liveComponent: TutorialViewer,
 }));
 
 // Combine and sort by date
