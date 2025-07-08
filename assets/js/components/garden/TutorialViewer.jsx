@@ -95,8 +95,8 @@ const TutorialViewer = ({ tutorial }) => {
 
       {currentStep === tutorial.steps.length - 1 && (
         <div className="final-result">
-          <h4>Final Result</h4>
           <img src={tutorial.finalResult} alt="Final result" />
+          <h4>Final Result</h4>
         </div>
       )}
     </div>

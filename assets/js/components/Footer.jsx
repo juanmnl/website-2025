@@ -34,16 +34,10 @@ const Footer = () => {
           </div>
 
           <div className="footer-column">
-            <h4>Pages</h4>
+            <h4>Specials</h4>
             <ul>
-              <li><a href="/index.html">Work</a></li>
-              <li><a href="/about.html">About</a></li>
-              <li><a href="/archive.html">Archive</a></li>
-              <li><a href="/contact.html">Contact</a></li>
+              <li><a href="/garden.html">Digital Garden</a></li>
             </ul>
-          </div>
-
-          <div className="footer-column">
             <h4>Downloads</h4>
             <ul>
               <li><a href="/assets/docs/Juan_Manuel_Cornejo_CV_2025.pdf" target="_blank">Resume</a></li>
@@ -57,6 +51,16 @@ const Footer = () => {
                   VSCode themes
                 </a>
               </li>
+            </ul>
+          </div>
+
+          <div className="footer-column">
+            <h4>Pages</h4>
+            <ul>
+              <li><a href="/index.html">Work</a></li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/archive.html">Archive</a></li>
+              <li><a href="/contact.html">Contact</a></li>
             </ul>
           </div>
 

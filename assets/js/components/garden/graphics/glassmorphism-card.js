@@ -12,7 +12,7 @@ export default {
       id: 1,
       title: 'Set Up Background',
       description:
-        'Create a new artboard (800x600px) and add a colorful background image. You can also use vibrant colors like a purple to pink gradient.',
+        'Create a New Artboard (A) – (800x600px) – and add a colorful background image. You can also use vibrant colors like a purple to pink gradient.',
       image: '/assets/images/tutorials/glass-card/step1.jpg',
       tips: [
         'Try gradients from #8B5CF6 to #EC4899',
@@ -36,7 +36,7 @@ export default {
       id: 3,
       title: 'Apply Glass Effect',
       description:
-        'Duplicate the card object, remove the fill, and add a stroke. Lower the fill opacity of the card to 20% and add layer effects: Inner Shadow, Drop Shadow, and most importantly, a background blur.',
+        'Duplicate the card object and rename it to "Outline", remove the fill, and add a stroke. Lower the fill opacity of the card to 20% and add layer effects: Inner Shadow, Drop Shadow, and most importantly, a background blur.',
       image: '/assets/images/tutorials/glass-card/step3.jpg',
       tips: [
         'Outline Stroke: 1px, white, center (make sure the outline layer is on top of the card',
@@ -58,6 +58,6 @@ export default {
       ],
     },
   ],
-  tools: ['Frame Effects', 'Text Tool', 'Layer Effects'],
+  tools: ['Frame Tool', 'Text Tool', 'Frame Effects'],
   finalResult: '/assets/images/tutorials/glass-card/final.jpg',
 };
