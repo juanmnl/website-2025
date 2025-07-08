@@ -5,7 +5,7 @@ import { createRoot } from 'react-dom/client';
 import Navigation from './components/Navigation.jsx';
 import Footer from './components/Footer.jsx';
 import DigitalGarden from './components/garden/digitalGarden.jsx';
-
+import StyleGuideGenerator from './components/StyleGuideGenerator.jsx'; // Add this import
 
 document.addEventListener('DOMContentLoaded', function () {
   document.body.classList.remove('loading', 'page-transitioning');
@@ -28,6 +28,12 @@ document.addEventListener('DOMContentLoaded', function () {
     gardenReactRoot.render(<DigitalGarden />);
   }
 
+  // Add this section for the Style Guide Generator
+  const styleGuideRoot = document.getElementById('style-guide-root');
+  if (styleGuideRoot) {
+    const styleGuideReactRoot = createRoot(styleGuideRoot);
+    styleGuideReactRoot.render(<StyleGuideGenerator />);
+  }
 
   let mouseBlurEffect = null;
   try {
