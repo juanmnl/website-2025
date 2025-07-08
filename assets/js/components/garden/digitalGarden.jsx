@@ -102,7 +102,7 @@ const DigitalGarden = () => {
     if (!dateAdded) return false;
     const itemDate = new Date(dateAdded);
     const weekAgo = new Date();
-    weekAgo.setDate(weekAgo.getDate() - 7);
+    weekAgo.setDate(weekAgo.getDate() - 4);
     return itemDate > weekAgo;
   };
 
@@ -210,8 +210,8 @@ const DigitalGarden = () => {
               <div className="garden-media">
                 <img src={item.thumbnail} alt={item.title} />
                 <span className="garden-card-badge">{item.type}</span>
-                {item.difficulty && (
-                  <span className="garden-difficulty-badge">{item.difficulty}</span>
+                 {item.contentType && (
+                  <span className="garden-content-type-badge">{item.contentType}</span>
                 )}
                 {isRecent(item.dateAdded) && (
                   <span className="garden-new-badge">NEW</span>
@@ -220,11 +220,6 @@ const DigitalGarden = () => {
               <div className="garden-content">
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
-                {item.estimatedTime && (
-                  <div className="garden-meta">
-                    <span className="estimated-time">⏱ {item.estimatedTime}</span>
-                  </div>
-                )}
               </div>
             </article>
           ))}

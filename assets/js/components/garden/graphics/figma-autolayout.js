@@ -1,19 +1,18 @@
 export default {
-  title: 'Mastering Figma Auto Layout',
-  description:
-    "Create responsive, flexible designs using Figma's Auto Layout feature",
+  title: 'Figma Auto Layout',
+  description: "Flexible designs using Figma's Auto Layout",
   type: 'graphic',
   dateAdded: '2025-06-30',
   contentType: 'figma',
-  thumbnail: '/assets/images/tutorials/figma-auto-layout-thumb.jpg',
-  difficulty: 'intermediate',
-  estimatedTime: '20 minutes',
+  thumbnail: '/assets/images/tutorials/thumbnails/auto-layout.svg',
+  difficulty: 'beginner',
+  estimatedTime: '10 minutes',
   steps: [
     {
       id: 1,
       title: 'Create Your Base Frame',
       description:
-        'Start by creating a frame (F) that will contain your card component. Make it 320x200px for a standard card size.',
+        'Start by creating a frame (F) that will contain your card component. Make it 320x200px for a standard card size, 8px of border-radius.',
       image: '/assets/images/tutorials/figma-auto-layout/step1.jpg',
       tips: [
         'Use the Frame tool (F) or Rectangle (R) then convert to frame',

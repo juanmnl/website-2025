@@ -1514,6 +1514,11 @@ footer p {
   background: var(--background);
 }
 
+.garden-drawer-content-type {
+  font-size: 0.8em;
+  color: var(--text-color);
+  text-transform: uppercase;
+}
 
 .garden-drawer-type {
   font-size: 0.8em;
@@ -1643,6 +1648,19 @@ footer p {
 }
 
 /* Enhanced Card Badges */
+.garden-content-type-badge {
+  position: absolute;
+  top: 45px;
+  right: 15px;
+  background: var(--butter);
+  color: var(--dark-gray);
+  padding: 2px 8px;
+  border-radius: var(--border-radius);
+  font-size: 0.7em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
 .garden-difficulty-badge {
   position: absolute;
   top: 45px;
@@ -1663,7 +1681,8 @@ footer p {
 }
 
 .estimated-time {
-  font-size: 0.7em;
+  font-size: 0.6em;
+  font-weight: 700;
   color: var(--secondary-color);
   text-transform: uppercase;
 }
@@ -1783,7 +1802,6 @@ footer p {
 
 .step-image {
   width: 100%;
-  max-width: 500px;
   margin: 15px auto;
   border: 1px solid var(--border);
   border-radius: var(--border-radius);

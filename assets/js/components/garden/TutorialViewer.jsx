@@ -1,7 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 const TutorialViewer = ({ tutorial }) => {
   const [currentStep, setCurrentStep] = useState(0);
+  const stepNavigatorRef = useRef(null);
+
+  const goToStep = (stepIndex) => {
+    setCurrentStep(stepIndex);
+    
+    setTimeout(() => {
+      if (stepNavigatorRef.current) {
+        const drawerContent = stepNavigatorRef.current.closest('.garden-drawer-content');
+        
+        if (drawerContent) {
+          const scrollTop = stepNavigatorRef.current.offsetTop - 120;
+          
+          drawerContent.scrollTo({
+            top: scrollTop,
+            behavior: 'smooth'
+          });
+        }
+      }
+    }, 100);
+  };
+
+  const goToPreviousStep = () => {
+    const newStep = Math.max(0, currentStep - 1);
+    goToStep(newStep);
+  };
+
+  const goToNextStep = () => {
+    const newStep = Math.min(tutorial.steps.length - 1, currentStep + 1);
+    goToStep(newStep);
+  };
   
   return (
     <div className="tutorial-container">
@@ -15,12 +45,12 @@ const TutorialViewer = ({ tutorial }) => {
         </div>
       </div>
 
-      <div className="step-navigator">
+      <div className="step-navigator" ref={stepNavigatorRef}>
         {tutorial.steps.map((step, index) => (
           <button
             key={step.id || index}
             className={`step-btn ${currentStep === index ? 'active' : ''}`}
-            onClick={() => setCurrentStep(index)}
+            onClick={() => goToStep(index)}
           >
             {index + 1}
           </button>
@@ -50,13 +80,13 @@ const TutorialViewer = ({ tutorial }) => {
 
       <div className="tutorial-navigation">
         <button 
-          onClick={() => setCurrentStep(Math.max(0, currentStep - 1))}
+          onClick={goToPreviousStep}
           disabled={currentStep === 0}
         >
           Previous
         </button>
         <button 
-          onClick={() => setCurrentStep(Math.min(tutorial.steps.length - 1, currentStep + 1))}
+          onClick={goToNextStep}
           disabled={currentStep === tutorial.steps.length - 1}
         >
           Next
