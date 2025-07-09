@@ -37,6 +37,7 @@ const Footer = () => {
             <h4>Specials</h4>
             <ul>
               <li><a href="/garden.html">Digital Garden</a></li>
+              <li><a href="/style-guide.html">Styleguide Generator</a></li>
             </ul>
             <h4>Downloads</h4>
             <ul>

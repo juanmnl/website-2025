@@ -1,10 +1,11 @@
 import React, { useState, useRef } from 'react';
+import '../../css/style-guide-generator.css';
 
 const StyleGuideGenerator = () => {
   const [styleGuide, setStyleGuide] = useState({
     project: {
-      name: 'My Design System',
-      description: 'A comprehensive design system for modern applications',
+      name: '',
+      description: '',
       version: '1.0.0'
     },
     colors: {
@@ -402,7 +403,7 @@ const StyleGuideGenerator = () => {
                   className="sample-text" 
                   style={{ 
                     fontSize: `${value}px`,
-                    fontFamily: styleGuide.typography.primaryFont
+                    fontFamily: `'${styleGuide.typography.primaryFont}', system-ui, sans-serif !important`
                   }}
                 >
                   The quick brown fox jumps over the lazy dog
@@ -547,11 +548,11 @@ const StyleGuideGenerator = () => {
 
           <div className="preview-typography">
             <h3>Typography</h3>
-            <div style={{ fontFamily: styleGuide.typography.primaryFont }}>
-              <h1>Heading 1</h1>
-              <h2>Heading 2</h2>
-              <h3>Heading 3</h3>
-              <p>Body text with primary font family</p>
+            <div style={{ fontFamily: `'${styleGuide.typography.primaryFont}', system-ui, sans-serif` }}>
+              <h1 style={{ fontFamily: `'${styleGuide.typography.primaryFont}', system-ui, sans-serif`, fontSize: generateTypographyScale()['2xl'] + 'px' }}>Heading 1</h1>
+              <h2 style={{ fontFamily: `'${styleGuide.typography.primaryFont}', system-ui, sans-serif`, fontSize: generateTypographyScale()['xl'] + 'px' }}>Heading 2</h2>
+              <h3 style={{ fontFamily: `'${styleGuide.typography.primaryFont}', system-ui, sans-serif`, fontSize: generateTypographyScale()['lg'] + 'px' }}>Heading 3</h3>
+              <p style={{ fontFamily: `'${styleGuide.typography.primaryFont}', system-ui, sans-serif`, fontSize: generateTypographyScale()['base'] + 'px' }}>Body text with primary font family</p>
             </div>
           </div>
         </div>
@@ -589,6 +590,7 @@ const StyleGuideGenerator = () => {
                 name: e.target.value
               }
             }))}
+            placeholder="Enter project name..."
           />
           <input
             type="text"
@@ -601,6 +603,7 @@ const StyleGuideGenerator = () => {
                 description: e.target.value
               }
             }))}
+            placeholder="Enter project description..."
           />
         </div>
       </header>
