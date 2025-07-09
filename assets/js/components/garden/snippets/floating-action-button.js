@@ -3,7 +3,7 @@ export default {
   description: 'The classic floating action button',
   type: 'animation',
   dateAdded: '2025-07-08',
-  thumbnail: '/assets/images/th4.png',
+  thumbnail: '/assets/images/snippets/thumbnails/FAB.svg',
   html: /*html*/ `<div class="fab-container">
   <button class="fab main-fab" onclick="toggleFabMenu()">
     <span class="fab-icon">+</span>

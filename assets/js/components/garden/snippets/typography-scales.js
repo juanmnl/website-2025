@@ -3,7 +3,7 @@ export default {
   description: 'TS with headings, body, and scaling',
   type: 'element',
   dateAdded: '2025-07-08',
-  thumbnail: '/assets/images/th1.png',
+  thumbnail: '/assets/images/snippets/thumbnails/typography.svg',
   html: /*html*/ `<div class="typography-demo">
   <section class="typography-section">
     <h2 class="section-title">Heading Scale</h2>

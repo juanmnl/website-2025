@@ -1,9 +1,9 @@
 export default {
-  title: 'Loading Skeleton Screen',
+  title: 'Loading Skeleton',
   description: 'Skeleton loading animation',
   type: 'animation',
   dateAdded: '2025-07-08',
-  thumbnail: '/assets/images/th3.png',
+  thumbnail: '/assets/images/snippets/thumbnails/skeleton.svg',
   html: /*html*/ `<div class="skeleton-demo">
   <button class="demo-button" onclick="toggleSkeletonState()">
     Toggle Loading State
@@ -13,7 +13,7 @@ export default {
     <!-- Real Content -->
     <div class="real-content">
       <div class="profile-card">
-        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face" alt="Profile" class="profile-avatar">
+        <img src="/assets/images/avatar-d.jpg" alt="Profile" class="profile-avatar">
         <div class="profile-info">
           <h3>John Doe</h3>
           <p>Senior Frontend Developer</p>
@@ -23,7 +23,7 @@ export default {
       
       <div class="article-list">
         <div class="article-item">
-          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=120&h=80&fit=crop" alt="Article" class="article-image">
+          <img src="/assets/images/th1.png" alt="Article" class="article-image">
           <div class="article-content">
             <h4>Building Modern Web Applications</h4>
             <p>Learn the latest techniques for building scalable and maintainable web applications...</p>
@@ -32,7 +32,7 @@ export default {
         </div>
         
         <div class="article-item">
-          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=120&h=80&fit=crop" alt="Article" class="article-image">
+          <img src="/assets/images/th3.png" alt="Article" class="article-image">
           <div class="article-content">
             <h4>CSS Animation Best Practices</h4>
             <p>Discover how to create smooth and performant animations that enhance user experience...</p>

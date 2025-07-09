@@ -3,7 +3,7 @@ export default {
   description: 'Multiple link styles with basic functionality',
   type: 'element',
   dateAdded: '2025-07-08',
-  thumbnail: '/assets/images/th2.png',
+  thumbnail: '/assets/images/snippets/thumbnails/links.svg',
   html: /*html*/ `<div class="links-demo">
   <section class="link-section">
     <h3>Basic Link Styles</h3>
