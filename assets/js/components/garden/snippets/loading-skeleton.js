@@ -2,7 +2,7 @@ export default {
   title: 'Loading Skeleton Screen',
   description: 'Skeleton loading animation',
   type: 'animation',
-  dateAdded: '2025-7-08',
+  dateAdded: '2025-07-08',
   thumbnail: '/assets/images/th3.png',
   html: /*html*/ `<div class="skeleton-demo">
   <button class="demo-button" onclick="toggleSkeletonState()">

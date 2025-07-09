@@ -2,7 +2,7 @@ export default {
   title: 'FAB',
   description: 'The classic floating action button',
   type: 'animation',
-  dateAdded: '2025-7-08',
+  dateAdded: '2025-07-08',
   thumbnail: '/assets/images/th4.png',
   html: /*html*/ `<div class="fab-container">
   <button class="fab main-fab" onclick="toggleFabMenu()">
