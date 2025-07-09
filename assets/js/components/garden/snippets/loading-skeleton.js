@@ -3,7 +3,7 @@ export default {
   description: 'Skeleton loading animation',
   type: 'animation',
   dateAdded: '2025-7-08',
-  thumbnail: '/assets/images/rarbbit.png',
+  thumbnail: '/assets/images/th3.png',
   html: /*html*/ `<div class="skeleton-demo">
   <button class="demo-button" onclick="toggleSkeletonState()">
     Toggle Loading State
