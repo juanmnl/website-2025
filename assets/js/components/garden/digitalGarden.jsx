@@ -90,9 +90,9 @@ const DigitalGarden = () => {
       items = items.filter(item => item.type === 'animation');
     } else if (filter === 'graphic') {
       items = items.filter(item => item.type === 'graphic');
+    } else if (filter === 'ux') {
+      items = items.filter(item => item.type === 'ux');
     }
-    // 'all' shows everything
-
     // ALWAYS sort by date (newest first)
     return sortByDate(items);
   }, [filter]);
@@ -133,6 +133,11 @@ const DigitalGarden = () => {
         return {
           name: 'Graphics',
           description: 'Step-by-step guides for visual design'
+        };
+      case 'ux':
+        return {
+          name: 'UX',
+          description: 'The laws and principles of user experience design'
         };
       default:
         return {
@@ -195,6 +200,12 @@ const DigitalGarden = () => {
           onClick={() => setFilter('graphic')}
         >
           Graphics
+        </button>
+        <button 
+          className={`button ${filter === 'ux' ? 'active' : ''}`}
+          onClick={() => setFilter('ux')}
+        >
+          UX
         </button>
       </div>
 
@@ -294,7 +305,14 @@ const DigitalGarden = () => {
                     </div>
                   </section>
                 </>
-              ) : (
+              ) : selectedItem.type === 'ux' ? (
+                // UX Post Layout
+                <section className="drawer-section">
+                  <div className="ux-post-container">
+                    <selectedItem.liveComponent post={selectedItem} />
+                  </div>
+                </section>
+              ): (
                 // Code Snippet Layout
                 <>
                   <section className="drawer-section">

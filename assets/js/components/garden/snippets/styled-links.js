@@ -77,17 +77,16 @@ export default {
   </section>
 </div>`,
   css: /*css*/ `/* Links Demo Container */
+/* Links Demo Container */
 .links-demo {
   max-width: 800px;
   margin: 0 auto;
-  padding: 40px 20px;
-  background: white;
-  border-radius: var(--border-radius);
+  padding: var(--space-4xl) var(--space-xl);
 }
 
 .link-section {
-  margin-bottom: 40px;
-  padding: 25px 0;
+  margin-bottom: var(--space-4xl);
+  padding: var(--space-xl) 0;
   border-bottom: 1px solid var(--border);
 }
 
@@ -97,69 +96,80 @@ export default {
 }
 
 .link-section h3 {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: var(--dark-gray);
-  margin-bottom: 20px;
-  padding-bottom: 8px;
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-sm);
   border-bottom: 2px solid var(--butter);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing);
 }
 
 .link-group {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: var(--space-lg);
   align-items: flex-start;
 }
 
 .link-group.horizontal {
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: var(--space-xl);
 }
 
-/* Base Link Styles */
-a {
+/* Reset conflicting base styles for this demo */
+.links-demo a {
+  color: inherit;
   text-decoration: none;
   transition: all 0.3s ease;
   position: relative;
 }
 
+.links-demo a:hover {
+  color: inherit;
+}
+
 /* Default Link Styles */
 .link-default {
-  color: var(--butter);
+  color: var(--text-color);
   font-weight: 500;
   border-bottom: 1px solid transparent;
+  letter-spacing: var(--letter-spacing);
 }
 
 .link-default:hover {
-  color: var(--burnt-butter);
-  border-bottom-color: var(--burnt-butter);
+  color: var(--dark-gray);
+  border-bottom-color: var(--butter);
 }
 
 .link-subtle {
-  color: var(--text-color);
+  color: var(--secondary-color);
   border-bottom: 1px solid var(--border);
+  letter-spacing: var(--letter-spacing);
 }
 
 .link-subtle:hover {
-  color: var(--dark-gray);
+  color: var(--text-color);
   border-bottom-color: var(--butter);
 }
 
 .link-bold {
   color: var(--dark-gray);
   font-weight: 700;
+  letter-spacing: var(--letter-spacing);
 }
 
 .link-bold:hover {
-  color: var(--butter);
+  color: var(--text-color);
   transform: translateY(-1px);
 }
 
 .link-muted {
   color: var(--secondary-color);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  letter-spacing: var(--letter-spacing);
 }
 
 .link-muted:hover {
@@ -172,6 +182,7 @@ a {
   font-weight: 500;
   position: relative;
   overflow: hidden;
+  letter-spacing: var(--letter-spacing);
 }
 
 .link-underline::after {
@@ -192,12 +203,13 @@ a {
 .link-slide {
   color: var(--dark-gray);
   font-weight: 500;
-  padding: 8px 16px;
-  border-radius: 6px;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--border-radius);
   background: linear-gradient(90deg, transparent 0%, var(--butter) 0%);
   background-size: 0% 100%;
   background-repeat: no-repeat;
   transition: all 0.3s ease;
+  letter-spacing: var(--letter-spacing);
 }
 
 .link-slide:hover {
@@ -206,27 +218,30 @@ a {
 }
 
 .link-glow {
-  color: var(--butter);
+  color: var(--text-color);
   font-weight: 600;
-  padding: 4px 8px;
-  border-radius: 4px;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--border-radius);
   transition: all 0.3s ease;
+  letter-spacing: var(--letter-spacing);
 }
 
 .link-glow:hover {
-  box-shadow: 0 0 20px rgba(255, 232, 168, 0.6);
-  background: rgba(255, 232, 168, 0.1);
+  box-shadow: 0 0 20px rgba(255, 232, 168, 0.4);
+  background: var(--burnt-butter);
+  color: var(--dark-gray);
 }
 
 .link-bounce {
   color: var(--dark-gray);
   font-weight: 500;
   display: inline-block;
+  letter-spacing: var(--letter-spacing);
 }
 
 .link-bounce:hover {
   animation: bounce 0.6s ease;
-  color: var(--butter);
+  color: var(--text-color);
 }
 
 @keyframes bounce {
@@ -239,16 +254,19 @@ a {
 /* Button-Style Links */
 .link-button {
   display: inline-block;
-  padding: 12px 24px;
-  border-radius: 8px;
+  padding: var(--space-md) var(--space-xl);
+  border-radius: var(--border-radius);
   font-weight: 600;
   text-align: center;
   transition: all 0.3s ease;
   border: 2px solid transparent;
   cursor: pointer;
   background: none;
-  font-family: inherit;
-  font-size: inherit;
+  font-family: var(--font-family);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing);
+  min-width: 120px;
 }
 
 .link-button.primary {
@@ -263,29 +281,32 @@ a {
 }
 
 .link-button.secondary {
-  background: var(--secondary-color);
-  color: white;
+  background: var(--light-gray);
+  color: var(--text-color);
+  border-color: var(--border);
 }
 
 .link-button.secondary:hover {
-  background: var(--dark-gray);
+  background: var(--burnt-butter);
+  color: var(--dark-gray);
   transform: translateY(-2px);
 }
 
 .link-button.outline {
   background: transparent;
-  color: var(--butter);
-  border-color: var(--butter);
+  color: var(--text-color);
+  border-color: var(--border);
 }
 
 .link-button.outline:hover {
   background: var(--butter);
   color: var(--dark-gray);
+  border-color: var(--butter);
 }
 
 .link-button.ghost {
   background: transparent;
-  color: var(--text-color);
+  color: var(--secondary-color);
 }
 
 .link-button.ghost:hover {
@@ -297,22 +318,25 @@ a {
 .link-icon {
   display: flex;
   align-items: center;
-  gap: 8px;
-  color: var(--dark-gray);
+  gap: var(--space-sm);
+  color: var(--text-color);
   font-weight: 500;
-  padding: 8px 12px;
-  border-radius: 6px;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--border-radius);
   transition: all 0.3s ease;
+  letter-spacing: var(--letter-spacing);
 }
 
 .link-icon:hover {
   background: var(--light-gray);
+  color: var(--dark-gray);
   transform: translateX(2px);
 }
 
 .link-icon .icon {
   font-size: 0.9em;
   transition: transform 0.3s ease;
+  flex-shrink: 0;
 }
 
 .link-icon.external:hover .icon,
@@ -333,29 +357,32 @@ a {
   display: flex;
   gap: 2px;
   background: var(--light-gray);
-  padding: 6px;
-  border-radius: 10px;
+  padding: var(--space-xs);
+  border-radius: var(--border-radius);
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .nav-link {
-  padding: 10px 20px;
-  border-radius: 6px;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: calc(var(--border-radius) - 2px);
   color: var(--secondary-color);
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   transition: all 0.3s ease;
   white-space: nowrap;
   position: relative;
+  letter-spacing: var(--letter-spacing);
+  text-transform: uppercase;
 }
 
 .nav-link:hover {
   background: rgba(255, 255, 255, 0.7);
-  color: var(--dark-gray);
+  color: var(--text-color);
 }
 
 .nav-link.active {
-  background: white;
+  background: var(--background);
   color: var(--dark-gray);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -383,7 +410,7 @@ a {
   content: '';
   position: absolute;
   top: 50%;
-  right: 8px;
+  right: var(--space-sm);
   transform: translateY(-50%);
   width: 12px;
   height: 12px;
@@ -398,28 +425,68 @@ a {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   .links-demo {
-    padding: 20px 15px;
+    padding: var(--space-3xl) var(--space-lg);
+  }
+  
+  .link-group {
+    gap: var(--space-md);
   }
   
   .link-group.horizontal {
     flex-direction: column;
     align-items: stretch;
+    gap: var(--space-md);
   }
   
   .nav-demo {
-    justify-content: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: calc(var(--space-xs) + 2px); /* Extra space for scrollbar */
   }
   
   .nav-link {
-    padding: 8px 16px;
-    font-size: 0.85rem;
+    padding: var(--space-sm) var(--space-md);
+    font-size: 0.75rem;
+    min-width: fit-content;
   }
   
   .link-button {
-    padding: 10px 20px;
-    font-size: 0.9rem;
+    padding: var(--space-sm) var(--space-lg);
+    font-size: 0.75rem;
+    width: 100%;
+    min-width: auto;
+  }
+  
+  .link-icon {
+    padding: var(--space-md);
+    justify-content: center;
+  }
+  
+  .link-section h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 26.5625rem) {
+  .links-demo {
+    padding: var(--space-xl) var(--space-md);
+  }
+  
+  .nav-demo {
+    gap: 1px;
+  }
+  
+  .nav-link {
+    padding: var(--space-xs) var(--space-sm);
+    font-size: 0.7rem;
+  }
+  
+  .link-button {
+    padding: var(--space-sm);
+    font-size: 0.7rem;
   }
 }`,
   js: /*js*/ `// Global functions for button interactions
