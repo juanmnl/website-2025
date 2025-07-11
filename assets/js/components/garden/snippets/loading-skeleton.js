@@ -13,7 +13,7 @@ export default {
     <!-- Real Content -->
     <div class="real-content">
       <div class="profile-card">
-        <img src="/assets/images/avatar-d.jpg" alt="Profile" class="profile-avatar">
+        <img src="/assets/images/th5.png" alt="Profile" class="profile-avatar">
         <div class="profile-info">
           <h3>John Doe</h3>
           <p>Senior Frontend Developer</p>
