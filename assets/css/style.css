@@ -2255,11 +2255,7 @@ footer p {
   .example-content {
     padding: var(--space-lg);
   }
-  
-  .ux-post-meta {
-    justify-content: center;
-  }
-  
+
   .image-placeholder {
     padding: var(--space-4xl) var(--space-lg);
   }
@@ -2361,11 +2357,7 @@ footer p {
   .example-content {
     padding: var(--space-lg);
   }
-  
-  .ux-post-meta {
-    justify-content: center;
-  }
-  
+
   .image-placeholder {
     padding: var(--space-4xl) var(--space-lg);
   }
