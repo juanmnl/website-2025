@@ -789,6 +789,10 @@ nav ul li a {
 }
 
 /* About Section */
+#resume {
+    scroll-margin-top: 8em;
+}
+
 .about-section {
     padding: var(--space-5xl) 0;
 }
