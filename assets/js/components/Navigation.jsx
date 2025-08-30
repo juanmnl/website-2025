@@ -80,7 +80,7 @@ const Navigation = () => {
           >
             Designer @Huridocs -
             <span className="highlight">
-              <small>Available soon!</small>
+              <small>Available for work!</small>
             </span>
           </a>
         </div>
