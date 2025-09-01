@@ -78,7 +78,7 @@ const Navigation = () => {
             onMouseEnter={() => handleMouseEnter('/index.html')}
             onClick={(e) => handleLinkClick(e, '/index.html')}
           >
-            Designer @Huridocs -
+            juanmnl.com -
             <span className="highlight">
               <small>Available for work!</small>
             </span>
