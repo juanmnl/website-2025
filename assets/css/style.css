@@ -403,15 +403,29 @@ nav ul li a {
     font-weight: 400;
 }
 
+.hero-section h2 {
+    font-family: "Archivo Black", sans-serif;
+    margin: .6em 0 0 0;
+    font-weight: 400;
+}
+
 .hero-section p {
     text-align: left;
-    max-width: 37.5rem; /* 600px */
+    max-width: 37.5rem;
+}
+
+.hero-section .container > p:first-of-type {
+    margin: 1em;
 }
 
 .hero-section ul {
     list-style: none;
     padding-left: 0;
     margin: 2.5rem 0;
+}
+
+.hero-section a {
+    text-decoration: underline;
 }
 
 .hero-section ul li a {
@@ -789,9 +803,6 @@ nav ul li a {
 }
 
 /* About Section */
-#resume {
-    /* scroll-margin-top: 8em; */
-}
 
 .about-section {
     padding: var(--space-5xl) 0;
