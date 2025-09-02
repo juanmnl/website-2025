@@ -1326,12 +1326,15 @@ footer p {
         height: 3.75rem; /* 60px */
     }
 
-    .personal-card h1 {
+    .personal-card h2 {
         font-size: 1rem;
+        margin-bottom: 4px;
     }
 
     .personal-card p {
         font-size: 0.9rem;
+        line-height: 1.1;
+        margin-bottom: 4px;
     }
 
     .project-grid {
