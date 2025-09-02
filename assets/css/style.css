@@ -39,7 +39,7 @@
 }
 
 html {
-    font-size: 16px; /* Base font size */
+    font-size: 18px; /* Base font size */
     scroll-behavior: smooth;
 }
 
@@ -124,26 +124,32 @@ a:hover {
     color: var(--dark-gray);
 }
 
-/* Typography - Use rem for consistent scaling */
 h1, h2 {
     color: var(--dark-gray);
     margin-bottom: 0.4em;
-    line-height: 1.2;
+    line-height: 1;
     letter-spacing: var(--letter-spacing);
 }
 
-h3, h4, h5, h6, article h1 {
-    /* font-family: "Archivo Black", sans-serif; */
+h3, h4, h5, h6 {
     color: var(--dark-gray);
     line-height: 1.2;
     font-family: var(--font-family);
     letter-spacing: var(--letter-spacing);
 }
 
-h1 { font-size: 1.3rem; }
-h2 { font-size: 1.2rem; }
-h3 { font-size: 1.1rem; }
-h4 { font-size: 0.9rem; }
+h1 {
+    font-size: 7rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+h2 { font-size: 1.7rem; font-weight: 900; }
+h3 { font-size: 1.4rem; font-weight: 900; }
+h4 { font-size: 1rem; }
+
+article h1 {
+    font-size: 4rem;
+}
 
 p {
     letter-spacing: var(--letter-spacing);
@@ -395,15 +401,8 @@ nav ul li a {
 
 /* Hero Section */
 .hero-section {
-    padding: var(--space-5xl) 0;
+    padding: var(--space-2xl) 0;
     text-align: left;
-}
-
-.hero-section h1 {
-    font-size: 7rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    line-height: 1;
 }
 
 .hero-section h2 {
@@ -440,7 +439,7 @@ nav ul li a {
     gap: var(--space-xl);
     align-items: center;
     width: fit-content;
-    padding: 0.7em 2em 0.7em 0.7em;
+    padding: 0.5em 2.5em 0.5em .8em;
     border-radius: 3.75rem; /* 60px */
     background-color: var(--background);
 }
@@ -454,9 +453,9 @@ nav ul li a {
     background-color: white;
 }
 
-.personal-card h1 {
-    font-size: 1.1rem;
-    font-weight: 600;
+.personal-card h2 {
+    font-size: 1.5rem;
+    font-weight: 900;
     margin-bottom: 0;
 }
 
@@ -510,7 +509,7 @@ nav ul li a {
 
 /* Work Section */
 .work-section {
-    padding: var(--space-5xl) 0;
+    padding: var(--space-2xl) 0;
 }
 
 .work-section h2 {
@@ -575,7 +574,7 @@ p.special {
 
 /* Archive Section */
 .archive-section {
-    padding: var(--space-5xl) 0;
+    padding: var(--space-2xl) 0;
 }
 
 .archive-intro {
@@ -644,7 +643,7 @@ p.special {
 }
 
 .archive-card.modal-card.expanded img {
-    height: 30rem; /* 480px */
+    height: 22rem;
     object-fit: cover;
 }
 
@@ -726,7 +725,7 @@ p.special {
 
 /* Case Study */
 .case-study {
-    padding: var(--space-5xl) 0;
+    padding: var(--space-2xl) 0;
 }
 
 .project-intro {
@@ -754,7 +753,7 @@ p.special {
 }
 
 .case-study-section {
-    margin-bottom: var(--space-5xl);
+    margin-bottom: var(--space-2xl);
     border-bottom: 1px solid var(--light-gray);
     padding-bottom: var(--space-4xl);
 }
@@ -816,7 +815,7 @@ p.special {
 /* About Section */
 
 .about-section {
-    padding: var(--space-5xl) 0;
+    padding: var(--space-2xl) 0;
 }
 
 .about-content {
@@ -841,7 +840,7 @@ p.special {
 
 .about-text {
     flex-grow: 1;
-    min-width: 18.75rem; /* 300px */
+    min-width: 18.75rem;
 }
 
 .about-section p > a {
@@ -853,7 +852,7 @@ p.special {
 }
 
 .about-text h2 {
-    margin-top: var(--space-5xl);
+    margin-top: var(--space-2xl);
 }
 
 .skills-list {
@@ -876,11 +875,7 @@ p.special {
 
 /* Contact Section */
 .contact-section {
-    padding: var(--space-5xl) 0;
-}
-
-.contact-section h1 {
-    margin-bottom: 0.8em;
+    padding: var(--space-2xl) 0;
 }
 
 .contact-section p {
@@ -1240,9 +1235,14 @@ footer p {
         --space-6xl: 3.75rem;   /* 60px */
     }
 
-    h1 { font-size: 1.3rem; }
+    h1 { font-size: 4rem; }
     h2 { font-size: 1.1rem; }
     h3 { font-size: 1rem; }
+
+    article h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+    }
 
     .container {
         padding: 0 var(--space-md);
@@ -1314,11 +1314,7 @@ footer p {
     }
 
     .hero-section, .about-section, .archive-section, .contact-section {
-        padding: var(--space-5xl) 0;
-    }
-    
-    .hero-section h1 {
-        font-size: 4rem;
+        padding: var(--space-2xl) 0;
     }
 
     p.special {
@@ -1453,7 +1449,7 @@ footer p {
 
 /* Digital Garden Styles */
 .garden-section {
-    padding: var(--space-5xl) 0;
+    padding: var(--space-2xl) 0;
 }
 
 .garden-grid {
@@ -2002,7 +1998,7 @@ footer p {
     }
     
     .garden-header {
-        padding: var(--space-5xl) 0;
+        padding: var(--space-2xl) 0;
     }
 
     .garden-filters > .button {
@@ -2015,7 +2011,7 @@ footer p {
     }
 
     .garden-empty-state {
-        padding: var(--space-5xl) var(--space-xl);
+        padding: var(--space-2xl) var(--space-xl);
     }
     
     .empty-state-icon {
