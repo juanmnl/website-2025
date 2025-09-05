@@ -635,7 +635,7 @@ p.special {
 }
 
 .archive-card.modal-card.expanded img {
-    height: 30rem;
+    height: 25rem;
     object-fit: cover;
 }
 
@@ -644,7 +644,7 @@ p.special {
 }
 
 .archive-card.modal-card.expanded .archive-details {
-    max-height: 25rem; /* 400px */
+    max-height: 30rem;
     opacity: 1;
     padding: 0.8rem;
 }
