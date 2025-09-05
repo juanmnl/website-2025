@@ -56,7 +56,7 @@ export default {
 }
 
 .main-fab {
-  background: var(--butter);
+  background: var(--accent);
   color: var(--dark-gray);
   font-size: 24px;
   font-weight: bold;
@@ -65,7 +65,7 @@ export default {
 }
 
 .main-fab:hover {
-  background: var(--burnt-butter);
+  background: var(--burnt-accent);
   transform: scale(1.1);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
@@ -201,8 +201,8 @@ export default {
 }
 
 .demo-btn:hover {
-  border-color: var(--butter);
-  background: var(--butter);
+  border-color: var(--accent);
+  background: var(--accent);
 }
 
 #status {

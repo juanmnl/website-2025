@@ -101,7 +101,7 @@ export default {
   color: var(--dark-gray);
   margin-bottom: var(--space-xl);
   padding-bottom: var(--space-sm);
-  border-bottom: 2px solid var(--butter);
+  border-bottom: 2px solid var(--accent);
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing);
 }
@@ -141,7 +141,7 @@ export default {
 
 .link-default:hover {
   color: var(--dark-gray);
-  border-bottom-color: var(--butter);
+  border-bottom-color: var(--accent);
 }
 
 .link-subtle {
@@ -152,7 +152,7 @@ export default {
 
 .link-subtle:hover {
   color: var(--text-color);
-  border-bottom-color: var(--butter);
+  border-bottom-color: var(--accent);
 }
 
 .link-bold {
@@ -192,7 +192,7 @@ export default {
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--butter);
+  background: var(--accent);
   transition: width 0.3s ease;
 }
 
@@ -205,7 +205,7 @@ export default {
   font-weight: 500;
   padding: var(--space-sm) var(--space-lg);
   border-radius: var(--border-radius);
-  background: linear-gradient(90deg, transparent 0%, var(--butter) 0%);
+  background: linear-gradient(90deg, transparent 0%, var(--accent) 0%);
   background-size: 0% 100%;
   background-repeat: no-repeat;
   transition: all 0.3s ease;
@@ -228,7 +228,7 @@ export default {
 
 .link-glow:hover {
   box-shadow: 0 0 20px rgba(255, 232, 168, 0.4);
-  background: var(--burnt-butter);
+  background: var(--burnt-accent);
   color: var(--dark-gray);
 }
 
@@ -270,12 +270,12 @@ export default {
 }
 
 .link-button.primary {
-  background: var(--butter);
+  background: var(--accent);
   color: var(--dark-gray);
 }
 
 .link-button.primary:hover {
-  background: var(--burnt-butter);
+  background: var(--burnt-accent);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
@@ -287,7 +287,7 @@ export default {
 }
 
 .link-button.secondary:hover {
-  background: var(--burnt-butter);
+  background: var(--burnt-accent);
   color: var(--dark-gray);
   transform: translateY(-2px);
 }
@@ -299,9 +299,9 @@ export default {
 }
 
 .link-button.outline:hover {
-  background: var(--butter);
+  background: var(--accent);
   color: var(--dark-gray);
-  border-color: var(--butter);
+  border-color: var(--accent);
 }
 
 .link-button.ghost {
@@ -395,7 +395,7 @@ export default {
   transform: translateX(-50%);
   width: 20px;
   height: 2px;
-  background: var(--butter);
+  background: var(--accent);
   border-radius: 1px;
 }
 

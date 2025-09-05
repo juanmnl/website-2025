@@ -11,7 +11,7 @@ const LivePreview = ({ html, css, js }) => {
     try {
       // Clear previous content
       container.innerHTML = '';
-      
+
       // Create a shadow DOM for isolation (if supported)
       let shadowRoot;
       if (container.attachShadow) {
@@ -49,8 +49,8 @@ const LivePreview = ({ html, css, js }) => {
           --background: #fff6e9;
           --dark-gray: #1b1e21;
           --white: #f5f5f5;
-          --butter: #ffe8a8;
-          --burnt-butter: #ffedcc;
+          --accent: #ffe8a8;
+          --burnt-accent: #ffedcc;
           --border: #F5F4EE;
           --border-radius: 20px;
           --font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -76,10 +76,10 @@ const LivePreview = ({ html, css, js }) => {
           try {
             // Create a safer execution context
             const executeJS = new Function(
-              'container', 
-              'document', 
-              'querySelector', 
-              'querySelectorAll', 
+              'container',
+              'document',
+              'querySelector',
+              'querySelectorAll',
               'getElementById',
               'createElement',
               `
@@ -99,7 +99,7 @@ const LivePreview = ({ html, css, js }) => {
               ${js}
               `
             );
-            
+
             executeJS(
               container,
               shadowRoot.ownerDocument || document,
@@ -130,13 +130,15 @@ const LivePreview = ({ html, css, js }) => {
 
   if (error) {
     return (
-      <div style={{
-        padding: '20px',
-        background: '#fee',
-        border: '1px solid #fcc',
-        borderRadius: '8px',
-        color: '#c33'
-      }}>
+      <div
+        style={{
+          padding: '20px',
+          background: '#fee',
+          border: '1px solid #fcc',
+          borderRadius: '8px',
+          color: '#c33',
+        }}
+      >
         Preview Error: {error}
       </div>
     );
@@ -152,7 +154,7 @@ const LivePreview = ({ html, css, js }) => {
         borderRadius: 'var(--border-radius)',
         backgroundColor: 'var(--background)',
         overflow: 'hidden',
-        position: 'relative'
+        position: 'relative',
       }}
     />
   );

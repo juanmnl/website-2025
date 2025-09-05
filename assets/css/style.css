@@ -16,8 +16,8 @@
     --background: #fcfcfc;
     --dark-gray: #1b1e21;
     --white: #f5f5f5;
-    --butter: #c7eafe;
-    --burnt-butter: #e0ecfb;
+    --accent: #c7eafe;
+    --burnt-accent: #e0ecfb;
     --brown: #5b524c;
     --border: #F5F4EE;
     --border-radius: 1.25rem; /* 20px */
@@ -197,8 +197,8 @@ video {
 }
 
 .highlight {
-    background-color: var(--butter);
-    background: linear-gradient(90deg, transparent 0%, var(--butter) 0%, var(--butter) 100%, transparent 100%);
+    background-color: var(--accent);
+    background: linear-gradient(90deg, transparent 0%, var(--accent) 0%, var(--accent) 100%, transparent 100%);
     background-size: 0% 100%;
     background-repeat: no-repeat;
     background-position: left center;
@@ -220,7 +220,7 @@ blockquote {
     font-size: 0.9rem;
     font-style: italic;
     color: var(--text-color);
-    border-left: 4px solid var(--butter);
+    border-left: 4px solid var(--accent);
     margin: 1rem 0;
     padding: 0.5em 1em;
     background-color: var(--background);
@@ -264,13 +264,13 @@ blockquote footer {
 }
 
 .button:hover {
-    background-color: var(--burnt-butter);
+    background-color: var(--burnt-accent);
     border-right: 1px solid red;
     border-left: 1px solid cyan;
 }
 
 .button.active {
-    background-color: var(--butter);
+    background-color: var(--accent);
     border-right: 1px solid red;
     border-left: 1px solid cyan;
 }
@@ -493,7 +493,7 @@ nav ul li a {
 .status-indicator {
     width: 0.8125rem; /* 13px */
     height: 0.8125rem; /* 13px */
-    background: var(--butter);
+    background: var(--accent);
     flex-shrink: 0;
     border-radius: 50%;
     animation: pulse 1s infinite;
@@ -635,7 +635,7 @@ p.special {
 }
 
 .archive-card.modal-card.expanded img {
-    height: 22rem;
+    height: 30rem;
     object-fit: cover;
 }
 
@@ -728,7 +728,7 @@ p.special {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(9.375rem, 1fr)); /* 150px */
     gap: var(--space-xl);
-    background-color: var(--burnt-butter);
+    background-color: var(--burnt-accent);
     padding: 1rem;
     border-radius: var(--border-radius);
     margin-bottom: var(--space-6xl);
@@ -1491,7 +1491,7 @@ footer p {
     position: absolute;
     top: var(--space-lg);
     right: var(--space-lg);
-    background: var(--burnt-butter);
+    background: var(--burnt-accent);
     color: var(--text-color);
     padding: 0.125rem 0.625rem; /* 2px 10px */
     border-radius: var(--border-radius);
@@ -1623,7 +1623,7 @@ footer p {
 }
 
 .garden-code-block {
-    background: var(--burnt-butter);
+    background: var(--burnt-accent);
     border-radius: var(--border-radius);
     overflow: hidden;
     border: 1px solid var(--border);
@@ -1657,7 +1657,7 @@ footer p {
 .garden-card-image {
     width: 100%;
     height: 7.5rem; /* 120px */
-    background: linear-gradient(135deg, var(--butter), var(--secondary-color));
+    background: linear-gradient(135deg, var(--accent), var(--secondary-color));
     display: block;
 }
 
@@ -1680,11 +1680,11 @@ footer p {
 }
 
 .garden-filters > .button:hover {
-    background: var(--burnt-butter);
+    background: var(--burnt-accent);
 }
 
 .garden-filters > .button.active {
-    background: var(--butter);
+    background: var(--accent);
     color: var(--dark-gray);
 }
 
@@ -1693,7 +1693,7 @@ footer p {
     position: absolute;
     top: 2.8125rem; /* 45px */
     right: var(--space-lg);
-    background: var(--butter);
+    background: var(--accent);
     color: var(--dark-gray);
     padding: 0.125rem 0.5rem; /* 2px 8px */
     border-radius: var(--border-radius);
@@ -1706,7 +1706,7 @@ footer p {
     position: absolute;
     top: 2.8125rem; /* 45px */
     right: var(--space-lg);
-    background: var(--burnt-butter);
+    background: var(--burnt-accent);
     color: var(--dark-gray);
     padding: 0.125rem 0.5rem; /* 2px 8px */
     border-radius: var(--border-radius);
@@ -1737,7 +1737,7 @@ footer p {
 }
 
 .garden-drawer-difficulty {
-    background: var(--burnt-butter);
+    background: var(--burnt-accent);
     color: var(--dark-gray);
     padding: 0.125rem 0.5rem; /* 2px 8px */
     border-radius: 0.75rem; /* 12px */
@@ -1755,7 +1755,7 @@ footer p {
     position: absolute;
     top: 1.0625rem; /* 17px */
     left: var(--space-lg);
-    background: var(--butter);
+    background: var(--accent);
     color: var(--text-color);
     padding: 0.125rem 0.25rem 0.0625rem 0.25rem; /* 2px 4px 1px 4px */
     border-radius: 0.25rem; /* 4px */
@@ -1791,7 +1791,7 @@ footer p {
 
 .difficulty {
     padding: 0.125rem 0.5rem; /* 2px 8px */
-    background: var(--butter);
+    background: var(--accent);
     border-radius: 0.75rem; /* 12px */
     font-size: 0.8rem;
     text-transform: uppercase;
@@ -1831,7 +1831,7 @@ footer p {
 }
 
 .step-btn.active {
-    background: var(--butter);
+    background: var(--accent);
     border-color: var(--dark-gray);
 }
 
@@ -1879,7 +1879,7 @@ footer p {
 }
 
 .tutorial-navigation button:hover:not(:disabled) {
-    background: var(--burnt-butter);
+    background: var(--burnt-accent);
 }
 
 .tutorial-navigation button:disabled {
@@ -1909,7 +1909,7 @@ footer p {
 }
 
 .toast--success {
-    background: var(--burnt-butter);
+    background: var(--burnt-accent);
     color: var(--text-color);
 }
 
@@ -2054,7 +2054,7 @@ footer p {
 
 .ux-category,
 .ux-read-time {
-  background: var(--butter);
+  background: var(--accent);
   color: var(--dark-gray);
   padding: 0.125rem 0.625rem;
   border-radius: var(--border-radius);
@@ -2064,7 +2064,7 @@ footer p {
 }
 
 .ux-read-time {
-  background: var(--burnt-butter);
+  background: var(--burnt-accent);
 }
 
 .ux-post-title {
@@ -2109,7 +2109,7 @@ footer p {
   background: var(--background);
   padding: var(--space-lg);
   border-radius: var(--border-radius);
-  border-left: 4px solid var(--butter);
+  border-left: 4px solid var(--accent);
   letter-spacing: var(--letter-spacing);
 }
 
@@ -2128,7 +2128,7 @@ footer p {
   padding: var(--space-lg);
   background: var(--background);
   border-radius: var(--border-radius);
-  border-left: 3px solid var(--butter);
+  border-left: 3px solid var(--accent);
 }
 
 .takeaway-icon {
@@ -2324,11 +2324,11 @@ footer p {
 }
 
 .application-item {
-  border-left: 3px solid var(--butter);
+  border-left: 3px solid var(--accent);
 }
 
 .application-number {
-  background: var(--butter);
+  background: var(--accent);
   color: var(--dark-gray);
   width: 1.5rem;
   height: 1.5rem;
@@ -2411,7 +2411,7 @@ footer p {
   background: var(--light-gray);
   padding: var(--space-lg);
   border-radius: var(--border-radius);
-  border-left: 3px solid var(--burnt-butter);
+  border-left: 3px solid var(--burnt-accent);
   font-style: italic;
   margin-top: var(--space-lg);
 }
@@ -2442,7 +2442,7 @@ footer p {
 }
 
 .related-law-card:hover {
-  border-color: var(--butter);
+  border-color: var(--accent);
   transform: translateY(-2px);
   box-shadow: 0 0.25rem 0.5rem rgba(2, 2, 2, 0.1);
 }

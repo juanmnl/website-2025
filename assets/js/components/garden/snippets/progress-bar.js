@@ -29,7 +29,7 @@ export default {
 
   .progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, var(--butter), var(--burnt-butter));
+    background: linear-gradient(90deg, var(--accent), var(--burnt-accent));
     width: 0%;
     transition: width 1s ease;
     border-radius: inherit;

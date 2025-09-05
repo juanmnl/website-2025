@@ -151,7 +151,7 @@ export default {
   color: var(--dark-gray);
   margin-bottom: 30px;
   padding-bottom: 10px;
-  border-bottom: 2px solid var(--butter);
+  border-bottom: 2px solid var(--accent);
 }
 
 /* Heading Scale */
@@ -451,7 +451,7 @@ function demonstrateResponsive() {
     top: 20px;
     right: 20px;
     padding: 8px 16px;
-    background: var(--butter);
+    background: var(--accent);
     border: none;
     border-radius: 6px;
     cursor: pointer;

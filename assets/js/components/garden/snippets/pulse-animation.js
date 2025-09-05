@@ -19,7 +19,7 @@ export default {
   .pulse-indicator {
     width: 32px;
     height: 32px;
-    background: var(--butter);
+    background: var(--accent);
     border-radius: 50%;
     animation: pulse 1s infinite;
   }

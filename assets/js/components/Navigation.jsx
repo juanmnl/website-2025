@@ -132,12 +132,12 @@ const Navigation = () => {
             </li>
             <li>
               <a 
-                href="/archive.html" 
-                className={activeLink === 'archive.html' ? 'button active' : 'button'}
-                onClick={(e) => handleLinkClick(e, '/archive.html')}
-                onMouseEnter={() => handleMouseEnter('/archive.html')}
+                href="/ui-bites.html" 
+                className={activeLink === 'ui-bites.html' ? 'button active' : 'button'}
+                onClick={(e) => handleLinkClick(e, '/ui-bites.html')}
+                onMouseEnter={() => handleMouseEnter('/ui-bites.html')}
               >
-                Archive
+                UI Bites
               </a>
             </li>
             <li>

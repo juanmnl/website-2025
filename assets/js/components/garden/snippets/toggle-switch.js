@@ -46,7 +46,7 @@ export default {
   }
 
   .toggle-switch input:checked + .toggle-slider {
-    background: var(--butter);
+    background: var(--accent);
   }
 
   .toggle-switch input:checked + .toggle-slider::after {
@@ -58,7 +58,7 @@ export default {
   }
 
   .toggle-switch input:checked + .toggle-slider:hover {
-    background: var(--burnt-butter);
+    background: var(--burnt-accent);
   }`,
   js: /*js*/ `
   document.querySelectorAll('.toggle-switch input').forEach(toggle => {

@@ -58,7 +58,7 @@ export default {
 }
 
 .accordion-header:hover {
-  background: var(--burnt-butter);
+  background: var(--burnt-accent);
 }
 
 .accordion-icon {

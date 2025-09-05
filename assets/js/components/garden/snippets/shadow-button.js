@@ -37,7 +37,7 @@ export default {
     }
 
     .button.active {
-      background-color: var(--butter);
+      background-color: var(--accent);
       box-shadow: 0px 0px 0px hsl(0deg 0% 0% / 0%), 1px 1px 0 #000000;
       background-color: var(--background);
     }`,

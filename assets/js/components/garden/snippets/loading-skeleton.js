@@ -92,7 +92,7 @@ export default {
 }
 
 .demo-button {
-  background: var(--butter);
+  background: var(--accent);
   color: var(--dark-gray);
   border: none;
   padding: 12px 24px;
@@ -107,7 +107,7 @@ export default {
 }
 
 .demo-button:hover {
-  background: var(--burnt-butter);
+  background: var(--burnt-accent);
   transform: translateY(-2px);
 }
 
@@ -138,14 +138,14 @@ export default {
 }
 
 .animation-btn:hover {
-  border-color: var(--butter);
-  background: var(--butter);
+  border-color: var(--accent);
+  background: var(--accent);
   color: var(--dark-gray);
 }
 
 .animation-btn.active {
-  background: var(--butter);
-  border-color: var(--butter);
+  background: var(--accent);
+  border-color: var(--accent);
   color: var(--dark-gray);
   font-weight: 600;
 }

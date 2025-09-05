@@ -34,7 +34,7 @@ export default {
   }
 
   .custom-checkbox input:checked + .checkmark {
-    background-color: var(--butter);
+    background-color: var(--accent);
     border-color: var(--dark-gray);
   }
 

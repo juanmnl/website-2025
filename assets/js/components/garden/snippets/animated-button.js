@@ -43,7 +43,7 @@ export default {
       border-left: 2px solid #111;
     }
     .button.active {
-      background-color: var(--butter);
+      background-color: var(--accent);
       border-right: 2px solid #111;
       border-left: 2px solid #111;
     }`,
