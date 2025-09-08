@@ -80,6 +80,16 @@ const Footer = () => {
               </li>
               <li>
                 <a
+                  href="https://www.linkedin.com/in/juanmnlcornejo/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn profile"
+                >
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://bsky.app/profile/juanmnl.bsky.social"
                   target="_blank"
                   rel="noopener noreferrer"
