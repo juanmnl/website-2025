@@ -18,25 +18,54 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Juan Manuel Cornejo",
-        "jobTitle": "Product Designer",
-        "url": "https://www.juanmnl.com",
-        "sameAs": [
-          "https://twitter.com/_juanmnl",
-          "https://www.instagram.com/juanmnlcornejo/",
-          "https://github.com/juanmnl"
-        ],
-        "knowsAbout": [
-          "Product Design",
-          "Human-Centered Software",
-          "AI Interfaces",
-          "Complex Systems"
-        ],
-        "alumniOf": {
-          "@type": "Organization",
-          "name": "Thoughtworks"
-        }
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://www.juanmnl.com#me",
+            "name": "Juan Manuel Cornejo",
+            "jobTitle": "Product Designer",
+            "url": "https://www.juanmnl.com",
+            "sameAs": [
+              "https://twitter.com/_juanmnl",
+              "https://www.instagram.com/juanmnlcornejo/",
+              "https://github.com/juanmnl"
+            ],
+            "knowsAbout": [
+              "Product Design",
+              "Human-Centered Software",
+              "AI Interfaces",
+              "Complex Systems"
+            ]
+          },
+          {
+            "@type": "CaseStudy",
+            "name": "ML-Powered Information Extraction",
+            "description": "A design case study on creating tools for extracting structured information using machine learning, making complex data more usable for human rights defenders.",
+            "author": { "@id": "https://www.juanmnl.com#me" },
+            "url": "https://www.juanmnl.com/uwazi-ml.html"
+          },
+          {
+            "@type": "CaseStudy",
+            "name": "Railcar Automation Systems",
+            "description": "A case study on designing human-centered interfaces for industrial automation, balancing safety, reliability, and usability in complex environments.",
+            "author": { "@id": "https://www.juanmnl.com#me" },
+            "url": "https://www.juanmnl.com/ktn-ryms.html"
+          },
+          {
+            "@type": "CaseStudy",
+            "name": "Preserve: Evidence Collection for the Web",
+            "description": "A design case study on a browser extension integrated with Uwazi that captures tamper-proof evidence from web content, social media posts, and online articles for legal proceedings.",
+            "author": { "@id": "https://www.juanmnl.com#me" },
+            "url": "https://www.juanmnl.com/uwazi-preserve.html"
+          },
+          {
+            "@type": "CaseStudy",
+            "name": "Interface Modernization & System Consistency",
+            "description": "A design case study on the redesign of a legacy interface for clarity, consistency, and usability across complex systems, ensuring smoother workflows for users.",
+            "author": { "@id": "https://www.juanmnl.com#me" },
+            "url": "https://www.juanmnl.com/uwazi-ui-refactor.html"
+          }
+        ]
       }
     </script>
     <script type="module" src="/assets/js/main.jsx"></script>
