@@ -252,6 +252,13 @@ blockquote footer {
     border-radius: var(--border-radius);
 }
 
+.paper h1 {
+    font-family: var(--font-family);
+    font-size: 2.2rem;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
 /* ==================================================
    Buttons (kept original look but consolidated)
    ================================================== */
@@ -1905,6 +1912,6 @@ footer p { margin: 0; }
 
 /* 425px */
 @media (max-width: 26.5625rem) {
-    h1 { font-size: 3.2rem; }
+    h1 { font-size: 2rem; white-space: wrap; word-break: break-all; }
     .project-grid { grid-template-columns: 1fr; }
 }
