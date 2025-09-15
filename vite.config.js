@@ -38,7 +38,7 @@ export default defineConfig({
         contact: 'contact.html',
         garden: 'garden.html',
         styleGuide: 'style-guide.html',
-        uiBites: 'user-interfaces.html',
+        userInterfaces: 'user-interfaces.html',
         graphicDesign: 'graphic-design.html',
         uwaziRefactor: 'projects/uwazi-ui-refactor.html',
         uwaziMl: 'projects/uwazi-ml.html',
