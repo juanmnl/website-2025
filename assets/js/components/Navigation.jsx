@@ -12,6 +12,8 @@ const Navigation = () => {
       '/index.html': 'index.html',
       '/about.html': 'about.html',
       '/garden.html': 'garden.html',
+      '/user-interfaces.html': 'user-interfaces.html',
+      '/graphic-design.html': 'graphic-design.html',
       '/archive.html': 'archive.html',
       '/contact.html': 'contact.html'
     };
@@ -132,12 +134,22 @@ const Navigation = () => {
             </li>
             <li>
               <a 
-                href="/ui-bites.html" 
-                className={activeLink === 'ui-bites.html' ? 'button active' : 'button'}
-                onClick={(e) => handleLinkClick(e, '/ui-bites.html')}
-                onMouseEnter={() => handleMouseEnter('/ui-bites.html')}
+                href="/user-interfaces.html" 
+                className={activeLink === 'user-interfaces.html' ? 'button active' : 'button'}
+                onClick={(e) => handleLinkClick(e, '/user-interfaces.html')}
+                onMouseEnter={() => handleMouseEnter('/user-interfaces.html')}
               >
-                UI Bites
+                Interfaces
+              </a>
+            </li>
+            <li>
+              <a 
+                href="/graphic-design.html" 
+                className={activeLink === 'graphic-design.html' ? 'button active' : 'button'}
+                onClick={(e) => handleLinkClick(e, '/graphic-design.html')}
+                onMouseEnter={() => handleMouseEnter('/graphic-design.html')}
+              >
+                Graphics
               </a>
             </li>
             <li>
