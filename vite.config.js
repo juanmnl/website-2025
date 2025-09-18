@@ -1,34 +1,44 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import viteImagemin from 'vite-plugin-imagemin';
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import viteCompression from 'vite-plugin-compression';
 
 export default defineConfig({
   plugins: [
-    viteImagemin({
-      gifsicle: { optimizationLevel: 7 },
-      mozjpeg: { quality: 80 },
-      pngquant: { quality: [0.65, 0.8] },
-      svgo: {
+    ViteImageOptimizer({
+      jpeg: {
+        quality: 80
+      },
+      png: {
+        quality: 80
+      },
+      webp: {
+        quality: 80
+      },
+      avif: {
+        quality: 50
+      },
+      // svgo is built in:
+      svg: {
         plugins: [
           {
             name: 'removeViewBox',
-            active: false,
-          },
-        ],
-      },
+            active: false
+          }
+        ]
+      }
     }),
     viteCompression({
       algorithm: 'gzip',
-      ext: '.gz',
+      ext: '.gz'
     }),
     viteCompression({
       algorithm: 'brotliCompress',
-      ext: '.br',
-    }),
+      ext: '.br'
+    })
   ],
   optimizeDeps: {
-    include: ['three'],
+    include: ['three']
   },
   build: {
     rollupOptions: {
@@ -43,21 +53,21 @@ export default defineConfig({
         uwaziRefactor: 'projects/uwazi-ui-refactor.html',
         uwaziMl: 'projects/uwazi-ml.html',
         uwaziPreserve: 'projects/uwazi-preserve.html',
-        ktnRyms: 'projects/ktn-ryms.html',
+        ktnRyms: 'projects/ktn-ryms.html'
       },
       output: {
         manualChunks: {
           react: ['react', 'react-dom'],
-          three: ['three'],
-        },
-      },
+          three: ['three']
+        }
+      }
     },
     minify: 'terser',
     terserOptions: {
       compress: {
         drop_console: true,
-        drop_debugger: true,
-      },
-    },
-  },
+        drop_debugger: true
+      }
+    }
+  }
 });
