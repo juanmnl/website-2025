@@ -6,17 +6,28 @@ import viteCompression from 'vite-plugin-compression';
 export default defineConfig({
   plugins: [
     ViteImageOptimizer({
+      jpg: {
+        quality: 75, // lower = smaller files
+        progressive: true
+      },
       jpeg: {
-        quality: 80
+        quality: 75,
+        progressive: true
       },
       png: {
-        quality: 80
+        quality: 75, // 0–100
+        compressionLevel: 9 // 0–9 (higher = more compressed)
       },
       webp: {
-        quality: 80
+        quality: 70
       },
       avif: {
         quality: 50
+      },
+      // optional: resize big images (good for web perf)
+      resize: {
+        width: 1920,
+        withoutEnlargement: true
       },
       // svgo is built in:
       svg: {
