@@ -49,29 +49,12 @@ const DigitalGarden = () => {
 
   // Copy to clipboard function with toast
   const copyToClipboard = async (text, type = 'Code') => {
-    if (navigator.clipboard) {
-      try {
-        await navigator.clipboard.writeText(text);
-        showToast(`${type} copied to clipboard!`, 'success');
-      } catch (err) {
-        console.error('Failed to copy:', err);
-        showToast('Failed to copy to clipboard', 'error');
-      }
-    } else {
-      // Fallback for older browsers
-      try {
-        const textArea = document.createElement('textarea');
-        textArea.value = text;
-        document.body.appendChild(textArea);
-        textArea.focus();
-        textArea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textArea);
-        showToast(`${type} copied to clipboard!`, 'success');
-      } catch (err) {
-        console.error('Failed to copy:', err);
-        showToast('Failed to copy to clipboard', 'error');
-      }
+    try {
+      await navigator.clipboard.writeText(text);
+      showToast(`${type} copied to clipboard!`, 'success');
+    } catch (err) {
+      console.error('Failed to copy:', err);
+      showToast('Failed to copy to clipboard', 'error');
     }
   };
 

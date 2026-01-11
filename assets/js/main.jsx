@@ -59,9 +59,24 @@ document.addEventListener('DOMContentLoaded', function () {
     cursor.style.left = startX - 10 + 'px';
     cursor.style.top = startY - 10 + 'px';
 
+    // Throttle cursor updates with requestAnimationFrame for better performance
+    let cursorX = startX;
+    let cursorY = startY;
+    let rafPending = false;
+
+    const updateCursor = () => {
+      cursor.style.left = cursorX - 10 + 'px';
+      cursor.style.top = cursorY - 10 + 'px';
+      rafPending = false;
+    };
+
     document.addEventListener('mousemove', (e) => {
-      cursor.style.left = e.clientX - 10 + 'px';
-      cursor.style.top = e.clientY - 10 + 'px';
+      cursorX = e.clientX;
+      cursorY = e.clientY;
+      if (!rafPending) {
+        rafPending = true;
+        requestAnimationFrame(updateCursor);
+      }
     });
 
     document.addEventListener('mouseleave', () => {

@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState('');
+  const navigationTimerRef = useRef(null);
 
   useEffect(() => {
     // Set active link based on current path
@@ -22,6 +23,13 @@ const Navigation = () => {
     } else {
       setActiveLink(pathMap[currentPath] || '');
     }
+
+    // Cleanup navigation timer on unmount
+    return () => {
+      if (navigationTimerRef.current) {
+        clearTimeout(navigationTimerRef.current);
+      }
+    };
   }, []);
 
   const toggleMenu = () => {
@@ -57,10 +65,15 @@ const Navigation = () => {
       return;
     }
 
+    // Cancel any pending navigation
+    if (navigationTimerRef.current) {
+      clearTimeout(navigationTimerRef.current);
+    }
+
     setIsMenuOpen(false);
     document.body.classList.add('page-transitioning');
-    
-    setTimeout(() => {
+
+    navigationTimerRef.current = setTimeout(() => {
       window.location.href = href;
     }, 50);
   };

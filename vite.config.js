@@ -7,22 +7,22 @@ export default defineConfig({
   plugins: [
     ViteImageOptimizer({
       jpg: {
-        quality: 75, // lower = smaller files
+        quality: 85, // balanced quality for portfolio images
         progressive: true
       },
       jpeg: {
-        quality: 75,
+        quality: 85,
         progressive: true
       },
       png: {
-        quality: 75, // 0–100
+        quality: 85, // 0–100
         compressionLevel: 9 // 0–9 (higher = more compressed)
       },
       webp: {
-        quality: 70
+        quality: 80
       },
       avif: {
-        quality: 50
+        quality: 65
       },
       // optional: resize big images (good for web perf)
       resize: {
