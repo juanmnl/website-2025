@@ -1,11 +1,11 @@
 import '../css/style.css';
-import { MouseBlur } from './mouse-blur.js';
+import { createMouseBlur, isMobileDevice } from './mouse-blur.js';
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import Navigation from './components/Navigation.jsx';
 import Footer from './components/Footer.jsx';
 import DigitalGarden from './components/garden/digitalGarden.jsx';
-import StyleGuideGenerator from './components/StyleGuideGenerator.jsx'; // Add this import
+import StyleGuideGenerator from './components/StyleGuideGenerator.jsx';
 
 document.addEventListener('DOMContentLoaded', function () {
   document.body.classList.remove('loading', 'page-transitioning');
@@ -36,22 +36,17 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   let mouseBlurEffect = null;
-  try {
-    mouseBlurEffect = new MouseBlur();
-    console.log('Mouse blur effect initialized');
-  } catch (error) {
-    console.error('Failed to initialize mouse blur effect:', error);
-  }
 
-  function isMobile() {
-    return (
-      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        navigator.userAgent
-      ) || window.innerWidth <= 768
-    );
-  }
+  // Initialize mouse blur effect asynchronously (only loads Three.js on desktop)
+  createMouseBlur()
+    .then((effect) => {
+      mouseBlurEffect = effect;
+    })
+    .catch((error) => {
+      console.error('Failed to initialize mouse blur effect:', error);
+    });
 
-  if (!isMobile()) {
+  if (!isMobileDevice()) {
     document.body.style.cursor = 'none';
 
     const cursor = document.createElement('div');
@@ -63,16 +58,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     cursor.style.left = startX - 10 + 'px';
     cursor.style.top = startY - 10 + 'px';
-
-    if (mouseBlurEffect && mouseBlurEffect.material) {
-      mouseBlurEffect.mouse.set(
-        startX / window.innerWidth,
-        1.0 - startY / window.innerHeight
-      );
-      mouseBlurEffect.material.uniforms.u_mouse.value.copy(
-        mouseBlurEffect.mouse
-      );
-    }
 
     document.addEventListener('mousemove', (e) => {
       cursor.style.left = e.clientX - 10 + 'px';
@@ -86,19 +71,6 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('mouseenter', () => {
       cursor.style.opacity = '1';
     });
-  } else {
-    if (mouseBlurEffect && mouseBlurEffect.material) {
-      const mobileX = window.innerWidth / 2;
-      const mobileY = window.innerHeight - 100;
-
-      mouseBlurEffect.mouse.set(
-        mobileX / window.innerWidth,
-        1.0 - mobileY / window.innerHeight
-      );
-      mouseBlurEffect.material.uniforms.u_mouse.value.copy(
-        mouseBlurEffect.mouse
-      );
-    }
   }
 
   window.addEventListener('beforeunload', () => {
@@ -114,17 +86,36 @@ document.addEventListener('DOMContentLoaded', function () {
       card.addEventListener('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
-        
+
+        // Store the element that had focus before opening modal
+        window.lastFocusedElement = document.activeElement;
+
         closeModal();
-        
+
         const overlay = createOverlay();
-        
+
         const modalCard = this.cloneNode(true);
         modalCard.classList.add('expanded', 'modal-card');
+
+        // Add ARIA attributes to modal card
+        modalCard.setAttribute('role', 'dialog');
+        modalCard.setAttribute('aria-modal', 'true');
+
+        // Find or create a title for aria-labelledby
+        const modalTitle = modalCard.querySelector('h3');
+        if (modalTitle) {
+          const titleId = 'modal-title-' + Date.now();
+          modalTitle.id = titleId;
+          modalCard.setAttribute('aria-labelledby', titleId);
+        } else {
+          modalCard.setAttribute('aria-label', 'Image details');
+        }
 
         const closeButton = document.createElement('button');
         closeButton.className = 'modal-close-btn';
         closeButton.innerHTML = '×';
+        closeButton.setAttribute('aria-label', 'Close modal');
+        closeButton.setAttribute('type', 'button');
         closeButton.addEventListener('click', function(e) {
           e.preventDefault();
           e.stopPropagation();
@@ -134,11 +125,16 @@ document.addEventListener('DOMContentLoaded', function () {
         modalCard.addEventListener('click', function(e) {
           e.stopPropagation();
         });
-        
+
         overlay.appendChild(modalCard);
         overlay.classList.add('active');
-        
+
         document.body.style.overflow = 'hidden';
+
+        // Focus the close button for accessibility
+        requestAnimationFrame(() => {
+          closeButton.focus();
+        });
       });
     });
   }, 100);
@@ -166,6 +162,12 @@ function closeModal() {
     overlay.classList.remove('active');
     overlay.innerHTML = '';
     document.body.style.overflow = '';
+
+    // Restore focus to the element that had focus before opening modal
+    if (window.lastFocusedElement) {
+      window.lastFocusedElement.focus();
+      window.lastFocusedElement = null;
+    }
   }
 }
 

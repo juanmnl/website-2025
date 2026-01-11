@@ -1,4 +1,13 @@
-import * as THREE from 'three';
+// Three.js is dynamically imported only on desktop devices
+let THREE = null;
+
+function isMobileDevice() {
+  return (
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    ) || window.innerWidth <= 768
+  );
+}
 
 class MouseBlur {
   constructor() {
@@ -6,18 +15,32 @@ class MouseBlur {
     this.camera = null;
     this.renderer = null;
     this.material = null;
-    this.mouse = new THREE.Vector2(0.5, 0.5);
+    this.mouse = null;
     this.animationId = null;
     this.container = null;
-    this.init();
+    this.initialized = false;
   }
 
-  init() {
-    this.createContainer();
-    this.setupScene();
-    this.createShader();
-    this.setupEventListeners();
-    this.animate();
+  async init() {
+    // Skip initialization on mobile devices to save ~600KB
+    if (isMobileDevice()) {
+      return;
+    }
+
+    try {
+      // Dynamically import Three.js only on desktop
+      THREE = await import('three');
+      this.mouse = new THREE.Vector2(0.5, 0.5);
+      this.initialized = true;
+
+      this.createContainer();
+      this.setupScene();
+      this.createShader();
+      this.setupEventListeners();
+      this.animate();
+    } catch (error) {
+      console.error('Failed to load Three.js:', error);
+    }
   }
 
   createContainer() {
@@ -168,11 +191,7 @@ class MouseBlur {
   }
 
   isMobile() {
-    return (
-      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        navigator.userAgent
-      ) || window.innerWidth <= 768
-    );
+    return isMobileDevice();
   }
 
   animate(time = 0) {
@@ -188,6 +207,10 @@ class MouseBlur {
   }
 
   destroy() {
+    if (!this.initialized) {
+      return;
+    }
+
     if (this.animationId) {
       cancelAnimationFrame(this.animationId);
     }
@@ -210,4 +233,11 @@ class MouseBlur {
   }
 }
 
-export { MouseBlur };
+// Factory function to create and initialize MouseBlur
+async function createMouseBlur() {
+  const instance = new MouseBlur();
+  await instance.init();
+  return instance;
+}
+
+export { MouseBlur, createMouseBlur, isMobileDevice };
