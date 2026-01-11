@@ -128,6 +128,25 @@ main { flex: 1; }
     border: 0;
 }
 
+/* Skip to content link for keyboard accessibility */
+.skip-to-content {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gray-900);
+    color: var(--white);
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--border-radius);
+    z-index: 10001;
+    transition: top 0.2s ease;
+}
+
+.skip-to-content:focus {
+    top: var(--space-lg);
+    color: var(--white);
+}
+
 /* Links */
 a {
     color: var(--gray-600);
@@ -494,7 +513,7 @@ nav ul li a {
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.project-card:hover { box-shadow: 0 0.25rem 0.5rem rgba(2,2,2,0.1); }
+/* hover box-shadow moved to @media (hover: hover) section */
 
 .project-card a {
     display: block;
@@ -557,7 +576,7 @@ p.special {
     cursor: pointer;
     background-color: var(--gray-50);
 }
-.archive-card:hover { box-shadow: 0 0.125rem 0.25rem rgba(2, 2, 2, 0.1); }
+/* hover box-shadow moved to @media (hover: hover) section */
 
 .archive-card img {
     position: relative;
@@ -755,7 +774,7 @@ p.special {
     flex-shrink: 0;
     margin: 0 auto;
 }
-.profile-photo:hover { animation: glitch-color 0.3s ease-in-out infinite; }
+/* hover animation moved to @media (hover: hover) section */
 
 .about-text { flex-grow: 1; min-width: 18.75rem; }
 .about-section p > a { text-decoration: underline; }
@@ -931,8 +950,7 @@ footer p { margin: 0; }
 [class*="-card"]::before { box-shadow: 0 0 0 2px red; }
 [class*="-card"]::after  { box-shadow: 0 0 0 2px cyan; }
 
-[class*="-card"]:hover::before { animation: glitch-card 0.3s ease-out; }
-[class*="-card"]:hover::after  { animation: glitch-card 0.3s ease-out 0.1s; }
+/* hover animations moved to @media (hover: hover) section */
 
 .glitch {
     position: relative;
@@ -1032,7 +1050,7 @@ footer p { margin: 0; }
     cursor: pointer;
     position: relative;
 }
-.garden-card:hover { box-shadow: 0 0.25rem 0.5rem rgba(2, 2, 2, 0.1); }
+/* hover box-shadow moved to @media (hover: hover) section */
 
 .garden-card-media { position: relative; overflow: hidden; }
 
@@ -1663,11 +1681,7 @@ footer p { margin: 0; }
   transition: all 0.3s ease;
   cursor: pointer;
 }
-.related-law-card:hover {
-  border-color: var(--accent);
-  transform: translateY(-2px);
-  box-shadow: 0 0.25rem 0.5rem rgba(2, 2, 2, 0.1);
-}
+/* hover styles moved to @media (hover: hover) section */
 .related-law-card h4 {
   margin-bottom: var(--space-sm);
   color: var(--gray-900);
@@ -1910,4 +1924,34 @@ footer p { margin: 0; }
 /* 425px */
 @media (max-width: 26.5625rem) {
     .project-grid { grid-template-columns: 1fr; }
+}
+
+/* ==================================================
+   Hover-only styles (prevents sticky hover on touch)
+   ================================================== */
+@media (hover: hover) {
+    .project-card:hover,
+    .archive-card:hover,
+    .garden-card:hover {
+        box-shadow: 0 0.25rem 0.5rem rgba(2, 2, 2, 0.1);
+    }
+
+    .profile-photo:hover {
+        animation: glitch-color 0.3s ease-in-out infinite;
+    }
+
+    [class*="-card"]:hover::before {
+        animation: glitch-card 0.3s ease-out;
+    }
+
+    [class*="-card"]:hover::after {
+        animation: glitch-card 0.3s ease-out 0.1s;
+    }
+
+    .related-law-card:hover {
+        border-color: var(--accent);
+        background: rgba(247, 198, 141, 0.05);
+        transform: translateY(-2px);
+        box-shadow: 0 0.25rem 0.5rem rgba(2, 2, 2, 0.1);
+    }
 }

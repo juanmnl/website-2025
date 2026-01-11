@@ -84,6 +84,9 @@ const Navigation = () => {
 
   return (
     <header>
+      <a href="#main" className="skip-to-content">
+        Skip to main content
+      </a>
       <div className="container">
         <div className="logo-status">
           <div className="status-indicator"></div>
